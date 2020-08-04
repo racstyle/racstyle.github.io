@@ -9,36 +9,36 @@
 	],
 "creatorBuild": "32186",
 "files": {
-	"/_scripts/app.js": {
+	"/_css/app-min.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/_css/app-min-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/_css/app.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/_css/app-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/_js/app.js": {
 		"bF": 0,
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "/_scripts/app-min.js",
+		"oAP": "/_js/app-min.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
-		},
-	"/_styles/app-min.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/_styles/app-min-min.css",
-		"oF": 0,
-		"oS": 3
-		},
-	"/_styles/app.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/_styles/app-min.css",
-		"oF": 0,
-		"oS": 3
 		},
 	"/index.html": {
 		"cB": 0,
