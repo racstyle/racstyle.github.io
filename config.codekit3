@@ -20,13 +20,23 @@
 		"sC": 3,
 		"tS": 0
 		},
-	"/_styles/app.css": {
+	"/css/app-min.css": {
 		"aP": 1,
 		"bl": 0,
 		"ft": 16,
 		"ma": 0,
 		"oA": 0,
-		"oAP": "/_styles/app-min.css",
+		"oAP": "/css/app-min-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/css/app.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/css/app-min.css",
 		"oF": 0,
 		"oS": 3
 		},
