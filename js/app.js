@@ -1,3 +1,5 @@
+$(document).foundation();
+
 $(function() {
-    $('#menu').load('nav.html');
+    $('#menu').load('nav.html')
 });
