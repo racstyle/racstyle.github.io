@@ -4,49 +4,65 @@
 	{
 		"name": "Process All Remaining Files and Folders",
 		"stepType": 1,
-		"uuidString": "639D9CCB-D0CF-42D9-BD7D-4421347DDD68"
+		"uuidString": "0A9E261D-382A-46E0-A323-68C65C0E2A52"
 		}
 	],
 "creatorBuild": "32186",
 "files": {
-	"/build": {
-		"ft": 65536,
-		"oA": 1,
-		"oAP": "/build/build",
-		"oF": 0
+	"/css/app-min.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/css/app-min-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/css/app.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/css/app-min.css",
+		"oF": 0,
+		"oS": 3
 		},
 	"/index.html": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/build/index.html",
+		"oAP": "/index.html",
 		"oF": 0
 		},
 	"/js/app.js": {
 		"bF": 0,
 		"ft": 64,
-		"ma": 1,
+		"ma": 0,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "build/js/app.js",
+		"oAP": "/js/app-min.js",
 		"oF": 0,
 		"sC": 3,
-		"tS": 1
+		"tS": 0
 		},
-	"/node_modules": {
-		"ft": 65536,
-		"oA": 2,
-		"oAP": "/build/node_modules",
+	"/nav.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/nav.html",
 		"oF": 0
 		},
-	"/package.json": {
-		"ft": 524288,
-		"oA": 1,
-		"oAP": "/build/package-min.json",
-		"oF": 0,
-		"oO": 0,
-		"oS": 1
+	"/Playground.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/Playground.html",
+		"oF": 0
 		},
 	"/README.md": {
 		"cB": 0,
@@ -58,7 +74,7 @@
 		"ft": 4096,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/build/README.html",
+		"oAP": "/README.html",
 		"oF": 0,
 		"oFM": 0,
 		"oS": 0,
@@ -66,40 +82,6 @@
 		"pME": 1,
 		"rFN": 0,
 		"uCM": 0
-		},
-	"/scss/_settings.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"ec": 1,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "/build/scss/_settings.css",
-		"oF": 0,
-		"oS": 0,
-		"sct": 0
-		},
-	"/scss/app.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"ec": 1,
-		"ft": 4,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "build/css/app.css",
-		"oF": 0,
-		"oS": 0,
-		"sct": 0
-		},
-	"/yarn.lock": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/build/yarn.lock",
-		"oF": 0
 		}
 	},
 "hooks": [
@@ -107,12 +89,11 @@
 "manualImportLinks": {
 	},
 "projectAttributes": {
-	"creationDate": 618787558.91526306,
+	"creationDate": 618104357.93590105,
 	"displayValue": "racstyle.github.io",
-	"displayValueWasSetByUser": 0,
-	"iconImageName": "brackets_gray",
-	"iconImageWasSetByUser": 0,
-	"lastBuiltDate": 618787589.84062099
+	"displayValueWasSetByUser": 1,
+	"iconImageName": "brackets_teal",
+	"iconImageWasSetByUser": 0
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
@@ -406,7 +387,7 @@
 	"bowerUseExactVersion": 0,
 	"browserRefreshDelay": 0,
 	"browserslistString": ">0.2%, last 2 versions, Firefox ESR, not dead",
-	"buildFolderActive": 1,
+	"buildFolderActive": 0,
 	"buildFolderName": "build",
 	"cleanBuild": 1,
 	"coffeeLintFlags2": {
@@ -550,11 +531,11 @@
 	"environmentVariablesString": "NODE_ENV:::production",
 	"esLintConfigFileHandlingType": 0,
 	"esLintECMAVersion": 7,
-	"esLintEnvironmentsMask": 8193,
+	"esLintEnvironmentsMask": 1,
 	"esLintRules": {
 		"accessor-pairs": {
 			"active": 0,
-			"optionString": "{'setWithoutGet': true, 'getWithoutSet': false, 'enforceForClassMembers': true}"
+			"optionString": "{'setWithoutGet': true, 'getWithoutSet': false}"
 			},
 		"array-bracket-newline": {
 			"active": 0,
@@ -630,7 +611,7 @@
 			},
 		"computed-property-spacing": {
 			"active": 0,
-			"optionString": "'never', {'enforceForClassMembers': true}"
+			"optionString": "'never'"
 			},
 		"consistent-return": {
 			"active": 0,
@@ -1378,7 +1359,7 @@
 			},
 		"no-void": {
 			"active": 0,
-			"optionString": "{'allowAsStatement': false}"
+			"optionString": ""
 			},
 		"no-warning-comments": {
 			"active": 0,
@@ -1594,7 +1575,7 @@
 			},
 		"use-isnan": {
 			"active": 1,
-			"optionString": "{'enforceForSwitchCase': true, 'enforceForIndexOf': false}"
+			"optionString": "{'enforceForSwitchCase': false, 'enforceForIndexOf': false}"
 			},
 		"valid-jsdoc": {
 			"active": 0,
@@ -1629,7 +1610,7 @@
 	"externalServerAddress": "http://localhost:8888",
 	"gitIgnoreBuildFolder": 1,
 	"hideConfigFile": 0,
-	"jsCheckerReservedNamesString": "$",
+	"jsCheckerReservedNamesString": "",
 	"jsHintFlags2": {
 		"asi": {
 			"active": 0,
@@ -2148,7 +2129,7 @@
 		"autoOutputPathReplace1": "sass",
 		"autoOutputPathReplace2": "css",
 		"autoOutputPathStyle": 0,
-		"compilerType": 0,
+		"compilerType": 1,
 		"createSourceMap": 0,
 		"decimalPrecision": 10,
 		"emitCharset": 1,
@@ -2528,7 +2509,7 @@
 		},
 	"uglifyMangleNames": 1,
 	"uglifyReservedNamesString": "$,exports,require",
-	"websiteRelativeRoot": "/build"
+	"websiteRelativeRoot": ""
 	},
 "settingsFileVersion": "3"
 }
