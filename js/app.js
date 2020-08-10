@@ -1,3 +1,1 @@
-$(function() {
-    $('#menu').load('nav.html');
-});
+$(document).foundation();

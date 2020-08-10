@@ -9,25 +9,96 @@
 	],
 "creatorBuild": "32186",
 "files": {
-	"/css/app-min.css": {
+	"/build/.gitignore": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/build/.gitignore",
+		"oF": 0
+		},
+	"/build/css/app.css": {
 		"aP": 1,
 		"bl": 0,
 		"ft": 16,
 		"ma": 0,
 		"oA": 0,
-		"oAP": "/css/app-min-min.css",
+		"oAP": "/build/css/app-min.css",
 		"oF": 0,
 		"oS": 3
 		},
-	"/css/app.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
+	"/build/index 2.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
 		"oA": 0,
-		"oAP": "/css/app-min.css",
+		"oAP": "/build/index 2.html",
+		"oF": 0
+		},
+	"/build/index.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/build/index.html",
+		"oF": 0
+		},
+	"/build/js/app.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/build/js/app-min.js",
 		"oF": 0,
-		"oS": 3
+		"sC": 3,
+		"tS": 0
+		},
+	"/build/js/app.js.map": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/build/js/app.js.map",
+		"oF": 0
+		},
+	"/build/nav.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/build/nav.html",
+		"oF": 0
+		},
+	"/build/node_modules": {
+		"ft": 65536,
+		"oA": 2,
+		"oAP": "/build/build/node_modules",
+		"oF": 0
+		},
+	"/build/playground.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/build/playground.html",
+		"oF": 0
+		},
+	"/build/README.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/build/README.html",
+		"oF": 0
+		},
+	"/build/yarn.lock": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/build/yarn.lock",
+		"oF": 0
 		},
 	"/index.html": {
 		"cB": 0,
@@ -56,12 +127,26 @@
 		"oAP": "/nav.html",
 		"oF": 0
 		},
-	"/Playground.html": {
+	"/node_modules": {
+		"ft": 65536,
+		"oA": 2,
+		"oAP": "/build/node_modules",
+		"oF": 0
+		},
+	"/package.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/package-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"/playground.html": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/Playground.html",
+		"oAP": "/playground.html",
 		"oF": 0
 		},
 	"/README.md": {
@@ -82,6 +167,40 @@
 		"pME": 1,
 		"rFN": 0,
 		"uCM": 0
+		},
+	"/scss/_settings.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"ec": 1,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/scss/_settings.css",
+		"oF": 0,
+		"oS": 0,
+		"sct": 0
+		},
+	"/scss/app.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"ec": 1,
+		"ft": 4,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/scss/app.css",
+		"oF": 0,
+		"oS": 0,
+		"sct": 0
+		},
+	"/yarn.lock": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/yarn.lock",
+		"oF": 0
 		}
 	},
 "hooks": [
@@ -93,7 +212,8 @@
 	"displayValue": "racstyle.github.io",
 	"displayValueWasSetByUser": 1,
 	"iconImageName": "brackets_teal",
-	"iconImageWasSetByUser": 0
+	"iconImageWasSetByUser": 0,
+	"lastBuiltDate": 618787589.84062099
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
@@ -531,7 +651,7 @@
 	"environmentVariablesString": "NODE_ENV:::production",
 	"esLintConfigFileHandlingType": 0,
 	"esLintECMAVersion": 7,
-	"esLintEnvironmentsMask": 1,
+	"esLintEnvironmentsMask": 8193,
 	"esLintRules": {
 		"accessor-pairs": {
 			"active": 0,
