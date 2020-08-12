@@ -9,12 +9,12 @@
 	],
 "creatorBuild": "32186",
 "files": {
-	"/build/.gitignore": {
+	"/.gitignore": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/build/.gitignore",
+		"oAP": "/.gitignore",
 		"oF": 0
 		},
 	"/build/css/app.css": {
@@ -26,22 +26,6 @@
 		"oAP": "/build/css/app-min.css",
 		"oF": 0,
 		"oS": 3
-		},
-	"/build/index 2.html": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/build/index 2.html",
-		"oF": 0
-		},
-	"/build/index.html": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/build/index.html",
-		"oF": 0
 		},
 	"/build/js/app.js": {
 		"bF": 0,
@@ -62,42 +46,10 @@
 		"oAP": "/build/js/app.js.map",
 		"oF": 0
 		},
-	"/build/nav.html": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/build/nav.html",
-		"oF": 0
-		},
 	"/build/node_modules": {
 		"ft": 65536,
 		"oA": 2,
 		"oAP": "/build/build/node_modules",
-		"oF": 0
-		},
-	"/build/playground.html": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/build/playground.html",
-		"oF": 0
-		},
-	"/build/README.html": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/build/README.html",
-		"oF": 0
-		},
-	"/build/yarn.lock": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/build/yarn.lock",
 		"oF": 0
 		},
 	"/index.html": {
@@ -158,9 +110,9 @@
 		"eSQ": 1,
 		"ft": 4096,
 		"hM": 0,
-		"oA": 0,
+		"oA": 1,
 		"oAP": "/README.html",
-		"oF": 0,
+		"oF": 1,
 		"oFM": 0,
 		"oS": 0,
 		"pHT": 0,
@@ -189,8 +141,8 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 0,
-		"oAP": "/scss/app.css",
-		"oF": 0,
+		"oAP": "/build/css/app.css",
+		"oF": 2,
 		"oS": 0,
 		"sct": 0
 		},
@@ -2248,7 +2200,7 @@
 		"autoOutputPathRelativePath": "../css",
 		"autoOutputPathReplace1": "sass",
 		"autoOutputPathReplace2": "css",
-		"autoOutputPathStyle": 0,
+		"autoOutputPathStyle": 2,
 		"compilerType": 1,
 		"createSourceMap": 0,
 		"decimalPrecision": 10,

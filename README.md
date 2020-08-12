@@ -25,8 +25,10 @@ In the meantime, while you see the chaos, check out what I (will) use in this re
 Most definitely!  Here is what I plan to add to my coding playground as soon as I can:
 - [Vue.js](https://vuejs.org)
 - [Bootstrap](https://getbootstrap.com) and hopefully [BootstrapVue](https://bootstrap-vue.org/)
-- React,js
-- Angular.js
+- [React.js](https://reactjs.org/)
+- [Angular.js](https://angularjs.org/)
+- [Svelte JS](https://svelte.dev/)
+- [Flutter](https://flutter.dev/)
 - .....And hopefully more!
 
 The purpose of these crazy implementations are just for building my DEV skills (hence the playground), but they may end up in the main functionality of my site, who knows? 🤷🏻‍♀️
