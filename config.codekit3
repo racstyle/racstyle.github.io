@@ -17,6 +17,22 @@
 		"oAP": "/.gitignore",
 		"oF": 0
 		},
+	"/_template.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/_template.php",
+		"oF": 0
+		},
+	"/about.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/about.php",
+		"oF": 0
+		},
 	"/css/app.css": {
 		"aP": 1,
 		"bl": 0,
@@ -26278,12 +26294,12 @@
 		"oO": 0,
 		"oS": 1
 		},
-	"/playground.html": {
+	"/playground.php": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/playground.html",
+		"oAP": "/playground.php",
 		"oF": 0
 		},
 	"/README.md": {
