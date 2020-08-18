@@ -19,6 +19,7 @@ In the meantime, while you see the chaos, check out what I (will) use in this re
 - [HTML5](https://www.w3schools.com/html/html_intro.asp) for the web skeleton and content
 - [CSS](https://www.w3schools.com/Css/) / [SCSS](https://sass-lang.com/) for the appealling looks
 - [JavaScript](https://www.javascript.com/) and [jQuery](https://jquery.com/) for the functionality
+- [PHP](https://php.net) for reusable code (e.g. reuse nav menu in each page)
 - [Foundation Sites 6](https://get.foundation/) for responsive pages
 
 # Do I plan to implement any other languages?
