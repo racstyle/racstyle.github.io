@@ -4,15 +4,22 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Excuse the mess...</title>
+    <title>Creativity World</title>
     <link rel="stylesheet" href="css/app.css">
   </head>
   <body>
     <div class="grid-container">
+      <!-- Menu bar -->
+      <div class="grid-x">
+        <div class="large-12 cell">
+          <nav><?php include 'nav.html'; ?></nav>
+        </div>
+      </div>
+
       <!-- Main header -->
       <div class="grid-x">
         <div class="large-12 cell">
-          <header><h1>Pardon my dust...</h1></header>
+          <header><h1>Let's get some creative STEAM!</h1></header>
         </div>
       </div>
 
@@ -20,11 +27,18 @@
       <div class="grid-x">
         <div class="large-12 cell">
           <div class="callout">
-            <p>I am currently working on my webpage to make it look all good for you guys to see.</p>
-            <p>Right now, it's a barebones mess but I'll keep you all update so stay tuned for some updates, both good and bad! 😅</p>
-            <p>But if you want to see a sneak peek of my progress via my commits, check out my <a href="https://github.com/racstyle/racstyle.github.io">GitHub repo</a>!</p>
+            <p>STEAM = Science, Technology, Engineering, Art, Mechanics.</p>
+            <p>We all know about STEM, but what about STEAM?  I hope to incorporate art into my engineering career too!</p>
+            <p>So let's see what artistic steam I've spewed lately!</p>
           </div>
         </div>
+      </div>
+
+      <!-- Footer -->
+      <div class="grid-x">
+          <div class="large-12 cell">
+            <footer><?php include 'foot.html'; ?></footer>
+          </div>
       </div>
     </div>
 

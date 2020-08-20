@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About</title>
+    <title>What About It?</title>
     <link rel="stylesheet" href="css/app.css">
   </head>
   <body>
@@ -27,8 +27,15 @@
       <div class="grid-x">
         <div class="large-12 cell">
           <div class="callout">
-            <p>This is where the text of the template will be</p>
+            <p>This is where find about stuff</p>
           </div>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <div class="grid-x">
+        <div class="large-12 cell">
+          <footer><?php include 'foot.html'; ?></footer>
         </div>
       </div>
     </div>

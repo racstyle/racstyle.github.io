@@ -33,6 +33,13 @@
           </div>
         </div>
       </div>
+
+      <!-- Footer -->
+      <div class="grid-x">
+          <div class="large-12 cell">
+            <footer><?php include 'foot.html'; ?></footer>
+          </div>
+      </div>
     </div>
 
     <script src="node_modules/jquery/dist/jquery.js"></script>
