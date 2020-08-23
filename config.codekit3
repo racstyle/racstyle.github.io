@@ -17,6 +17,14 @@
 		"oAP": "/.gitignore",
 		"oF": 0
 		},
+	"/404.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/404.html",
+		"oF": 0
+		},
 	"/_template.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -32,6 +40,17 @@
 		"oA": 0,
 		"oAP": "/about.php",
 		"oF": 0
+		},
+	"/assets/red.jpg": {
+		"ft": 16384,
+		"iS": 619,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/assets/red.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
 		},
 	"/css/app.css": {
 		"aP": 1,
@@ -65,6 +84,22 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/index.php",
+		"oF": 0
+		},
+	"/index_PollOfTheDay.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/index_PollOfTheDay.php",
+		"oF": 0
+		},
+	"/index_PollOfTheDay_result.txt": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/index_PollOfTheDay_result.txt",
 		"oF": 0
 		},
 	"/js/app-min.js": {
@@ -22389,6 +22424,30 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/playground-home.php",
+		"oF": 0
+		},
+	"/project1_dev-poll_result.txt": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/project1_dev-poll_result.txt",
+		"oF": 0
+		},
+	"/project1_dev-poll_vote.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/project1_dev-poll_vote.php",
+		"oF": 0
+		},
+	"/project1_dev-polling.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/project1_dev-polling.php",
 		"oF": 0
 		},
 	"/README.md": {

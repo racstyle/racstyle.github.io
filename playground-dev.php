@@ -29,8 +29,11 @@
           <div class="callout">
             <p>Well, not really, that would be evil of me.  BUT we can still have fun programming, right?</p>
               
-            <p>This is where my scratch dev projects live.  You can also check out the GitHub repos attached if you are the nerdy type. 🤓</p>
+            <p>This is where my scratch dev projects live.  If applicable, you can also check out the GitHub repos attached if you are the nerdy type. 🤓</p>
           </div>
+
+          <h3>Current Projects:</h3>
+          <h5><a href="project1_dev-polling.php">Project 1: Simple Polling</a></h5>
         </div>
       </div>
 

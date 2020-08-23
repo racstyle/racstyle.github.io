@@ -27,7 +27,7 @@
       <div class="grid-x">
         <div class="large-12 cell">
           <div class="callout">
-            <p>Let's have some fun, shall we?  I have 2 ways we can have fun: the web dev way or the creative way.</p>
+            <p>Let's have some fun, shall we?  I have 2 ways we can have fun: the dev way or the creative way.</p>
             <p>This is mainly for me to have fun utilizing my web dev and art skills (yes, engineers can be artists too!)</p>
             <p>Choose your poison, and don't forget to enjoy!</p>
           </div>

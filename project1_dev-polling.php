@@ -4,8 +4,22 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Creativity World</title>
+    <title>DEV project 1 - polling</title>
     <link rel="stylesheet" href="css/app.css">
+    <script>
+      function getVote(intn) {
+        var xmlhttp=new XMLHttpRequest();
+        
+        xmlhttp.onreadystatechange = function() {
+          if (this.readyState==4 && this.status==200) {
+            document.getElementById("poll").innerHTML = this.responseText;
+          }
+        }
+
+        xmlhttp.open("GET", "project1_dev-poll_vote.php?vote=" + intn,true);
+        xmlhttp.send();
+      }
+    </script>
   </head>
   <body>
     <div class="grid-container">
@@ -19,7 +33,7 @@
       <!-- Main header -->
       <div class="grid-x">
         <div class="large-12 cell">
-          <header><h1>Let's get some creative STEAM!</h1></header>
+          <header><h1>Simple polling via PHP</h1></header>
         </div>
       </div>
 
@@ -27,10 +41,16 @@
       <div class="grid-x">
         <div class="large-12 cell">
           <div class="callout">
-            <p>STEAM = Science, Technology, Engineering, Art, Mathematics.</p>
-            <p>We all know about STEM, but what about STEAM?  I hope to incorporate art into my engineering career too!</p>
-            <p>So let's see what artistic steam I've spewed lately!</p>
+            <p>I am attempting to create a simple polling I can also use in the homepage.  Feel free to vote what you think!</p>
           </div>
+        </div>
+
+        <div id="poll">
+          <h3>Is this poll cool enough?</h3>
+          <form>
+            Yeah! <input type="radio" name="vote" value="0" onclick="getVote(this.value)"><br>
+            Nah <input type="radio" name="vote" value="1" onclick="getVote(this.value)">
+          </form>
         </div>
       </div>
 
