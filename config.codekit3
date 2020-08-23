@@ -41,15 +41,15 @@
 		"oAP": "/about.php",
 		"oF": 0
 		},
-	"/assets/red.jpg": {
-		"ft": 16384,
-		"iS": 619,
-		"jF": 0,
+	"/assets/Apple-Spring.png": {
+		"ft": 32768,
+		"iS": 3535309,
 		"oA": 0,
-		"oAP": "/assets/red.jpg",
+		"oAP": "/assets/Apple-Spring.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
+		"oT": 1,
 		"q": 100
 		},
 	"/css/app.css": {

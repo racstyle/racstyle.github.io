@@ -5,6 +5,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome Home!</title>
+    <link rel="stylesheet" href="https://unpkg.com/@coreui/icons/css/all.min.css">
     <link rel="stylesheet" href="css/app.css">
 
     <script>
@@ -55,7 +56,7 @@
                 <div class="docs-example-orbit-slide">
                   <h3>Poll of the Day:</h3>
                   <div id="poll">
-                    <h4>Should I create a dedicated social media account for this page?</h4>
+                    <h4>Do you like what you are seeing so far?</h4>
                     <form>
                       Yeah! <input type="radio" name="vote" value="0" onclick="getVote(this.value)"><br>
                       Nah <input type="radio" name="vote" value="1" onclick="getVote(this.value)">
@@ -65,13 +66,13 @@
               </li>
               <li class="orbit-slide">
                 <div class="docs-example-orbit-slide">
-                  <p><strong>This is rebeccapurple.</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  <h3>Announcement #1:</h3>
+                  <h5>More exciting stuff coming soon!  Right now, it ain't much but hey, I try 😅</h5>
                 </div>
               </li>
               <li class="orbit-slide">
-                <div class="docs-example-orbit-slide">
-                  <p><strong>This is darkgoldenrod.</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                </div>
+                <img class="orbit-image" src="assets/Apple-Spring.png" />
+                <figcaption class="orbit-caption">Look!  Colors!</figcaption>
               </li>
             </ul>
             <nav class="orbit-bullets">

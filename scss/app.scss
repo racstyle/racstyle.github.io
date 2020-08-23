@@ -63,10 +63,15 @@
 @include motion-ui-transitions;
 @include motion-ui-animations;
 
+// Global variables
+$orbit-height: 20em;
+$icon-size: 2em;
+
+// Classes
 .docs-example-orbit-slide {
     padding: 2rem 4rem;
     color: $white;
-    height: 15em;
+    height: $orbit-height;
 
     .orbit-slide:nth-of-type(1) & {
         background: dodgerblue;
@@ -75,8 +80,14 @@
     .orbit-slide:nth-of-type(2) & {
         background: rebeccapurple;
     }
+}
 
-    .orbit-slide:nth-of-type(3) & {
-        background: darkgoldenrod;
-    }
+.orbit-image {
+    height: $orbit-height;
+    object-fit: cover;
+}
+
+.icon-foot {
+    font-size: $icon-size;
+    color: black;
 }

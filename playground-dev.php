@@ -4,7 +4,8 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Where the fun lives!</title>
+    <title>Where the DEV fun lives!</title>
+    <link rel="stylesheet" href="https://unpkg.com/@coreui/icons/css/all.min.css">
     <link rel="stylesheet" href="css/app.css">
   </head>
   <body>
@@ -28,11 +29,10 @@
         <div class="large-12 cell">
           <div class="callout">
             <p>Well, not really, that would be evil of me.  BUT we can still have fun programming, right?</p>
-              
-            <p>This is where my scratch dev projects live.  If applicable, you can also check out the GitHub repos attached if you are the nerdy type. 🤓</p>
+            <p>This is where my scratch enDEVors live (get it?! 😜).  If applicable, you can also check out the GitHub repos attached if you are the nerdy type (like me). 🤓</p>
           </div>
 
-          <h3>Current Projects:</h3>
+          <h3>Mini Site Projects:</h3>
           <h5><a href="project1_dev-polling.php">Project 1: Simple Polling</a></h5>
         </div>
       </div>

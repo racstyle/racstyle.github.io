@@ -7499,7 +7499,7 @@ html.is-reveal-open body {
 .docs-example-orbit-slide {
   padding: 2rem 4rem;
   color: #fefefe;
-  height: 15em;
+  height: 20em;
 }
 .orbit-slide:nth-of-type(1) .docs-example-orbit-slide {
   background: dodgerblue;
@@ -7507,6 +7507,13 @@ html.is-reveal-open body {
 .orbit-slide:nth-of-type(2) .docs-example-orbit-slide {
   background: rebeccapurple;
 }
-.orbit-slide:nth-of-type(3) .docs-example-orbit-slide {
-  background: darkgoldenrod;
+
+.orbit-image {
+  height: 20em;
+  object-fit: cover;
+}
+
+.icon-foot {
+  font-size: 2em;
+  color: black;
 }
