@@ -28,7 +28,7 @@
       <div class="grid-x">
         <div class="large-12 cell">
           <div class="callout">
-            <p>This is where find about stuff</p>
+            <p>This is where you find out about stuff</p>
           </div>
         </div>
       </div>
