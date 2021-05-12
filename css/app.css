@@ -7508,16 +7508,23 @@ html.is-reveal-open body {
   background: rebeccapurple;
 }
 .orbit-slide:nth-of-type(3) .docs-example-orbit-slide {
-  background: green;
-}
-
-.orbit-container {
-  height: 20em;
+  background: lightseagreen;
 }
 
 .orbit-image {
   height: 20em;
   object-fit: cover;
+}
+
+.orbit-container {
+  height: 250px;
+}
+
+.orbit-container .orbit-slides-container > * {
+  position: relative;
+  margin-left: 0;
+  float: left;
+  height: 100%;
 }
 
 .icon-foot {
