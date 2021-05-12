@@ -1,3 +1,9 @@
 # *
 !.gitignore
 _NO_PUSHY
+js
+scss
+config.codekit3
+package-lock.json
+package.json
+yarn.lock

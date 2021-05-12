@@ -9,12 +9,12 @@
   ],
   "creatorBuild" : "34127",
   "files" : {
-    "\/_NO_PUSHY\/template.html" : {
+    "\/_NO_PUSHY\/kitchen.html" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/build\/_NO_PUSHY\/template.html",
+      "oAP" : "\/build\/_NO_PUSHY\/kitchen.html",
       "oF" : 0
     },
     "\/.gitignore" : {
