@@ -10,7 +10,7 @@
     <body>
         <div class="grid-container">
             <!-- Nav bar -->
-            
+            <div id="nav-placeholder"></div>
             
             <!-- Main header -->
             <div class="grid-x grid-padding-x">
@@ -27,16 +27,66 @@
                         <p>Right now, it's a barebones mess but stay tuned for some updates, both good and bad! 😅</p>
                         <p>Note: we have started fresh from before so that it why we are back to the plain mess of nothingness 😅</p>
                     </div>
+
+                    <div class="orbit" role="region" aria-label="Favorite Text Ever" data-orbit>
+                        <ul class="orbit-container">
+                            <!-- Slideshow nav arrows -->
+                            <button class="orbit-previous" aria-label="previous"><span class="show-for-sr">Previous Slide</span>&#9664;</button>
+                            <button class="orbit-next" aria-label="next"><span class="show-for-sr">Next Slide</span>&#9654;</button>
+                            <!-- Slide #1 -->
+                            <li class="is-active orbit-slide">
+                                <div class="docs-example-orbit-slide">
+                                    <h3>Poll of the Day:</h3>
+                                    <div id="poll">
+                                        <h4>Do you like what you are seeing so far? (doesn't work now)</h4>
+                                        <form>
+                                            Yeah! <input type="radio" name="vote" value="0" onclick="getVote(this.value)"><br>
+                                            Nah <input type="radio" name="vote" value="1" onclick="getVote(this.value)">
+                                        </form>
+                                    </div>
+                                </div>
+                            </li>
+                            <!-- Slide #2 -->
+                            <li class="orbit-slide">
+                                <div class="docs-example-orbit-slide">
+                                    <h3>Announcement #1:</h3>
+                                    <h5>More exciting stuff coming soon!  Right now, it ain't much but hey, I try 😅</h5>
+                                </div>
+                            </li>
+                            <!-- Slide #3 -->
+                            <li class="orbit-slide">
+                                <div class="docs-example-orbit-slide">
+                                    <h3>Announcement #2:</h3>
+                                    <h5>Stuff is happening! 😮</h5>
+                                </div>
+                            </li>
+                            <!-- Slide #4 -->
+                            <li class="orbit-slide">
+                                <img class="orbit-image" src="assets/Apple-Spring.png" />
+                                <figcaption class="orbit-caption">Look!  Colors!</figcaption>
+                            </li>
+                        </ul>
+                        <!-- Slideshow nav bullets -->
+                        <nav class="orbit-bullets">
+                            <button class="is-active" data-slide="0">
+                                <span class="show-for-sr">First slide details.</span>
+                                <span class="show-for-sr" data-slide-active-label>Current Slide</span>
+                            </button>
+                            <button data-slide="1"><span class="show-for-sr">Second slide details.</span></button>
+                            <button data-slide="2"><span class="show-for-sr">Third slide details.</span></button>
+                            <button data-slide="3"><span class="show-for-sr">Fourth slide details.</span></button>
+                        </nav>
+                    </div>
                 </div>
             </div>
 
             <!-- Footer -->
-
+            <div id="foot-placeholder"></div>
         </div>
 
         <script src="node_modules/jquery/dist/jquery.js"></script>
         <script src="node_modules/what-input/dist/what-input.js"></script>
         <script src="node_modules/foundation-sites/dist/js/foundation.js"></script>
-        <script src="js/app.js"></script>
+        <script src="js/app-min.js"></script>
     </body>
 </html>
