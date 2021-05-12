@@ -8,7 +8,7 @@ In the meantime, while you see the chaos, check out what I (will) use in this re
 # What tools were used?
 - Well first off, [GitHub](https://github.com) to host my page repo (duh)
 - [Visual Studio Code](https://code.visualstudio.com) for all of my coding enDEVors (ba-dum-tssh!) 😜
-- [CodeKit 3](https://codekitapp.com) for managing my frameworks and compiling/minifying code
+- [CodeKit 3](https://codekitapp.com) for managing my frameworks and compiling/minifying code as well as compiling the build folder for publishing
 - [Responsively](https://responsively.app/) for checking my pages' responsiveness (yo front-end devs, you need this tool, trust me)
 - [Terminal](https://support.apple.com/guide/terminal/welcome/mac), only used for debugging
 - [Google](https://google.com) because I am not a super programmer guru I aspire to be 😅
