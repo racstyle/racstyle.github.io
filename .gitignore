@@ -1,9 +1,2 @@
 # *
 !.gitignore
-_NO_PUSHY
-yarn.lock
-node_modules
-build/_NO_PUSHY
-build/node_modules
-build/index.html
-build/yarn.lock
