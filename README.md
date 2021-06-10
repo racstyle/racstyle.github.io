@@ -19,8 +19,10 @@ In the meantime, while you see the chaos, check out what I (will) use in this re
 - [HTML5](https://www.w3schools.com/html/html_intro.asp) for the web skeleton and content
 - [CSS](https://www.w3schools.com/Css/) / [SCSS](https://sass-lang.com/) for the appealling looks
 - [JavaScript](https://www.javascript.com/) and [jQuery](https://jquery.com/) for the functionality
+
+# What have I tried to implement but it couldn't work due to GitHub pages' limitations?
 - [PHP](https://php.net) for reusable code (e.g. reuse nav menu in each page)
-- [Foundation Sites 6](https://get.foundation/) for responsive pages
+- [Foundation Sites 6](https://get.foundation/) for responsive pages, the animations were not working
 
 # Do I plan to implement any other languages?
 Most definitely!  Here is what I plan to add to my coding playground as soon as I can:
@@ -39,4 +41,4 @@ It is all experimental here, so not all of these implementations may not happen,
 # WAIT, are you still here reading this?
 Well, what are you waiting for???  Now that you know what this site is about, [go check it out and enjoy](https://racstyle.github.io)!
 
-*Got any tips, tricks, or found something, like, **ick**?  Let me know if anything can be updated or if you have any suggestions.  Thank you, God bless and stay safe!* 😊
+*Got any tips, tricks, or found something, like, **ick**?  Let me know if anything can be updated or if you have any suggestions.  Thank you, God bless, and stay safe!* 😊
