@@ -1,1 +1,1 @@
-$(document).foundation(),$((function(){$("#nav-placeholder").load("nav.html")})),$(".menu").onclick((function(){"top-bar"===$("div").attr("class")?$("div").attr("top-bar","responsive"):$("div").attr("top-bar")})),$((function(){$("#foot-placeholder").load("foot.html")}));
+$(document).foundation();
