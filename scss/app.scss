@@ -1,0 +1,151 @@
+@charset 'utf-8';
+
+@import 'settings';
+@import 'foundation';
+@import 'motion-ui';
+
+// Global styles
+@include foundation-global-styles;
+@include foundation-forms;
+@include foundation-typography;
+
+// Grids (choose one)
+@include foundation-xy-grid-classes;
+// @include foundation-grid;
+// @include foundation-flex-grid;
+
+// Generic components
+@include foundation-button;
+@include foundation-button-group;
+@include foundation-close-button;
+@include foundation-label;
+@include foundation-progress-bar;
+@include foundation-slider;
+@include foundation-switch;
+@include foundation-table;
+// Basic components
+@include foundation-badge;
+@include foundation-breadcrumbs;
+@include foundation-callout;
+@include foundation-card;
+@include foundation-dropdown;
+@include foundation-pagination;
+@include foundation-tooltip;
+
+// Containers
+@include foundation-accordion;
+@include foundation-media-object;
+@include foundation-orbit;
+@include foundation-responsive-embed;
+@include foundation-tabs;
+@include foundation-thumbnail;
+// Menu-based containers
+@include foundation-menu;
+@include foundation-menu-icon;
+@include foundation-accordion-menu;
+@include foundation-drilldown-menu;
+@include foundation-dropdown-menu;
+
+// Layout components
+@include foundation-off-canvas;
+@include foundation-reveal;
+@include foundation-sticky;
+@include foundation-title-bar;
+@include foundation-top-bar;
+
+// Helpers
+@include foundation-float-classes;
+@include foundation-flex-classes;
+@include foundation-visibility-classes;
+// @include foundation-prototype-classes;
+
+// Motion UI
+@include motion-ui-transitions;
+@include motion-ui-animations;
+
+// Global variables
+$orbit-height: 20em;    //  height of slides
+$icon-size: 2em;
+.fa { text-decoration: none; }
+
+// Slideshow Classes
+.docs-example-orbit-slide {     //  slideshow elements/slides
+    padding: 2rem 4rem;
+    color: $white;
+    height: $orbit-height;
+
+    .orbit-slide:nth-of-type(1) & {     //  slide 1
+        background: dodgerblue;
+    }
+
+    .orbit-slide:nth-of-type(2) & {     //  slide 2
+        background: rebeccapurple;
+    }
+
+    .orbit-slide:nth-of-type(3) & {     //  slide 3
+        background: lightseagreen;
+    }
+}
+
+// .orbit-container {          //  entire slideshow container
+//     height: $orbit-height;
+// }
+
+.orbit-image {      //  image of slideshow
+    height: $orbit-height;
+    object-fit: cover;
+}
+
+.orbit-container { height:250px; }  
+
+.orbit-container .orbit-slides-container > * {
+  position: relative;
+  margin-left: 0;
+  float: left;
+  height: 100%;
+}
+
+// Footer
+.icon-foot {
+    font-size: $icon-size;
+    color: black;
+}
+
+// // Nav bar
+// .top-bar {
+//     list-style: none;
+// }
+
+// .top-bar li a {
+//     float: left;
+//     display: block;
+//     // color: #f2f2f2;
+//     text-align: center;
+//     // padding: 14px 16px;
+//     text-decoration: none;
+//     // font-size: 17px;
+// }
+
+// .top-bar .menu-icon {
+//     display: none;
+// }
+
+// @media screen and (max-width: 40em) {
+//     .top-bar li a:not(:first-child) { display: none; }
+//     .top-bar li a .menu-icon {
+//         float: right;
+//     }
+// }
+
+// @media screen and (max-width: 40em) {
+//     .top-bar-left .responsive { position: relative; }
+//     .top-bar-left .responsive .menu-icon {
+//         right: 0;
+//         top: 0;
+//     }
+//     .top-bar-left .responsive li a {
+//         float: none;
+//         display: block;
+//         text-align: left;
+//     }
+// }

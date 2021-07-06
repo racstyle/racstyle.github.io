@@ -1,2 +1,10 @@
 # *
 !.gitignore
+config.codekit3
+yarn.lock
+package-lock.json
+package.json
+.jekyll-cache
+Gemfile
+Gemfile.lock
+.vscode
