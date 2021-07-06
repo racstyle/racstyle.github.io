@@ -12,7 +12,7 @@ In the meantime, while you see the chaos, check out what I (will) use in this re
 - [Responsively](https://responsively.app/) for checking my pages' responsiveness (yo front-end devs, you need this tool, trust me)
 - [Terminal](https://support.apple.com/guide/terminal/welcome/mac), only used for debugging
 - [Google](https://google.com) because I am not a super programmer guru I aspire to be 😅
-- [Spotify](https://spotify.com) for my motivation music because every programmer needs that awesome hackers-themed music 🙃
+- [Spotify](https://spotify.com) for my motivation music because every programmer needs that awesome hackers-themed music 🙃 (psst, you can take a listen [here](https://open.spotify.com/playlist/4AnozME0oobxBJQX2H5ko2?si=a72acc98755a4369)!)
 
 # What languages and frameworks were used?
 - [Git](https://git-scm.com/) for project management
