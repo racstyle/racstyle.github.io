@@ -6,8 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>{{ page.title }}</title>
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css">
-        <link rel="icon" href="assets/Apple-Spring.png">    <!-- Icon -->
-        <link rel="stylesheet" href="node_modules/foundation-icons/foundation-icons.css">
+        
         <link rel="stylesheet" href="css/app.css">
     </head>
     <body>
@@ -19,20 +18,15 @@
         </div>
         
         <!-- Menu bar content -->
-        <nav class="top-bar" id="menu" data-animate="hinge-in-from-top spin-out">
+        <nav class="top-bar" id="menu">
             {% include nav.html %}
         </nav>
+            
+        <!-- Content -->
+        {{ content }}
         
-        <!-- Content and Footer -->
-        <div class="grid-x grid-padding-x">
-            <div class="large-12 cell">
-                <!-- Content -->
-                {{ content }}
-                
-                <!-- Footer -->
-                {% include foot.html %}
-            </div>
-        </div>
+        <!-- Footer -->
+        {% include foot.html %}
         
         <script src="https://code.jquery.com/jquery-3.6.0.min.js" crossorigin="anonymous"></script>
         <script>window.jQuery || document.write('<script src="node_modules/jquery/dist/jquery.min.js"><\/script>')</script>

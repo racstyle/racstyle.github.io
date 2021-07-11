@@ -7496,29 +7496,8 @@ html.is-reveal-open body {
   animation-delay: 700ms !important;
 }
 
-hr {
-  max-width: 100%;
-}
-
-.no-js .top-bar {
-  display: none;
-}
-
-@media screen and (min-width: 40em) {
-  .no-js .top-bar {
-    display: block;
-  }
-
-  .no-js .title-bar {
-    display: none;
-  }
-}
-.about-icon-size-img {
-  width: 5em;
-}
-
-.custom-card-text-height {
-  height: 4em;
+.fa {
+  text-decoration: none;
 }
 
 .docs-example-orbit-slide {
@@ -7536,10 +7515,6 @@ hr {
   background: lightseagreen;
 }
 
-.orbit-container {
-  height: 20em;
-}
-
 .orbit-image {
   height: 20em;
   object-fit: cover;
@@ -7549,7 +7524,7 @@ hr {
   height: 250px;
 }
 
-.orbit-container .orbit-slides-container {
+.orbit-container .orbit-slides-container > * {
   position: relative;
   margin-left: 0;
   float: left;
@@ -7557,11 +7532,8 @@ hr {
 }
 
 .icon-foot {
-  font-size: 1.5em;
-}
-
-.fa {
-  text-decoration: none;
+  font-size: 2em;
+  color: black;
 }
 
 /*# sourceMappingURL=app.css.map */

@@ -63,60 +63,89 @@
 @include motion-ui-transitions;
 @include motion-ui-animations;
 
-// ---------------- Global variables and elements ----------------
+// Global variables
 $orbit-height: 20em;    //  height of slides
-$footer-icon-size: 1.5em;
+$icon-size: 2em;
+.fa { text-decoration: none; }
 
-hr { max-width: 100%; }
-
-// -------------------------- Nav bar ---------------------------
-// Prevent flash of unstyled content
-.no-js .top-bar {
-    display: none;
-} 
-@media screen and (min-width: 40em) {
-    .no-js .top-bar {
-        display: block;
-    }
-    .no-js .title-bar {
-        display: none;
-    }
-}
-
-// ------------------------ About me page -------------------------
-.about-icon-size-img { width: 5em; }
-.custom-card-text-height { height: 4em; }
-
-// ---------------------- Slideshow Classes -----------------------
+// Slideshow Classes
 .docs-example-orbit-slide {     //  slideshow elements/slides
     padding: 2rem 4rem;
     color: $white;
     height: $orbit-height;
+
     .orbit-slide:nth-of-type(1) & {     //  slide 1
         background: dodgerblue;
     }
+
     .orbit-slide:nth-of-type(2) & {     //  slide 2
         background: rebeccapurple;
     }
+
     .orbit-slide:nth-of-type(3) & {     //  slide 3
         background: lightseagreen;
     }
 }
-.orbit-container {          //  entire slideshow container
-    height: $orbit-height;
-}
+
+// .orbit-container {          //  entire slideshow container
+//     height: $orbit-height;
+// }
+
 .orbit-image {      //  image of slideshow
     height: $orbit-height;
     object-fit: cover;
 }
-.orbit-container { height: 250px; }  
-.orbit-container .orbit-slides-container {
-    position: relative;
-    margin-left: 0;
-    float: left;
-    height: 100%;
+
+.orbit-container { height:250px; }  
+
+.orbit-container .orbit-slides-container > * {
+  position: relative;
+  margin-left: 0;
+  float: left;
+  height: 100%;
 }
 
-// --------------------------- Footer ------------------------------
-.icon-foot { font-size: $footer-icon-size; }
-.fa { text-decoration: none; }  //  remove underscores in links
+// Footer
+.icon-foot {
+    font-size: $icon-size;
+    color: black;
+}
+
+// // Nav bar
+// .top-bar {
+//     list-style: none;
+// }
+
+// .top-bar li a {
+//     float: left;
+//     display: block;
+//     // color: #f2f2f2;
+//     text-align: center;
+//     // padding: 14px 16px;
+//     text-decoration: none;
+//     // font-size: 17px;
+// }
+
+// .top-bar .menu-icon {
+//     display: none;
+// }
+
+// @media screen and (max-width: 40em) {
+//     .top-bar li a:not(:first-child) { display: none; }
+//     .top-bar li a .menu-icon {
+//         float: right;
+//     }
+// }
+
+// @media screen and (max-width: 40em) {
+//     .top-bar-left .responsive { position: relative; }
+//     .top-bar-left .responsive .menu-icon {
+//         right: 0;
+//         top: 0;
+//     }
+//     .top-bar-left .responsive li a {
+//         float: none;
+//         display: block;
+//         text-align: left;
+//     }
+// }

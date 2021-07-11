@@ -7,22 +7,6 @@ year: 2021
 
 # Build settings
 markdown: kramdown
-skip_initial_build: true
-
-# Prevent Jekyll from processing these files BUT include in the build folder.
-include:
-  - node_modules/
-  
-# Collections
-collections:
-  - work_experiences   # Work experiences
-    # order:
-    #   - technical_assistant_family.html
-    #   - specialist.html
-    #   - soft_eng_intern.html
-  - volunteer_experiences # Volunteer experiences
-    # order:
-    #   - technical_assistant_mchapel.html
 
 # Exclude from processing.
 exclude:
@@ -34,6 +18,10 @@ exclude:
   - package-lock.json
   - config.codekit3
   - yarn.lock
-  - node_modules/foundation-sites-custom/
   - node_modules/foundation-sites/docs/
   - node_modules/foundation-sites/meteor-README.md
+  - node_modules/foundation-sites/patches
+  - node_modules/foundation-sites/gulp
+  - node_modules/foundation-sites/test
+  - node_modules/foundation-sites/patches
+  - node_modules/foundation-sites/customizer
