@@ -9,6 +9,10 @@ year: 2021
 markdown: kramdown
 skip_initial_build: true
 
+# Prevent Jekyll from processing these files BUT include in the build folder.
+include:
+  - node_modules/
+
 # Exclude from processing.
 exclude:
   - .jekyll-cache/
