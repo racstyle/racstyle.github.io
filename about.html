@@ -22,3 +22,63 @@ title: About meeeeeee!
         <p>I am a computer engineering graduate from the University of Illinois at Chicago also looking to obtain my Master's of the same degree at the same school.</p>
     </div>
 </section>
+
+<!-- Education -->
+<hr>
+<header><h2>EDUCATION</h2></header>
+<section class="grid-x grid-padding-x">
+    <div class="large-12 cell">
+        <h3>University of Illinois at Chicago (College of Engineering)</h3>
+        <p>Bachelor's degree in Computer Engineering &nbsp; | &nbsp; 2016 - 2021 </p>
+        <br>
+        <h3>Homeschooled</h3>
+        <p>1999 - 2015</p>
+    </div>
+</section>
+
+<!-- Skills -->
+<hr>
+<header><h2>SKILLS</h2></header>
+<section class="grid-x grid-padding-x">
+    <!-- Coding languages -->
+    <div class="large-12 cell">
+        <header><h3>Languages</h3></header>
+        <div class="grid-x grid-margin-x small-up-2 medium-up-5 large-up-7">
+            {% for item in site.data.languages %}
+                <section class="cell card shrink">
+                    <!-- Language name -->
+                    <header><h5 class="card-divider text-center align-center custom-card-text-height"><strong>{{ item.language }}</strong></h5></header>
+                    <!-- Language icon -->
+                    <div class="grid-x align-center">{{ item.icon }}</div>
+                    <!-- Progress/knowledge bar -->
+                    <div class="progress">
+                        <span class="progress-meter" style="width: {{ item.knowledge }}%">
+                            <span class="progress-meter-text">{{ item.knowledge }}%</span>
+                        </span>
+                    </div>
+                </section>
+            {% endfor %}
+        </div>
+    </div>
+    <!-- Frameworks -->
+    <div class="large-12 cell">
+        <br>
+        <header><h3>Frameworks</h3></header>
+        <div class="grid-x grid-margin-x small-up-2 medium-up-5 large-up-7">
+            {% for item in site.data.frameworks %}
+                <section class="cell card shrink">
+                    <!-- Language name -->
+                    <header><h5 class="card-divider text-center align-center custom-card-text-height"><strong>{{ item.framework }}</strong></h5></header>
+                    <!-- Language icon -->
+                    <div class="grid-x align-center">{{ item.icon }}</div>
+                    <!-- Progress/knowledge bar -->
+                    <div class="progress">
+                        <span class="progress-meter" style="width: {{ item.knowledge }}%">
+                            <span class="progress-meter-text">{{ item.knowledge }}%</span>
+                        </span>
+                    </div>
+                </section>
+            {% endfor %}
+        </div>
+    </div>
+</section>

@@ -7513,6 +7513,14 @@ hr {
     display: none;
   }
 }
+.about-icon-size-img {
+  width: 5em;
+}
+
+.custom-card-text-height {
+  height: 4em;
+}
+
 .docs-example-orbit-slide {
   padding: 2rem 4rem;
   color: #fefefe;
