@@ -7500,6 +7500,11 @@ hr {
   max-width: 100%;
 }
 
+.construction-icons {
+  width: 3em;
+  margin-bottom: 10px;
+}
+
 .no-js .top-bar {
   display: none;
 }

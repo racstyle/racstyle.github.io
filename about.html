@@ -83,6 +83,32 @@ title: About meeeeeee!
     </div>
 </section>
 
+<!-- Tools -->
+<hr>
+<header><h2>TOOLS</h2></header>
+<section class="grid-x grid-padding-x">
+    <!-- Graphics tools -->
+    <div class="large-12 cell">
+        <header><h3>Graphics</h3></header>
+        <div class="grid-x grid-margin-x small-up-2 medium-up-5 large-up-7">
+            {% for item in site.data.tools_graphics %}
+                <section class="cell card shrink">
+                    <!-- Graphic tool name -->
+                    <header><h5 class="card-divider text-center align-center custom-card-text-height"><strong>{{ item.tool }}</strong></h5></header>
+                    <!-- Graphic ool icon -->
+                    <div class="grid-x align-center">{{ item.icon }}</div>
+                    <!-- Progress/knowledge bar -->
+                    <div class="progress">
+                        <span class="progress-meter" style="width: {{ item.knowledge }}%">
+                            <span class="progress-meter-text">{{ item.knowledge }}%</span>
+                        </span>
+                    </div>
+                </section>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
 <!-- Experience -->
 <hr>
 <header><h2>EXPERIENCE</h2></header>
