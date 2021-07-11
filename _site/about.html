@@ -6,7 +6,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>About meeeeeee!</title>
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css">
-        
+        <link rel="icon" href="assets/Apple-Spring.png">    <!-- Icon -->
+        <link rel="stylesheet" href="node_modules/foundation-icons/foundation-icons.css">
         <link rel="stylesheet" href="css/app.css">
     </head>
     <body>
@@ -18,12 +19,17 @@
         </div>
         
         <!-- Menu bar content -->
-        <nav class="top-bar" id="menu">
+        <nav class="top-bar" id="menu" data-animate="hinge-in-from-top spin-out">
             <div class="top-bar-left">
     <ul class="vertical menu dropdown medium-horizontal" data-dropdown-menu>
         <li class="menu-text">Le Website</li>
-        <li><a href="http://localhost:4000" class="active">Home</a></li>
-        <li><a href="/about">About</a></li>
+        
+            <li><a href="/" >Home</a></li>
+        
+            <li><a href="/about.html"  class="is-active" >About</a></li>
+        
+            <li><a href="/playgrounds.html" >Playgrounds</a></li>
+        
     </ul>
 </div>
 <div class="top-bar-right">
@@ -32,38 +38,278 @@
     </ul>
 </div>
         </nav>
-            
-        <!-- Content -->
-        <!-- Main header -->
-<div class="grid-x grid-padding-x">
-    <div class="large-12 cell">
-        <header><h1>About meeeeeee!</h1></header>
-    </div>
-</div>
+        
+        <!-- Content and Footer -->
+        <div class="grid-x grid-padding-x">
+            <div class="large-12 cell">
+                <!-- Content -->
+                <!-- Main header -->
+<header><h1>About meeeeeee!</h1></header>
 
 <!-- Main content -->
-<div class="grid-x">
-    <div class="large-12 cell">
-        <div class="callout">
-            <p>This is where you can find out more about meeeeee!</p>
-            <p>More stuff will be coming soon!</p>
-        </div>
-    </div>
-</div>
-        
-        <!-- Footer -->
-        <hr>
-<div class="float-left">
-    <h4>Oh look, a foot!</h4>
+<!-- Description box -->
+<div class="callout">
+    <p>Wanna learn more about the creator of this website?  This is where you can find out more about meeeeee!</p>
 </div>
 
-<div class="float-right">
-    <p style="display: inline;">Follow me!</p>
-    <!-- &nbsp; &nbsp; -->
-    <a href="https://github.com/racstyle/" target="_blank"><i class="fab fa-github"></i></a>
-    &nbsp;
-    <a href="https://linkedin.com/in/rachel-estilo/" target="_blank"><i class="fab fa-linkedin"></i></a>
-</div>
+<!-- Introduction -->
+<section class="media-object">
+    <div class="media-object-section">
+        <img class="thumbnail" src="assets/rachel.jpg">
+    </div>
+    <div class="media-object-section">
+        <h2>Coding, music, and graphics, 'nuff said</h2>
+        <p>I am a computer engineering graduate from the University of Illinois at Chicago also looking to obtain my Master's of the same degree at the same school.</p>
+    </div>
+</section>
+
+<!-- Education -->
+<hr>
+<header><h2>EDUCATION</h2></header>
+<section class="grid-x grid-padding-x">
+    <div class="large-12 cell">
+        <h3>University of Illinois at Chicago (College of Engineering)</h3>
+        <p>Bachelor's degree in Computer Engineering &nbsp; | &nbsp; 2016 - 2021 </p>
+        <br>
+        <h3>Homeschooled</h3>
+        <p>1999 - 2015</p>
+    </div>
+</section>
+
+<!-- Skills -->
+<hr>
+<header><h2>SKILLS</h2></header>
+<section class="grid-x grid-padding-x">
+    <!-- Coding languages -->
+    <div class="large-12 cell">
+        <header><h3>Languages</h3></header>
+        <div class="grid-x grid-margin-x small-up-2 medium-up-5 large-up-7">
+            
+                <section class="cell card shrink">
+                    <!-- Language name -->
+                    <header><h5 class="card-divider text-center align-center custom-card-text-height"><strong>HTML5</strong></h5></header>
+                    <!-- Language icon -->
+                    <div class="grid-x align-center"><img class="about-icon-size-img" src="https://img.icons8.com/color/480/000000/html-5--v1.png"/></div>
+                    <!-- Progress/knowledge bar -->
+                    <div class="progress">
+                        <span class="progress-meter" style="width: 93%">
+                            <span class="progress-meter-text">93%</span>
+                        </span>
+                    </div>
+                </section>
+            
+                <section class="cell card shrink">
+                    <!-- Language name -->
+                    <header><h5 class="card-divider text-center align-center custom-card-text-height"><strong>CSS3</strong></h5></header>
+                    <!-- Language icon -->
+                    <div class="grid-x align-center"><img class="about-icon-size-img" src="https://img.icons8.com/color/480/000000/css3.png"/></div>
+                    <!-- Progress/knowledge bar -->
+                    <div class="progress">
+                        <span class="progress-meter" style="width: 90%">
+                            <span class="progress-meter-text">90%</span>
+                        </span>
+                    </div>
+                </section>
+            
+                <section class="cell card shrink">
+                    <!-- Language name -->
+                    <header><h5 class="card-divider text-center align-center custom-card-text-height"><strong>JavaScript</strong></h5></header>
+                    <!-- Language icon -->
+                    <div class="grid-x align-center"><img class="about-icon-size-img" src="https://img.icons8.com/color/480/000000/javascript--v1.png"/></div>
+                    <!-- Progress/knowledge bar -->
+                    <div class="progress">
+                        <span class="progress-meter" style="width: 87%">
+                            <span class="progress-meter-text">87%</span>
+                        </span>
+                    </div>
+                </section>
+            
+                <section class="cell card shrink">
+                    <!-- Language name -->
+                    <header><h5 class="card-divider text-center align-center custom-card-text-height"><strong>Python</strong></h5></header>
+                    <!-- Language icon -->
+                    <div class="grid-x align-center"><img class="about-icon-size-img" src="https://img.icons8.com/color/480/000000/python--v1.png"/></div>
+                    <!-- Progress/knowledge bar -->
+                    <div class="progress">
+                        <span class="progress-meter" style="width: 85%">
+                            <span class="progress-meter-text">85%</span>
+                        </span>
+                    </div>
+                </section>
+            
+                <section class="cell card shrink">
+                    <!-- Language name -->
+                    <header><h5 class="card-divider text-center align-center custom-card-text-height"><strong>MatLab</strong></h5></header>
+                    <!-- Language icon -->
+                    <div class="grid-x align-center"><img class="about-icon-size-img" src="https://img.icons8.com/fluent/480/000000/matlab.png"/></div>
+                    <!-- Progress/knowledge bar -->
+                    <div class="progress">
+                        <span class="progress-meter" style="width: 67%">
+                            <span class="progress-meter-text">67%</span>
+                        </span>
+                    </div>
+                </section>
+            
+                <section class="cell card shrink">
+                    <!-- Language name -->
+                    <header><h5 class="card-divider text-center align-center custom-card-text-height"><strong>C++</strong></h5></header>
+                    <!-- Language icon -->
+                    <div class="grid-x align-center"><img class="about-icon-size-img" src="https://img.icons8.com/color/480/000000/c-plus-plus-logo.png"/></div>
+                    <!-- Progress/knowledge bar -->
+                    <div class="progress">
+                        <span class="progress-meter" style="width: 47%">
+                            <span class="progress-meter-text">47%</span>
+                        </span>
+                    </div>
+                </section>
+            
+        </div>
+    </div>
+    <!-- Frameworks -->
+    <div class="large-12 cell">
+        <br>
+        <header><h3>Frameworks</h3></header>
+        <div class="grid-x grid-margin-x small-up-2 medium-up-5 large-up-7">
+            
+                <section class="cell card shrink">
+                    <!-- Language name -->
+                    <header><h5 class="card-divider text-center align-center custom-card-text-height"><strong>Foundation Sites 6</strong></h5></header>
+                    <!-- Language icon -->
+                    <div class="grid-x align-center"><img class="about-icon-size-img" src="https://img.icons8.com/material-outlined/480/000000/z-coordinate.png"/></div>
+                    <!-- Progress/knowledge bar -->
+                    <div class="progress">
+                        <span class="progress-meter" style="width: 90%">
+                            <span class="progress-meter-text">90%</span>
+                        </span>
+                    </div>
+                </section>
+            
+                <section class="cell card shrink">
+                    <!-- Language name -->
+                    <header><h5 class="card-divider text-center align-center custom-card-text-height"><strong>Vue.js</strong></h5></header>
+                    <!-- Language icon -->
+                    <div class="grid-x align-center"><img class="about-icon-size-img" src="https://img.icons8.com/color/480/000000/vue-js.png"/></div>
+                    <!-- Progress/knowledge bar -->
+                    <div class="progress">
+                        <span class="progress-meter" style="width: 85%">
+                            <span class="progress-meter-text">85%</span>
+                        </span>
+                    </div>
+                </section>
+            
+                <section class="cell card shrink">
+                    <!-- Language name -->
+                    <header><h5 class="card-divider text-center align-center custom-card-text-height"><strong>Sass</strong></h5></header>
+                    <!-- Language icon -->
+                    <div class="grid-x align-center"><img class="about-icon-size-img" src="https://img.icons8.com/color/480/000000/sass.png"/></div>
+                    <!-- Progress/knowledge bar -->
+                    <div class="progress">
+                        <span class="progress-meter" style="width: 78%">
+                            <span class="progress-meter-text">78%</span>
+                        </span>
+                    </div>
+                </section>
+            
+        </div>
+    </div>
+</section>
+
+<!-- Tools -->
+<hr>
+<header><h2>TOOLS</h2></header>
+<section class="grid-x grid-padding-x">
+    <div class="large-12 cell">
+        <header><h3>Graphics</h3></header>
+        <div class="grid-x grid-margin-x small-up-2 medium-up-5 large-up-7">
+            
+                <section class="cell card shrink">
+                    <!-- Tool name -->
+                    <header><h5 class="card-divider text-center align-center custom-card-text-height"><strong>Adobe Photoshop</strong></h5></header>
+                    <!-- Tool icon -->
+                    <div class="grid-x align-center"><img class="about-icon-size-img" src="https://img.icons8.com/fluent/480/000000/adobe-photoshop.png"/></div>
+                    <!-- Progress/knowledge bar -->
+                    <div class="progress">
+                        <span class="progress-meter" style="width: 90%">
+                            <span class="progress-meter-text">90%</span>
+                        </span>
+                    </div>
+                </section>
+            
+        </div>
+    </div>
+</section>
+
+<!-- Experience -->
+<hr>
+<header><h2>EXPERIENCE</h2></header>
+<section class="grid-x grid-padding-x">
+    <div class="large-6 cell">
+        <h3>Job Experience</h3>
+        
+        
+            <h4>Technical Assistant</h4>
+            <p>Mar 12, 2012 - Jul 10, 2021 &nbsp; &nbsp; | &nbsp; &nbsp; Personal Family Business</p>
+            <ul>
+    <li>Repair Windows or Mac computers for clients and family.</li>
+    <li>Update program software and operating software.</li>
+</ul>
+            <br>
+        
+            <h4>Client Support Specialist</h4>
+            <p>May 19, 2019 - May 19, 2021 &nbsp; &nbsp; | &nbsp; &nbsp; University of Illinois at Chicago</p>
+            <ul>
+    <li>Categorize and reply to an average of 4 to 5 support tickets emailed to the Learning Technology Solutions (LTS) office during daily shifts.</li>
+    <li>Answer phone calls regarding a variety of technical problems with classroom A/V systems and providing solutions for basic Blackboard website questions</li>
+    <li>Perform classroom checks on a majority of UIC East Campus buildings by maintaining the A/V systems within each lecture room.</li>
+</ul>
+            <br>
+        
+            <h4>Software Engineering Intern (Front End Developer)</h4>
+            <p>Jun 01, 2020 - Aug 13, 2020 &nbsp; &nbsp; | &nbsp; &nbsp; Avanade Inc.</p>
+            <ul>
+    <li>Participated in Avanade’s first virtual internship program due to the COVID-19 Coronavirus pandemic.</li>
+    <li>Member of a successful group encouraging team participation and communication in the remote project.</li>
+    <li>Assisted in creating a live leaderboard for the Midwest Virtual Makeathon 2020 using Power BI and Power Apps.</li>
+    <li>Participated and won in Avanade’s first virtual FUEL Hackathon Conference.</li>
+    <li>Coded in Vue.js, Bootstrap, HTML, and CSS for the last internship project.</li>
+</ul>
+            <br>
+        
+        <hr class="medium-12">
+    </div>
+    <div class="large-6 cell">
+        <h3>Volunteer Experience</h3>
+        
+            <h4>Technical Assistant</h4>
+            <p>2013 - Present &nbsp; &nbsp; | &nbsp; &nbsp; Maranatha Chapel</p>
+            <ul>
+    <li>Assist with AV operations and troubleshooting for Sunday church services.</li>
+    <li>Test new software and hardware for computers at the church to better meet the needs of the staff and church members.</li>
+    <li>Maintain and repair computers and equipment used in church offices by conducting weekly checks and services.</li>
+    <li>Use Adobe After Effects and Premiere Pro to create various lyric videos for offertories and other church performances.</li>
+</ul>
+            <br>
+        
+    </div>
+</section>
+
+                
+                <!-- Footer -->
+                <hr>
+<footer>
+    <div class="float-left">
+        <h4>Oh look, a foot!</h4>
+    </div>
+
+    <div class="float-right">
+        <p style="display: inline;">Follow me! &nbsp; &nbsp; &nbsp; &nbsp;</p>
+        <a href="https://github.com/racstyle/" target="_blank"><i class="fab fa-github icon-foot"></i></a>
+        &nbsp;
+        <a href="https://linkedin.com/in/rachel-estilo/" target="_blank"><i class="fab fa-linkedin icon-foot"></i></a>
+    </div>
+</footer>
+            </div>
+        </div>
         
         <script src="https://code.jquery.com/jquery-3.6.0.min.js" crossorigin="anonymous"></script>
         <script>window.jQuery || document.write('<script src="node_modules/jquery/dist/jquery.min.js"><\/script>')</script>

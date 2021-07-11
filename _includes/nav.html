@@ -1,8 +1,9 @@
 <div class="top-bar-left">
     <ul class="vertical menu dropdown medium-horizontal" data-dropdown-menu>
         <li class="menu-text">Le Website</li>
-        <li><a href="{{ site.url }}" class="active">Home</a></li>
-        <li><a href="/about">About</a></li>
+        {% for item in site.data.navigation %}
+            <li><a href="{{ item.url }}" {% if page.url == item.url %} class="is-active" {% endif %}>{{ item.name }}</a></li>
+        {% endfor %}
     </ul>
 </div>
 <div class="top-bar-right">

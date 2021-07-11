@@ -1,0 +1,65 @@
+---
+layout: default
+title: Playing grounds
+---
+
+<!-- Main header -->
+<header><h1>{{ page.title }}</h1></header>
+
+<!-- Main content -->
+<!-- Description box -->
+<div class="callout">
+    <p>It's time to play!  Here is where you can see some personal projects I am working on!</p>
+</div>
+
+<!-- Slideshow stuff -->
+<h2>Slideshow test!</h2>
+<div class="orbit" role="region" aria-label="Favorite Text Ever" data-orbit>
+    <ul class="orbit-container">
+        <!-- Slideshow nav arrows -->
+        <button class="orbit-previous" aria-label="previous"><span class="show-for-sr">Previous Slide</span>&#9664;</button>
+        <button class="orbit-next" aria-label="next"><span class="show-for-sr">Next Slide</span>&#9654;</button>
+        <!-- Slide #1 -->
+        <li class="is-active orbit-slide">
+            <div class="docs-example-orbit-slide">
+                <h3>Poll of the Day:</h3>
+                <div id="poll">
+                    <h4>Do you like what you are seeing so far? (poll doesn't work now but fun to play with!)</h4>
+                    <form>
+                        Yeah! <input type="radio" name="vote" value="0" onclick="getVote(this.value)"><br>
+                        Nah <input type="radio" name="vote" value="1" onclick="getVote(this.value)">
+                    </form>
+                </div>
+            </div>
+        </li>
+        <!-- Slide #2 -->
+        <li class="orbit-slide">
+            <div class="docs-example-orbit-slide">
+                <h3>Announcement #1:</h3>
+                <h5>More exciting stuff coming soon!  Right now, it ain't much but hey, I try 😅</h5>
+            </div>
+        </li>
+        <!-- Slide #3 -->
+        <li class="orbit-slide">
+            <div class="docs-example-orbit-slide">
+                <h3>Announcement #2:</h3>
+                <h5>Cool stuff is happening! 😱</h5>
+            </div>
+        </li>
+        <!-- Slide #4 -->
+        <li class="orbit-slide">
+            <img class="orbit-image" src="assets/Apple-Spring.png" />
+            <figcaption class="orbit-caption">Look!  Colors!</figcaption>
+        </li>
+    </ul>
+    <!-- Slideshow nav bullets -->
+    <nav class="orbit-bullets">
+        <button class="is-active" data-slide="0">
+            <span class="show-for-sr">First slide details.</span>
+            <span class="show-for-sr" data-slide-active-label>Current Slide</span>
+        </button>
+        <button data-slide="1"><span class="show-for-sr">Second slide details.</span></button>
+        <button data-slide="2"><span class="show-for-sr">Third slide details.</span></button>
+        <button data-slide="3"><span class="show-for-sr">Fourth slide details.</span></button>
+    </nav>
+</div>

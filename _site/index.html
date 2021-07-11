@@ -4,9 +4,10 @@
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Welcome Homeeeeeee!</title>
+        <title>Home sweet Homeeeeeee!</title>
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css">
-        
+        <link rel="icon" href="assets/Apple-Spring.png">    <!-- Icon -->
+        <link rel="stylesheet" href="node_modules/foundation-icons/foundation-icons.css">
         <link rel="stylesheet" href="css/app.css">
     </head>
     <body>
@@ -18,12 +19,17 @@
         </div>
         
         <!-- Menu bar content -->
-        <nav class="top-bar" id="menu">
+        <nav class="top-bar" id="menu" data-animate="hinge-in-from-top spin-out">
             <div class="top-bar-left">
     <ul class="vertical menu dropdown medium-horizontal" data-dropdown-menu>
         <li class="menu-text">Le Website</li>
-        <li><a href="http://localhost:4000" class="active">Home</a></li>
-        <li><a href="/about">About</a></li>
+        
+            <li><a href="/"  class="is-active" >Home</a></li>
+        
+            <li><a href="/about.html" >About</a></li>
+        
+            <li><a href="/playgrounds.html" >Playgrounds</a></li>
+        
     </ul>
 </div>
 <div class="top-bar-right">
@@ -32,90 +38,39 @@
     </ul>
 </div>
         </nav>
-            
-        <!-- Content -->
-        <!-- Main header -->
-<div class="grid-x grid-padding-x">
-    <div class="large-12 cell">
-        <header><h1>Home sweet Homeeeeeee!</h1></header>
-    </div>
-</div>
+        
+        <!-- Content and Footer -->
+        <div class="grid-x grid-padding-x">
+            <div class="large-12 cell">
+                <!-- Content -->
+                <!-- Main header -->
+<header><h1>Home sweet Homeeeeeee!</h1></header>
 
 <!-- Main content -->
-<div class="grid-x">
-    <div class="large-12 cell">
-        <div class="callout">
-            <p>Hi!  This is where you will find what craziness I am up to!</p>
-            <p>Right now, it's a barebones mess but stay tuned for some updates, both good and bad! 😅</p>
-            <p><strong>Note:</strong> we have started fresh from before so that it why we are back to the plain mess of nothingness 😅</p>
-        </div>
-
-        <!-- Slideshow stuff -->
-        <div class="orbit" role="region" aria-label="Favorite Text Ever" data-orbit>
-            <ul class="orbit-container">
-                <!-- Slideshow nav arrows -->
-                <button class="orbit-previous" aria-label="previous"><span class="show-for-sr">Previous Slide</span>&#9664;</button>
-                <button class="orbit-next" aria-label="next"><span class="show-for-sr">Next Slide</span>&#9654;</button>
-                <!-- Slide #1 -->
-                <li class="is-active orbit-slide">
-                    <div class="docs-example-orbit-slide">
-                        <h3>Poll of the Day:</h3>
-                        <div id="poll">
-                            <h4>Do you like what you are seeing so far? (poll doesn't work now but fun to play with!)</h4>
-                            <form>
-                                Yeah! <input type="radio" name="vote" value="0" onclick="getVote(this.value)"><br>
-                                Nah <input type="radio" name="vote" value="1" onclick="getVote(this.value)">
-                            </form>
-                        </div>
-                    </div>
-                </li>
-                <!-- Slide #2 -->
-                <li class="orbit-slide">
-                    <div class="docs-example-orbit-slide">
-                        <h3>Announcement #1:</h3>
-                        <h5>More exciting stuff coming soon!  Right now, it ain't much but hey, I try 😅</h5>
-                    </div>
-                </li>
-                <!-- Slide #3 -->
-                <li class="orbit-slide">
-                    <div class="docs-example-orbit-slide">
-                        <h3>Announcement #2:</h3>
-                        <h5>Cool stuff is happening! 😱</h5>
-                    </div>
-                </li>
-                <!-- Slide #4 -->
-                <li class="orbit-slide">
-                    <img class="orbit-image" src="assets/Apple-Spring.png" />
-                    <figcaption class="orbit-caption">Look!  Colors!</figcaption>
-                </li>
-            </ul>
-            <!-- Slideshow nav bullets -->
-            <nav class="orbit-bullets">
-                <button class="is-active" data-slide="0">
-                    <span class="show-for-sr">First slide details.</span>
-                    <span class="show-for-sr" data-slide-active-label>Current Slide</span>
-                </button>
-                <button data-slide="1"><span class="show-for-sr">Second slide details.</span></button>
-                <button data-slide="2"><span class="show-for-sr">Third slide details.</span></button>
-                <button data-slide="3"><span class="show-for-sr">Fourth slide details.</span></button>
-            </nav>
-        </div>
+<!-- Description box -->
+<div class="callout">
+    <p>Hi!  This is where you will find what craziness I am up to!</p>
+    <p>Right now, it's a barebones mess but stay tuned for some updates, both good and bad! 😅</p>
+    <p><strong>Note:</strong> we have started fresh from before so that it why we are back to the plain mess of nothingness 😅</p>
+    <p>This website is a work-in-progress so expect to see a bunch of small or even huge updates coming soon!</p>
+</div>
+                
+                <!-- Footer -->
+                <hr>
+<footer>
+    <div class="float-left">
+        <h4>Oh look, a foot!</h4>
     </div>
-</div>
-        
-        <!-- Footer -->
-        <hr>
-<div class="float-left">
-    <h4>Oh look, a foot!</h4>
-</div>
 
-<div class="float-right">
-    <p style="display: inline;">Follow me!</p>
-    <!-- &nbsp; &nbsp; -->
-    <a href="https://github.com/racstyle/" target="_blank"><i class="fab fa-github"></i></a>
-    &nbsp;
-    <a href="https://linkedin.com/in/rachel-estilo/" target="_blank"><i class="fab fa-linkedin"></i></a>
-</div>
+    <div class="float-right">
+        <p style="display: inline;">Follow me! &nbsp; &nbsp; &nbsp; &nbsp;</p>
+        <a href="https://github.com/racstyle/" target="_blank"><i class="fab fa-github icon-foot"></i></a>
+        &nbsp;
+        <a href="https://linkedin.com/in/rachel-estilo/" target="_blank"><i class="fab fa-linkedin icon-foot"></i></a>
+    </div>
+</footer>
+            </div>
+        </div>
         
         <script src="https://code.jquery.com/jquery-3.6.0.min.js" crossorigin="anonymous"></script>
         <script>window.jQuery || document.write('<script src="node_modules/jquery/dist/jquery.min.js"><\/script>')</script>

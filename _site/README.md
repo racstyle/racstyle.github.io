@@ -13,6 +13,7 @@ In the meantime, while you see the chaos, check out what I (will) use in this re
 - [Terminal](https://support.apple.com/guide/terminal/welcome/mac), only used for debugging
 - [Google](https://google.com) because I am not a super programmer guru I aspire to be 😅
 - [Spotify](https://spotify.com) for my motivation music because every programmer needs that awesome hackers-themed music 🙃 (psst, you can take a listen [here](https://open.spotify.com/playlist/4AnozME0oobxBJQX2H5ko2?si=a72acc98755a4369)!)
+- [Notion.so](https://notion.so) for all my DEV tasks, notes, and bookmarks (I dunno about you, but I love this tool)
 
 # What languages and frameworks were used?
 - [Git](https://git-scm.com/) for project management
@@ -22,7 +23,7 @@ In the meantime, while you see the chaos, check out what I (will) use in this re
 - [Foundation Sites 6](https://get.foundation/) for responsive pages (I almost gave up on this but this [repo](https://github.com/daigofuji/jekyll-foundation-6-starter/tree/gh-pages/bower_components/foundation-sites) is a Godsend)
 - [Jekyll](http://jekyllrb.com) for viewing my live results on my local dev environment
 - [Liquid](https://jekyllrb.com/docs/liquid/) for reusable code for my nav and footer elements (NOTE: being a newb at static pages I am, it used to be [PHP](https://php.net) but I have learned my lesson lol)
-- [Font Awesome](https://fontawesome.com/) for awesome icons!
+- [Font Awesome](https://fontawesome.com/), [Icons8](https://icons8.com), and [Foundation Icon Fonts 3](https://zurb.com/playground/foundation-icon-fonts-3) for awesome icons!
 
 # Do I plan to implement any other languages?
 Most definitely!  Here is what I plan to add to my coding playground as soon as I can:
