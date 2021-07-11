@@ -7496,10 +7496,23 @@ html.is-reveal-open body {
   animation-delay: 700ms !important;
 }
 
-.fa {
-  text-decoration: none;
+hr {
+  max-width: 100%;
 }
 
+.no-js .top-bar {
+  display: none;
+}
+
+@media screen and (min-width: 40em) {
+  .no-js .top-bar {
+    display: block;
+  }
+
+  .no-js .title-bar {
+    display: none;
+  }
+}
 .docs-example-orbit-slide {
   padding: 2rem 4rem;
   color: #fefefe;
@@ -7515,6 +7528,10 @@ html.is-reveal-open body {
   background: lightseagreen;
 }
 
+.orbit-container {
+  height: 20em;
+}
+
 .orbit-image {
   height: 20em;
   object-fit: cover;
@@ -7524,7 +7541,7 @@ html.is-reveal-open body {
   height: 250px;
 }
 
-.orbit-container .orbit-slides-container > * {
+.orbit-container .orbit-slides-container {
   position: relative;
   margin-left: 0;
   float: left;
@@ -7532,8 +7549,11 @@ html.is-reveal-open body {
 }
 
 .icon-foot {
-  font-size: 2em;
-  color: black;
+  font-size: 1.5em;
+}
+
+.fab {
+  text-decoration: none;
 }
 
 /*# sourceMappingURL=app.css.map */
