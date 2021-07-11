@@ -64,10 +64,8 @@
 @include motion-ui-animations;
 
 // --------------- Global variables and elements ----------------
-$orbit-height: 20em;    //  height of slides
-$footer-icon-size: 1.5em;
-
 hr { max-width: 100%; }
+
 
 // -------------------------- Nav bar ---------------------------
 // Prevent flash of unstyled content
@@ -84,6 +82,7 @@ hr { max-width: 100%; }
 }
 
 // --------------------- Slideshow Classes -----------------------
+$orbit-height: 20em;    //  height of slides
 .docs-example-orbit-slide {     //  slideshow elements/slides
     padding: 2rem 4rem;
     color: $white;
@@ -107,12 +106,13 @@ hr { max-width: 100%; }
 }
 .orbit-container { height:250px; }  
 .orbit-container .orbit-slides-container {
-  position: relative;
-  margin-left: 0;
-  float: left;
-  height: 100%;
+    position: relative;
+    margin-left: 0;
+    float: left;
+    height: 100%;
 }
 
 // --------------------------- Footer ------------------------------
+$footer-icon-size: 1.5em;
 .icon-foot { font-size: $footer-icon-size; }
 .fab { text-decoration: none; }  //  remove underscores in links
