@@ -1,0 +1,29 @@
+---
+layout: default
+title: ⚠️ Oh wow!  You have found a secret dev page!
+---
+
+<!-- Main header -->
+<header><h1>{{ page.title }}</h1></header>
+
+<!-- Main content -->
+<!-- Description box -->
+<div class="callout">
+    <p>Hey, congrats on finding a secret dev page I use to debug!  This is the <strong>Liquid language debugger</strong> I use to test the Liquid language syntax for whatever I use Liquid for.</p>
+    <p>Why am I keeping this here in the live site you ask?  Well, I want to make sure my local tests also works on my remote site as well!  Plus, it is fun to have people see what happens behind the scenes to see how my website came together. :D</p>
+</div>
+
+<!-- Liquid grouped sorting test -->
+<h2>Testing grouped sorting</h2>
+
+{% assign sorted_days = site.work_experiences | sort: "end_day" %}
+{% assign months = sorted_days | sort: "end_month" %}
+{% assign sorted_months = months | reverse %}
+{% assign sorted_years = sorted_months | sort: "end_year" %}
+
+{% for item in sorted_years reversed %}
+    {% if item.end_day == null %}
+        <p>Day is empty</p>
+    {% endif %}
+    {{ item.end_year }} {{ item.end_month }} {{ item.end_day }} | {{ item.position }} <br>
+{% endfor %}
