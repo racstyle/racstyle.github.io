@@ -17,6 +17,21 @@ title: 🎊 Oh wow!  You have found a secret dev page! 😱
 <h2>Testing grouped sorting</h2>
 <div class="callout">
     <p>Aighty, it's about to get real, people.  This is tougher than I thought!</p>
-
-    {{ site.work_experiences }}
+     
+    <!-- Trying again with a different method, nested front matter...... -->
+    <p>Trying again with a different method, nested front matter......</p>
+    <!-- Needs to be in a for-loop to examine each front matter variable in each page -->
+    {% for data in site.work_experiences %}     <!-- go through each page -->
+        {% assign end_dataa = data.end_data %}      <!-- enable ability to access each sub item -->
+        all end_data equiv {{ end_dataa }} <br>     <!-- list each sub item to be sure -->
+        <br>
+        <p>Ok, let's try looping through.....</p>
+        {% for page_end_data in data.end_data %}    <!-- accessing each sub item -->
+            {{ page_end_data.end_yeara }}               <!-- year -->
+            {{ page_end_data.end_montha }}              <!-- month -->
+            {{ page_end_data.end_daya }}                <!-- day -->
+            <br>
+        {% endfor %}
+        <hr><br>
+    {% endfor %}
 </div>
