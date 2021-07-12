@@ -15,15 +15,8 @@ title: 🎊 Oh wow!  You have found a secret dev page! 😱
 
 <!-- Liquid grouped sorting test -->
 <h2>Testing grouped sorting</h2>
+<div class="callout">
+    <p>Aighty, it's about to get real, people.  This is tougher than I thought!</p>
 
-{% assign sorted_days = site.work_experiences | sort: "end_day" %}
-{% assign months = sorted_days | sort: "end_month" %}
-{% assign sorted_months = months | reverse %}
-{% assign sorted_years = sorted_months | sort: "end_year" %}
-
-{% for item in sorted_years reversed %}
-    {% if item.end_day == null %}
-        <p>Day is empty</p>
-    {% endif %}
-    {{ item.end_year }} {{ item.end_month }} {{ item.end_day }} | {{ item.position }} <br>
-{% endfor %}
+    {{ site.work_experiences }}
+</div>
