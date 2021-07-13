@@ -9,11 +9,6 @@ year: 2021
 markdown: kramdown
 skip_initial_build: true
 
-# Collections
-collections:
-  - work_experiences   # Work experiences
-  - volunteer_experiences # Volunteer experiences
-
 # Prevent Jekyll from processing these files BUT include in the build folder.
 include:
   - node_modules/

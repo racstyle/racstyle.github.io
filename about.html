@@ -115,22 +115,11 @@ title: About meeeeeee!
 <section class="grid-x grid-padding-x">
     <div class="large-6 cell">
         <h3>Job Experience</h3>
-        {% assign sorted_experiences = site.work_experiences | sort: "end_date" %}
-        {% for work in sorted_experiences reversed %}
-            <h4>{{ work.position }}</h4>
-            <p>{{ work.start_date | date: '%b %d, %Y' }} - {{ work.end_date | date: '%b %d, %Y' }} &nbsp; &nbsp; | &nbsp; &nbsp; {{ work.company }}</p>
-            {{ work.content }}
-            <br>
-        {% endfor %}
+        
         <hr class="medium-12">
     </div>
     <div class="large-6 cell">
         <h3>Volunteer Experience</h3>
-        {% for volunteer in site.volunteer_experiences %}
-            <h4>{{ volunteer.position }}</h4>
-            <p>{{ volunteer.duration }} &nbsp; &nbsp; | &nbsp; &nbsp; {{ volunteer.company }}</p>
-            {{ volunteer.content }}
-            <br>
-        {% endfor %}
+        
     </div>
 </section>

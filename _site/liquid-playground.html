@@ -70,62 +70,72 @@
 <h2>Testing grouped sorting</h2>
 <div class="callout">
     <p>Aighty, it's about to get real, people.  This is tougher than I thought!</p>
-     
-    <!-- Trying again with a different method, nested front matter...... -->
-    <p>Trying again with a different method, nested front matter......</p>
-    <!-- Needs to be in a for-loop to examine each front matter variable in each page -->
-         <!-- go through each page -->
-              <!-- enable ability to access each sub item -->
-        all end_data equiv {"end_yeara"=>2020}{"end_montha"=>8}{"end_daya"=>1} <br>     <!-- list each sub item to be sure -->
-        <br>
-        <p>Ok, let's try looping through.....</p>
-            <!-- accessing each sub item -->
-            2020               <!-- year -->
-                          <!-- month -->
-                            <!-- day -->
-            <br>
-            <!-- accessing each sub item -->
-                           <!-- year -->
-            8              <!-- month -->
-                            <!-- day -->
-            <br>
-            <!-- accessing each sub item -->
-                           <!-- year -->
-                          <!-- month -->
-            1                <!-- day -->
-            <br>
-        
-        <hr><br>
-         <!-- go through each page -->
-              <!-- enable ability to access each sub item -->
-        all end_data equiv {"end_yeara"=>2021}{"end_montha"=>5}{"end_daya"=>19} <br>     <!-- list each sub item to be sure -->
-        <br>
-        <p>Ok, let's try looping through.....</p>
-            <!-- accessing each sub item -->
-            2021               <!-- year -->
-                          <!-- month -->
-                            <!-- day -->
-            <br>
-            <!-- accessing each sub item -->
-                           <!-- year -->
-            5              <!-- month -->
-                            <!-- day -->
-            <br>
-            <!-- accessing each sub item -->
-                           <!-- year -->
-                          <!-- month -->
-            19                <!-- day -->
-            <br>
-        
-        <hr><br>
-         <!-- go through each page -->
-              <!-- enable ability to access each sub item -->
-        all end_data equiv  <br>     <!-- list each sub item to be sure -->
-        <br>
-        <p>Ok, let's try looping through.....</p>
-        
-        <hr><br>
+
+    <p>Solution #1</p>
+    <!-- Sort by year -->
     
+    
+        2021 Year<br>
+
+        <!-- Sort by month -->
+        
+        
+            5 Month<br>
+
+            <!-- Sort by day -->
+            
+            
+                11 Day<br>
+                <!-- end day loop -->
+            <br>
+            <!-- end month loop -->
+        <br>
+    
+        2020 Year<br>
+
+        <!-- Sort by month -->
+        
+        
+            8 Month<br>
+
+            <!-- Sort by day -->
+            
+            
+                19 Day<br>
+            
+                1 Day<br>
+                <!-- end day loop -->
+            <br>
+            <!-- end month loop -->
+        <br>
+        <!-- end year loop -->
+    
+    <br>
+    <p>Solution #2</p>
+    <!-- Access each data point -->
+    
+        {"end_yeara"=>2020, "end_montha"=>8, "end_daya"=>1} Data<br>
+    
+        <!-- Access each year -->
+        
+        2020 Year<br>
+    
+        {"end_yeara"=>2021, "end_montha"=>5, "end_daya"=>19} Data<br>
+    
+        <!-- Access each year -->
+        
+        2021 Year<br>
+    
+        {"end_yeara"=>2019} Data<br>
+    
+        <!-- Access each year -->
+        
+        2019 Year<br>
+    
+
+    
+    
+    <br>
 </div>
                 
                 <!-- Footer -->

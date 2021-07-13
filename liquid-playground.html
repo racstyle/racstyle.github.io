@@ -17,21 +17,40 @@ title: 🎊 Oh wow!  You have found a secret dev page! 😱
 <h2>Testing grouped sorting</h2>
 <div class="callout">
     <p>Aighty, it's about to get real, people.  This is tougher than I thought!</p>
-     
-    <!-- Trying again with a different method, nested front matter...... -->
-    <p>Trying again with a different method, nested front matter......</p>
-    <!-- Needs to be in a for-loop to examine each front matter variable in each page -->
-    {% for data in site.work_experiences %}     <!-- go through each page -->
-        {% assign end_dataa = data.end_data %}      <!-- enable ability to access each sub item -->
-        all end_data equiv {{ end_dataa }} <br>     <!-- list each sub item to be sure -->
-        <br>
-        <p>Ok, let's try looping through.....</p>
-        {% for page_end_data in data.end_data %}    <!-- accessing each sub item -->
-            {{ page_end_data.end_yeara }}               <!-- year -->
-            {{ page_end_data.end_montha }}              <!-- month -->
-            {{ page_end_data.end_daya }}                <!-- day -->
+
+    <p>Solution #1</p>
+    <!-- Sort by year -->
+    {% assign job_by_end_year = site.data.work_experiences | sort: "end_year" | group_by: "end_year" %}
+    {% for year in job_by_end_year reversed %}
+        {{ year.name }} Year<br>
+
+        <!-- Sort by month -->
+        {% assign job_by_end_month = year.items | sort: "end_month" | group_by: "end_month" %}
+        {% for month in job_by_end_month reversed %}
+            {{ month.items.first.end_month }} Month<br>
+
+            <!-- Sort by day -->
+            {% assign job_by_end_day = month.items | sort: "end_day" | group_by: "end_day" %}
+            {% for day in job_by_end_day reversed %}
+                {{ day.items.first.end_day }} Day<br>
+            {% endfor %}    <!-- end day loop -->
             <br>
-        {% endfor %}
-        <hr><br>
+        {% endfor %}    <!-- end month loop -->
+        <br>
+    {% endfor %}    <!-- end year loop -->
+    
+    <br>
+    <p>Solution #2</p>
+    <!-- Access each data point -->
+    {% for job in site.data.work_experiences %}
+        {{ job.end_data }} Data<br>
+    
+        <!-- Access each year -->
+        {% assign data_data = job.end_data %}
+        {{ data_data.end_yeara }} Year<br>
     {% endfor %}
+
+    {% assign data = site.data.work_experiences.end_data %}
+    {% assign years = data.end_yeara %}
+    {{ data }}<br>
 </div>
