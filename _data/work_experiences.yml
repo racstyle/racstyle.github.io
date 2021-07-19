@@ -1,62 +1,62 @@
 - position: Software Engineering Intern (Front End Developer)
   company: Avanade Inc.
   start_date: 2020-06-01
-  end_date: 2020-08-13
+  end_date: 2020-08-06
   start_year: 2020
   start_month: 6
   start_day: 1
   end_year: 2020
   end_month: 8
-  end_day: 1
-  end_data:
-    end_yeara: 2020
-    end_montha: 8
-    end_daya: 1
+  end_day: 6
   location: Chicago, Illinois
   tasks:
-    <ul>
-      <li>Participated in Avanade’s first virtual internship program due to the COVID-19 Coronavirus pandemic.</li>
-      <li>Member of a successful group encouraging team participation and communication in the remote project.</li>
-      <li>Assisted in creating a live leaderboard for the Midwest Virtual Makeathon 2020 using Power BI and Power Apps.</li>
-      <li>Participated and won in Avanade’s first virtual FUEL Hackathon Conference.</li>
-      <li>Coded in Vue.js, Bootstrap, HTML, and CSS for the last internship project.</li>
-    </ul>
+    - description: Participated in Avanade’s first virtual internship program due to the COVID-19 Coronavirus pandemic.
+    - description: Member of a successful group encouraging team participation and communication in the remote project.
+    - description: Assisted in creating a live leaderboard for the Midwest Virtual Makeathon 2020 using Power BI and Power Apps.
+    - description: Participated and won in Avanade’s first virtual FUEL Hackathon Conference.
+    - description: Coded in Vue.js, Bootstrap, HTML, and CSS for the last internship project.
+    # <ul>
+    #   <li>Participated in Avanade’s first virtual internship program due to the COVID-19 Coronavirus pandemic.</li>
+    #   <li>Member of a successful group encouraging team participation and communication in the remote project.</li>
+    #   <li>Assisted in creating a live leaderboard for the Midwest Virtual Makeathon 2020 using Power BI and Power Apps.</li>
+    #   <li>Participated and won in Avanade’s first virtual FUEL Hackathon Conference.</li>
+    #   <li>Coded in Vue.js, Bootstrap, HTML, and CSS for the last internship project.</li>
+    # </ul>
 - position: Client Support Specialist
   company: University of Illinois at Chicago
-  start_date: 2019-05-19
-  end_date: 2021-05-19
+  start_date: 2019-05-17
+  end_date: 2021-05-07
   start_year: 2019
   start_month: 5
-  start_day: 19
+  start_day: 17
   end_year: 2020
-  end_month: 8
-  end_day: 19
-  end_data:
-    end_yeara: 2021
-    end_montha: 5
-    end_daya: 19
+  end_month: 6
+  end_day: 7
   location: Chicago, Illinois
   tasks:
-    <ul>
-      <li>Categorize and reply to an average of 4 to 5 support tickets emailed to the Learning Technology Solutions (LTS) office during daily shifts.</li>
-      <li>Answer phone calls regarding a variety of technical problems with classroom A/V systems and providing solutions for basic Blackboard website questions</li>
-      <li>Perform classroom checks on a majority of UIC East Campus buildings by maintaining the A/V systems within each lecture room.</li>
-    </ul>
+    - description: Categorize and reply to an average of 4 to 5 support tickets emailed to the Learning Technology Solutions (LTS) office during daily shifts.
+    - description: Answer phone calls regarding a variety of technical problems with classroom A/V systems and providing solutions for basic Blackboard website questions.
+    - description: Perform classroom checks on a majority of UIC East Campus buildings by maintaining the A/V systems within each lecture room.
+    # <ul>
+    #   <li>Categorize and reply to an average of 4 to 5 support tickets emailed to the Learning Technology Solutions (LTS) office during daily shifts.</li>
+    #   <li>Answer phone calls regarding a variety of technical problems with classroom A/V systems and providing solutions for basic Blackboard website questions</li>
+    #   <li>Perform classroom checks on a majority of UIC East Campus buildings by maintaining the A/V systems within each lecture room.</li>
+    # </ul>
 - position: Technical Assistant (Family)
   company: Personal Family Business
-  start_date: 2012-03-01
-  end_date: 2021-07-02
+  start_date: 2012-03-00
+  end_date: 2999-10-30
   start_year: 2012
-  start_month: 6
-  start_day: 12
-  end_year: 2021
-  end_month: 5
-  end_day: 11
-  end_data:
-    end_yeara: 2019
+  start_month: 3
+  start_day:
+  end_year: 2999
+  end_month:
+  end_day:
   location: Orland Park, Illinois
   tasks:
-    <ul>
-      <li>Repair Windows or Mac computers for clients and family.</li>
-      <li>Update program software and operating software.</li>
-    </ul>
+    - description: Repair Windows or Mac computers for clients and family.
+    - description: Update program software and operating software.
+    # <ul>
+    #   <li>Repair Windows or Mac computers for clients and family.</li>
+    #   <li>Update program software and operating software.</li>
+    # </ul>

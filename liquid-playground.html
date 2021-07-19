@@ -19,38 +19,113 @@ title: 🎊 Oh wow!  You have found a secret dev page! 😱
     <p>Aighty, it's about to get real, people.  This is tougher than I thought!</p>
 
     <p>Solution #1</p>
+    <br>
+    <!-- Basic idea: -->
+    {% assign end_times = site.data.work_experiences | sort: "end_date" | reverse %}
+    {% for end_year in end_times %}
+        {% assign year_year = end_year.end_date %}
+        <!-- Checking if year is present -->
+        {% assign year_check = year_year | date: "%Y" %}
+        {% if year_check == "2999" %}
+            {% assign year_year = "Present" %}
+        {% endif %}
+        {% if year_year == "Present" %}
+            {{ year_year | date: "%Y" }}<br>
+        {% else %}
+            {{ year_year | date: "%Y" }}<br>
+            {{ year_year | date: "%b" }}<br>
+            {{ year_year | date: "%d" }}<br>
+        {% endif %}
+    {% endfor %}
+    <br><br><br>
+    <!-- Now with sub items by hard formatting -->
+    {% assign endings = site.data.work_experiences | sort: "end_year" | reverse %}
+    {% for year_item in endings %}
+        {% assign yearz = year_item.end_year %}
+        {% assign monthz = year_item.end_month | prepend: '00' | slice: -2, 2 %}
+        {% assign dayz = year_item.end_day | prepend: '00' | slice: -2, 2 %}
+
+        {% capture date_formattin %}{{ yearz }}-{{ monthz }}-{{ dayz }}{% endcapture %}
+        {{ date_formattin }}<br>
+
+        {% case monthz %}
+            {% when != "00" %}
+                <p>Should be happening</p>
+                {% assign yearz = yearz | group_by: "end_year" | sort: "end_month" %}
+                {{ yearz }}<br>
+            {% else %}
+                <p>Nothing happening</p>
+        {% endcase %}
+    {% endfor %}
+    <br>
+    
+    <hr>
+    <div style="display: inline-block;">
+    {% assign work_duration = "" %}
     <!-- Sort by year -->
     {% assign job_by_end_year = site.data.work_experiences | sort: "end_year" | group_by: "end_year" %}
     {% for year in job_by_end_year reversed %}
-        {{ year.name }} Year<br>
+        {% assign job_end_year = year.name %}
 
+        <!-- If end_year is empty/Present --> 
+        {% if job_end_year == "2999" %}
+            {% assign job_end_year = "Present" %}
+        {% endif %}
+        
+        <p>{{ job_end_year }} Year</p>
+
+        <!-- If month is empty -->
+        {% if year.items.first.end_month == nil or year.items.first.start_month == nil %}
+            <p>Month is empty</p>
+
+            <!-- Year -->
+            {% capture work_duration %}
+                {{ year.items.first.start_year }} - {{ job_end_year }}
+            {% endcapture %}
+            <p>{{ year.items.first.start_year }} - {{ job_end_year }}</p><br><br>
+            <!-- {% continue %} -->
+        {% endif %}
+        
         <!-- Sort by month -->
         {% assign job_by_end_month = year.items | sort: "end_month" | group_by: "end_month" %}
         {% for month in job_by_end_month reversed %}
-            {{ month.items.first.end_month }} Month<br>
+            <p>{{ month.items.first.end_month }} Month</p>
+
+            <!-- Arbitrary start date to format month to date -->
+            {% capture start_monthy %}
+                {{ year.items.first.start_year }}-{{ month.items.first.start_month | prepend: '00' | slice: -2, 2 }}-12
+            {% endcapture %}
+            <!-- Arbitrary end date to format month to date -->
+            {% capture end_monthy %}
+                {{ job_end_year }}-{{ month.items.first.end_month | prepend: '00' | slice: -2, 2 }}-12
+            {% endcapture %}
+
+            <!-- If day is empty -->
+            {% if month.items.first.end_day == nil or month.items.first.start_day == nil %}
+                <p>Day is empty</p>
+
+                <!-- Month Year -->
+                {% capture work_duration %}
+                    {{ start_monthy | date: "%b" }} {{ year.items.first.start_year }} - {{ end_monthy | date: "%b" }} {{ job_end_year }}
+                {% endcapture %}
+                <p>{{ start_monthy | date: "%b" }} {{ year.items.first.start_year }} - {{ end_monthy | date: "%b" }} {{ job_end_year }}</p><br>
+                <!-- {% continue %} -->
+            {% endif %}
 
             <!-- Sort by day -->
             {% assign job_by_end_day = month.items | sort: "end_day" | group_by: "end_day" %}
             {% for day in job_by_end_day reversed %}
-                {{ day.items.first.end_day }} Day<br>
+                <p>{{ day.items.first.end_day }} Day</p>
+                <!-- Month Day, Year -->
+                {% capture work_duration %}
+                    {{ start_monthy | date: "%b" }} {{ day.items.first.start_day }}, {{ year.items.first.start_year }} - {{ end_monthy | date: "%b" }} {{ day.items.first.end_day }}, {{ job_end_year }}
+                {% endcapture %}
+                <p>{{ start_monthy | date: "%b" }} {{ day.items.first.start_day }}, {{ year.items.first.start_year }} - {{ end_monthy | date: "%b" }} {{ day.items.first.end_day }}, {{ job_end_year }}</p>
+                <!-- <p>Work duration: {{ work_duration }}</p> -->
             {% endfor %}    <!-- end day loop -->
             <br>
         {% endfor %}    <!-- end month loop -->
         <br>
     {% endfor %}    <!-- end year loop -->
-    
-    <br>
-    <p>Solution #2</p>
-    <!-- Access each data point -->
-    {% for job in site.data.work_experiences %}
-        {{ job.end_data }} Data<br>
-    
-        <!-- Access each year -->
-        {% assign data_data = job.end_data %}
-        {{ data_data.end_yeara }} Year<br>
-    {% endfor %}
-
-    {% assign data = site.data.work_experiences.end_data %}
-    {% assign years = data.end_yeara %}
-    {{ data }}<br>
+    </div>
 </div>
