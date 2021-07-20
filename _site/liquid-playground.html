@@ -104,47 +104,125 @@
             06<br>
         
     
+    
     <br><br><br>
+
     <!-- Now with sub items by hard formatting -->
+    <!-- First sort by end year, then month, then day and put into array -->
     
     
-        
-        
-        
-
-        
-        2999-00-00<br>
-
-        
-                <p>Nothing happening</p>
-        
+    
+    
+    <!-- Sort by year -->
+    
+    <p>{"name"=>"2020", "items"=>[{"position"=>"Software Engineering Intern (Front End Developer)", "company"=>"Avanade Inc.", "start_date"=>#<Date: 2020-06-01 ((2459002j,0s,0n),+0s,2299161j)>, "end_date"=>#<Date: 2020-08-06 ((2459068j,0s,0n),+0s,2299161j)>, "start_year"=>2020, "start_month"=>6, "start_day"=>1, "end_year"=>2020, "end_month"=>8, "end_day"=>6, "location"=>"Chicago, Illinois", "tasks"=>[{"description"=>"Participated in Avanade’s first virtual internship program due to the COVID-19 Coronavirus pandemic."}, {"description"=>"Member of a successful group encouraging team participation and communication in the remote project."}, {"description"=>"Assisted in creating a live leaderboard for the Midwest Virtual Makeathon 2020 using Power BI and Power Apps."}, {"description"=>"Participated and won in Avanade’s first virtual FUEL Hackathon Conference."}, {"description"=>"Coded in Vue.js, Bootstrap, HTML, and CSS for the last internship project."}]}], "size"=>1}{"name"=>"2021", "items"=>[{"position"=>"Client Support Specialist", "company"=>"University of Illinois at Chicago", "start_date"=>#<Date: 2019-05-17 ((2458621j,0s,0n),+0s,2299161j)>, "end_date"=>#<Date: 2021-05-07 ((2459342j,0s,0n),+0s,2299161j)>, "start_year"=>2019, "start_month"=>5, "start_day"=>17, "end_year"=>2021, "end_month"=>5, "end_day"=>7, "location"=>"Chicago, Illinois", "tasks"=>[{"description"=>"Categorize and reply to an average of 4 to 5 support tickets emailed to the Learning Technology Solutions (LTS) office during daily shifts."}, {"description"=>"Answer phone calls regarding a variety of technical problems with classroom A/V systems and providing solutions for basic Blackboard website questions."}, {"description"=>"Perform classroom checks on a majority of UIC East Campus buildings by maintaining the A/V systems within each lecture room."}]}], "size"=>1}{"name"=>"2999", "items"=>[{"position"=>"Technical Assistant (Family)", "company"=>"Personal Family Business", "start_date"=>"2012-03-00", "end_date"=>#<Date: 2999-10-30 ((2816725j,0s,0n),+0s,2299161j)>, "start_year"=>2012, "start_month"=>3, "start_day"=>nil, "end_year"=>2999, "end_month"=>nil, "end_day"=>nil, "location"=>"Orland Park, Illinois", "tasks"=>[{"description"=>"Repair Windows or Mac computers for clients and family."}, {"description"=>"Update program software and operating software."}]}], "size"=>1}</p><br>
     
         
-        
+
+        <!-- If end_year is empty/Present --> 
         
 
+        <!-- If month is empty -->
         
-        2020-06-07<br>
+            <!-- Year -->
+            
+            
+            
+            
+            <!-- 
+        
 
+        <!-- If end_year is empty/Present --> 
         
-                <p>Nothing happening</p>
+
+        <!-- If month is empty -->
         
+        
+        <!-- Sort by month -->
+        
+        
+            <!-- Arbitrary start date to format month to date -->
+            
+            <!-- Arbitrary end date to format month to date -->
+            
+
+            <!-- If day is empty -->
+            
+
+            <!-- Sort by day -->
+            
+            
+                <!-- Month Day, Year -->
+                
+                
+                
+                
+                <!-- end day loop -->
+            <!-- end month loop -->
     
         
-        
+
+        <!-- If end_year is empty/Present --> 
         
 
+        <!-- If month is empty -->
         
-        2020-08-06<br>
+        
+        <!-- Sort by month -->
+        
+        
+            <!-- Arbitrary start date to format month to date -->
+            
+            <!-- Arbitrary end date to format month to date -->
+            
 
-        
-                <p>Nothing happening</p>
-        
+            <!-- If day is empty -->
+            
+
+            <!-- Sort by day -->
+            
+            
+                <!-- Month Day, Year -->
+                
+                
+                
+                
+                <!-- end day loop -->
+            <!-- end month loop -->
+        <!-- end year loop -->
+    
+    <br><br><br>
+    <p>["\n                2012 - Present\n            " "\n                    May 17 2019 - May 07 2021\n                " "\n                    Jun 01 2020 - Aug 06 2020\n                "]</p>
+    <p>
+                    Jun 01, 2020 - Aug 06, 2020
+                </p>
+    <p>["Technical Assistant (Family)" "Client Support Specialist" "Software Engineering Intern (Front End Developer)"]</p>
+    <p>Software Engineering Intern (Front End Developer)</p>
+    <p>["Personal Family Business" "University of Illinois at Chicago" "Avanade Inc."]</p>
+    <p>Avanade Inc.</p>
+    <br><br><br>
+
+    <!-- Then put it together with the experiences -->
+    
+        <p>Technical Assistant (Family)</p>
+        <p>
+                2012 - Present
+            </p>
+    
+        <p>Client Support Specialist</p>
+        <p>
+                    May 17, 2019 - May 07, 2021
+                </p>
+    
+        <p>Software Engineering Intern (Front End Developer)</p>
+        <p>
+                    Jun 01, 2020 - Aug 06, 2020
+                </p>
     
     <br>
     
     <hr>
-    <div style="display: inline-block;">
+    <div style="display: none;">
     
     <!-- Sort by year -->
     
@@ -164,6 +242,44 @@
             
             <p>2012 - Present</p><br><br>
             <!-- 
+        
+
+        <!-- If end_year is empty/Present --> 
+        
+        
+        <p>2021 Year</p>
+
+        <!-- If month is empty -->
+        
+        
+        <!-- Sort by month -->
+        
+        
+            <p>5 Month</p>
+
+            <!-- Arbitrary start date to format month to date -->
+            
+            <!-- Arbitrary end date to format month to date -->
+            
+
+            <!-- If day is empty -->
+            
+
+            <!-- Sort by day -->
+            
+            
+                <p>7 Day</p>
+                <!-- Month Day, Year -->
+                
+                <p>May 17, 2019 - May 7, 2021</p>
+                <!-- <p>Work duration: 
+                    May 17, 2019 - May 7, 2021
+                </p> -->
+                <!-- end day loop -->
+            <br>
+            <!-- end month loop -->
+        <br>
+    
         
 
         <!-- If end_year is empty/Present --> 
@@ -196,29 +312,6 @@
                 <p>Jun 1, 2020 - Aug 6, 2020</p>
                 <!-- <p>Work duration: 
                     Jun 1, 2020 - Aug 6, 2020
-                </p> -->
-                <!-- end day loop -->
-            <br>
-        
-            <p>6 Month</p>
-
-            <!-- Arbitrary start date to format month to date -->
-            
-            <!-- Arbitrary end date to format month to date -->
-            
-
-            <!-- If day is empty -->
-            
-
-            <!-- Sort by day -->
-            
-            
-                <p>7 Day</p>
-                <!-- Month Day, Year -->
-                
-                <p>May 17, 2020 - Jun 7, 2020</p>
-                <!-- <p>Work duration: 
-                    May 17, 2020 - Jun 7, 2020
                 </p> -->
                 <!-- end day loop -->
             <br>
