@@ -1,0 +1,36 @@
+- title: Responsible Consumption
+  company: Avanade Inc.
+  start_year: 2020
+  start_month: 7
+  start_day:
+  end_year: 2020
+  end_month: 8
+  end_day:
+  tasks:
+    - description: Collaborated with a group of two other interns to create a progressive web app to help reduce food waste.
+    - description: Used Azure DevOps and Git for project management and Azure Storage Explorer for hosting the web app.
+    - description: Researched ideas on reducing food waste, determine if additional resources are needed for idea to work, etc.
+    - description: Assisted making web pages responsive and functional using Vue.js and Bootstrap.
+- title: Python MIPS Simulator
+  company: UIC
+  start_year: 2020
+  start_month: 2
+  start_day:
+  end_year: 2020
+  end_month: 2
+  end_day:
+  tasks:
+    - description: Collaborated with a group of two other students to program a MIPS assembly instruction simulator.
+    - description: Developed the assembler and disassembler for instruction conversion from hexadecimal to assembly code and vice versa.
+    - description: Enabled ability to print the listing of registers and memory addresses onto a Python console and output file.
+- title: Tiva C Series LaunchPad Music Box
+  company: UIC
+  start_year: 2019
+  start_month: 11
+  start_day:
+  end_year: 2019
+  end_month: 12
+  end_day:
+  tasks:
+    - description: Developed a music box using a TivaWare C TM4C123G LaunchPad and additional hardware.
+    - description: Coded in C and ARMv7M assembly language as a culmination of hardware programming skills acquired from multiple programming labs during the semester.

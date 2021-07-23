@@ -28,10 +28,10 @@ title: About meeeeeee!
 <header><h2>EDUCATION</h2></header>
 <section class="grid-x grid-padding-x">
     <div class="large-12 cell">
-        <h3>University of Illinois at Chicago (College of Engineering)</h3>
+        <h5>University of Illinois at Chicago (College of Engineering)</h5>
         <p>Bachelor's degree in Computer Engineering &nbsp; | &nbsp; 2016 - 2021 </p>
         <br>
-        <h3>Homeschooled</h3>
+        <h5>Homeschooled</h5>
         <p>1999 - 2015</p>
     </div>
 </section>
@@ -116,10 +116,41 @@ title: About meeeeeee!
     <div class="large-6 cell">
         <h3>Job Experience</h3>
         
+        <!-- Job experiences -->
+        {% assign exp_listz = site.data.work_experiences %}
+
+        <!-- Job date range for work duration, rest self-explanatory -->
+        {% assign job_date_range = "" | split: "," %}
+        {% assign titlez = "" | split: "," %}
+        {% assign tagz = "" | split: "," %}
+        {% assign company = "" | split: "," %}
+        {% assign location = "" | split: "," %}
+        {% assign tasks = "" | split: "," %}
+        
+        <!-- Sorting job experiences; no display yet, setup first -->
+        {% include sorting_exp.html exp_list=exp_listz %}
+
+        <!-- Display jobs -->
+        <div>
+            {% for job in site.data.work_experiences %}
+                <div class="clearfix">
+                    <h5 class="float-left"><strong>{{ company[forloop.index0] }}</strong>, {{ location[forloop.index0] }}</h5>
+                    <p class="float-right">{{ job_date_range[forloop.index0] }}</p>
+                </div>
+                <p><i>{{ titlez[forloop.index0] }}</i></p>
+                <ul>
+                    {% for task_item in tasks[forloop.index0] %}
+                        <li>{{ task_item.description }}</li>
+                    {% endfor %}
+                </ul>
+                <br>
+            {% endfor %}
+        </div>
         <hr class="medium-12">
     </div>
     <div class="large-6 cell">
         <h3>Volunteer Experience</h3>
         
     </div>
+    
 </section>

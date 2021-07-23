@@ -19,25 +19,6 @@ title: 🎊 Oh wow!  You have found a secret dev page! 😱
     <p>Aighty, it's about to get real, people.  This is tougher than I thought!</p>
 
     <p>Solution #1</p>
-    <br>
-    <!-- Basic idea: -->
-    {% assign end_times = site.data.work_experiences | sort: "end_date" | reverse %}
-    {% for end_year in end_times %}
-        {% assign year_year = end_year.end_date %}
-        <!-- Checking if year is present -->
-        {% assign year_check = year_year | date: "%Y" %}
-        {% if year_check == "2999" %}
-            {% assign year_year = "Present" %}
-        {% endif %}
-        {% if year_year == "Present" %}
-            {{ year_year | date: "%Y" }}<br>
-        {% else %}
-            {{ year_year | date: "%Y" }}<br>
-            {{ year_year | date: "%b" }}<br>
-            {{ year_year | date: "%d" }}<br>
-        {% endif %}
-    {% endfor %}
-    
     <br><br><br>
 
     <!-- Now with sub items by hard formatting -->
@@ -46,9 +27,9 @@ title: 🎊 Oh wow!  You have found a secret dev page! 😱
     {% assign data_data_data = "" | split: "," %}
     {% assign pos_pos_pos = "" | split: "," %}
     {% assign com_com_com = "" | split: "," %}
+
     <!-- Sort by year -->
     {% assign job_by_end_year = site.data.work_experiences | sort: "end_year" | group_by: "end_year" %}
-    <p>{{ job_by_end_year }}</p><br>
     {% for year in job_by_end_year reversed %}
         {% assign job_end_year = year.name %}
 
@@ -66,7 +47,7 @@ title: 🎊 Oh wow!  You have found a secret dev page! 😱
             {% assign data_data_data = data_data_data | push: work_duration %}
             {% assign pos_pos_pos = pos_pos_pos | push: year.items.first.position %}
             {% assign com_com_com = com_com_com | push: year.items.first.company %}
-            <!-- {% continue %} -->
+            {% continue %}
         {% endif %}
         
         <!-- Sort by month -->
@@ -105,20 +86,12 @@ title: 🎊 Oh wow!  You have found a secret dev page! 😱
             {% endfor %}    <!-- end day loop -->
         {% endfor %}    <!-- end month loop -->
     {% endfor %}    <!-- end year loop -->
-    
-    <br><br><br>
-    <p>{{ data_data_data | split: "," }}</p>
-    <p>{{ data_data_data[2] }}</p>
-    <p>{{ pos_pos_pos | split: "," }}</p>
-    <p>{{ pos_pos_pos[2] }}</p>
-    <p>{{ com_com_com | split: "," }}</p>
-    <p>{{ com_com_com[2] }}</p>
-    <br><br><br>
 
     <!-- Then put it together with the experiences -->
     {% for job in site.data.work_experiences %}
         <p>{{ pos_pos_pos[forloop.index0] }}</p>
         <p>{{ data_data_data[forloop.index0] }}</p>
+        <p>{{ com_com_com[forloop.index0] }}</p>
     {% endfor %}
     <br>
     

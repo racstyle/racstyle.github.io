@@ -1,7 +1,6 @@
-- position: Software Engineering Intern (Front End Developer)
+- title: Software Engineering Intern (Front End Developer)
   company: Avanade Inc.
-  start_date: 2020-06-01
-  end_date: 2020-08-06
+  tags: [ internship, software, web-dev ]
   start_year: 2020
   start_month: 6
   start_day: 1
@@ -15,17 +14,9 @@
     - description: Assisted in creating a live leaderboard for the Midwest Virtual Makeathon 2020 using Power BI and Power Apps.
     - description: Participated and won in Avanade’s first virtual FUEL Hackathon Conference.
     - description: Coded in Vue.js, Bootstrap, HTML, and CSS for the last internship project.
-    # <ul>
-    #   <li>Participated in Avanade’s first virtual internship program due to the COVID-19 Coronavirus pandemic.</li>
-    #   <li>Member of a successful group encouraging team participation and communication in the remote project.</li>
-    #   <li>Assisted in creating a live leaderboard for the Midwest Virtual Makeathon 2020 using Power BI and Power Apps.</li>
-    #   <li>Participated and won in Avanade’s first virtual FUEL Hackathon Conference.</li>
-    #   <li>Coded in Vue.js, Bootstrap, HTML, and CSS for the last internship project.</li>
-    # </ul>
-- position: Client Support Specialist
+- title: Client Support Specialist
   company: University of Illinois at Chicago
-  start_date: 2019-05-17
-  end_date: 2021-05-07
+  tags: [ tech-exp, hardware, software ]
   start_year: 2019
   start_month: 5
   start_day: 17
@@ -37,17 +28,11 @@
     - description: Categorize and reply to an average of 4 to 5 support tickets emailed to the Learning Technology Solutions (LTS) office during daily shifts.
     - description: Answer phone calls regarding a variety of technical problems with classroom A/V systems and providing solutions for basic Blackboard website questions.
     - description: Perform classroom checks on a majority of UIC East Campus buildings by maintaining the A/V systems within each lecture room.
-    # <ul>
-    #   <li>Categorize and reply to an average of 4 to 5 support tickets emailed to the Learning Technology Solutions (LTS) office during daily shifts.</li>
-    #   <li>Answer phone calls regarding a variety of technical problems with classroom A/V systems and providing solutions for basic Blackboard website questions</li>
-    #   <li>Perform classroom checks on a majority of UIC East Campus buildings by maintaining the A/V systems within each lecture room.</li>
-    # </ul>
-- position: Technical Assistant (Family)
+- title: Technical Assistant (Family)
   company: Personal Family Business
-  start_date: 2012-03-00
-  end_date: 2999-10-30
-  start_year: 2012
-  start_month: 3
+  tags: [ tech-exp ]
+  start_year: 2013
+  start_month: 4
   start_day:
   end_year: 2999
   end_month:
@@ -56,7 +41,32 @@
   tasks:
     - description: Repair Windows or Mac computers for clients and family.
     - description: Update program software and operating software.
-    # <ul>
-    #   <li>Repair Windows or Mac computers for clients and family.</li>
-    #   <li>Update program software and operating software.</li>
-    # </ul>
+- title: Math Learning Assistant
+  company: University of Illinois at Chicago
+  tags: [ teaching-exp ]
+  start_year: 2017
+  start_month: 9
+  start_day:
+  end_year: 2020
+  end_month: 12
+  end_day:
+  location: Chicago, Illinois
+  tasks:
+    - description: Assist students in-class for 100-level college math courses ranging from basic algebra to calculus.
+    - description: Provide office hours for students requiring extra help with homework or exam preparation outside of lecture hours at the Math & Science Learning Center of UIC.
+    - description: Meet and coordinate with instructors on a weekly basis to better understand the focus of course material taught to students.
+- title: Technical Assistant (MChapel)
+  company: Maranatha Chapel
+  tags: [ volunteer-exp, tech-exp ]
+  start_year: 2013
+  start_month: 3
+  start_day:
+  end_year: 2999
+  end_month:
+  end_day:
+  location: Evergreen Park, Illinois
+  tasks:
+    - description: Assist with AV operations and troubleshooting for Sunday church services.
+    - description: Test new software and hardware for computers at the church to better meet the needs of the staff and church members.
+    - description: Maintain and repair computers and equipment used in church offices by conducting weekly checks and services.</li>
+    - description: Use Adobe After Effects and Premiere Pro to create various lyric videos for offertories and other church performances.
