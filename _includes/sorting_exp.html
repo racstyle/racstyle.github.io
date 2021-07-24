@@ -51,13 +51,6 @@
                         {{ start_monthy | date: "%b" }} {{ year_item.start_year }} - {{ end_monthy | date: "%b" }} {{ job_end_year }}
                     {% endcapture %}
 
-                    <!-- If the year is Present, change formatting -->
-                    {% if job_end_year == "Present" %}
-                        {% capture work_duration %}
-                            {{ start_monthy | date: "%b" }} {{ year_item.start_year }} - {{ job_end_year }}
-                        {% endcapture %}
-                    {% endif %}
-
                     {% assign job_date_range = job_date_range | push: work_duration %}
                     {% assign titlez = titlez | push: month_item.title %}
                     {% assign tagz = tagz | push: month_item.tags %}
