@@ -20,14 +20,14 @@
             {% capture work_duration %}
                 {{ year_item.start_year }} - {{ job_end_year }}
             {% endcapture %}
-
+            
             {% assign job_date_range = job_date_range | push: work_duration %}
             {% assign titlez = titlez | push: year_item.title %}
             {% assign tagz = tagz | push: year_item.tags %}
             {% assign company = company | push: year_item.company %}
             {% assign location = location | push: year_item.location %}
             {% assign tasks = tasks | push: year_item.tasks %}
-
+            
             {% continue %}
         {% endif %}
 

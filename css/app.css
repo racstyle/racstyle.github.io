@@ -5663,8 +5663,8 @@ a.thumbnail image {
   padding: 0.7rem 1rem;
 }
 .dropdown.menu > li.is-active > a {
-  background: transparent;
-  color: #1779ba;
+  background: #1779ba;
+  color: white;
 }
 .no-js .dropdown.menu ul {
   display: none;

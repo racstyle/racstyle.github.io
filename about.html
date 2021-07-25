@@ -134,7 +134,7 @@ title: About meeeeeee!
         <div>
             {% for job in site.data.work_experiences %}
                 <div class="grid-x grid-padding-x">
-                    <h5 class="cell auto"><strong>{{ company[forloop.index0] }}</strong>, {{ location[forloop.index0] }}</h5>
+                    <p class="cell auto"><strong>{{ company[forloop.index0] }}</strong>, {{ location[forloop.index0] }}</p>
                     <p class="cell large-shrink medium-shrink small-auto">{{ job_date_range[forloop.index0] }}</p>
                 </div>
                 <p><i>{{ titlez[forloop.index0] }}</i></p>
