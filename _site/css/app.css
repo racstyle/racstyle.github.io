@@ -7518,12 +7518,18 @@ hr {
     display: none;
   }
 }
-.about-icon-size-img {
-  width: 5em;
-}
-
 .custom-card-text-height {
   height: 6em;
+}
+
+.experience-headers {
+  text-decoration: underline;
+  color: #1779ba;
+  font-weight: bold;
+}
+
+.about-icon-size-img {
+  width: 5em;
 }
 
 .docs-example-orbit-slide {
@@ -7567,6 +7573,10 @@ hr {
 
 .fab {
   text-decoration: none;
+}
+
+footer {
+  margin-bottom: 2.5em;
 }
 
 /*# sourceMappingURL=app.css.map */

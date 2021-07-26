@@ -2,14 +2,14 @@
 {% assign work_duration = "" %}
 
 <!-- Sort by year -->
-{% assign job_by_end_year = include.exp_list | sort: "end_year" | group_by: "end_year" %}
+{% assign exp_by_end_year = include.exp_list | sort: "end_year" | group_by: "end_year" %}
 
-{% for year in job_by_end_year reversed %}
-    {% assign job_end_year = year.name %}
+{% for year in exp_by_end_year reversed %}
+    {% assign exp_end_year = year.name %}
 
     <!-- If end_year is empty/Present --> 
-    {% if job_end_year == "2999" %}
-        {% assign job_end_year = "Present" %}
+    {% if exp_end_year == "2999" %}
+        {% assign exp_end_year = "Present" %}
     {% endif %}
 
     <!-- Access each experience in the year -->
@@ -18,10 +18,10 @@
         {% if year_item.end_month == nil %}
             <!-- Year -->
             {% capture work_duration %}
-                {{ year_item.start_year }} - {{ job_end_year }}
+                {{ year_item.start_year }} - {{ exp_end_year }}
             {% endcapture %}
             
-            {% assign job_date_range = job_date_range | push: work_duration %}
+            {% assign exp_date_range = exp_date_range | push: work_duration %}
             {% assign titlez = titlez | push: year_item.title %}
             {% assign tagz = tagz | push: year_item.tags %}
             {% assign company = company | push: year_item.company %}
@@ -32,8 +32,8 @@
         {% endif %}
 
         <!-- Sort by month -->
-        {% assign job_by_end_month = year.items | sort: "end_month" | group_by: "end_month" %}
-        {% for month in job_by_end_month reversed %}
+        {% assign exp_by_end_month = year.items | sort: "end_month" | group_by: "end_month" %}
+        {% for month in exp_by_end_month reversed %}
             {% for month_item in month.items %}
                 <!-- Arbitrary start date to format month to date -->
                 {% capture start_monthy %}
@@ -41,17 +41,17 @@
                 {% endcapture %}
                 <!-- Arbitrary end date to format month to date -->
                 {% capture end_monthy %}
-                    {{ job_end_year }}-{{ month_item.end_month | prepend: '00' | slice: -2, 2 }}-12
+                    {{ exp_end_year }}-{{ month_item.end_month | prepend: '00' | slice: -2, 2 }}-12
                 {% endcapture %}
 
                 <!-- If start or end day is empty -->
                 {% if month_item.end_day == nil or month_item.start_day == nil %}
                     <!-- Month Year -->
                     {% capture work_duration %}
-                        {{ start_monthy | date: "%b" }} {{ year_item.start_year }} - {{ end_monthy | date: "%b" }} {{ job_end_year }}
+                        {{ start_monthy | date: "%b" }} {{ year_item.start_year }} - {{ end_monthy | date: "%b" }} {{ exp_end_year }}
                     {% endcapture %}
 
-                    {% assign job_date_range = job_date_range | push: work_duration %}
+                    {% assign exp_date_range = exp_date_range | push: work_duration %}
                     {% assign titlez = titlez | push: month_item.title %}
                     {% assign tagz = tagz | push: month_item.tags %}
                     {% assign company = company | push: month_item.company %}
@@ -62,22 +62,22 @@
                 {% endif %}
 
                 <!-- Sort by day -->
-                {% assign job_by_end_day = month.items | sort: "end_day" | group_by: "end_day" %}
-                {% for day in job_by_end_day reversed %}
+                {% assign exp_by_end_day = month.items | sort: "end_day" | group_by: "end_day" %}
+                {% for day in exp_by_end_day reversed %}
                     {% for day_item in day.items %}
                         <!-- Month Day, Year -->
                         {% capture work_duration %}
-                            {{ start_monthy | date: "%b" }} {{ day_item.start_day | prepend: '00' | slice: -2, 2 }}, {{ year_item.start_year }} - {{ end_monthy | date: "%b" }} {{ day_item.end_day | prepend: '00' | slice: -2, 2 }}, {{ job_end_year }}
+                            {{ start_monthy | date: "%b" }} {{ day_item.start_day | prepend: '00' | slice: -2, 2 }}, {{ year_item.start_year }} - {{ end_monthy | date: "%b" }} {{ day_item.end_day | prepend: '00' | slice: -2, 2 }}, {{ exp_end_year }}
                         {% endcapture %}
 
                         <!-- If the year is Present, change formatting -->
-                        {% if job_end_year == "Present" %}
+                        {% if exp_end_year == "Present" %}
                             {% capture work_duration %}
-                            {{ start_monthy | date: "%b" }} {{ day_item.start_day | prepend: '00' | slice: -2, 2 }}, {{ year_item.start_year }} - {{ job_end_year }}
+                            {{ start_monthy | date: "%b" }} {{ day_item.start_day | prepend: '00' | slice: -2, 2 }}, {{ year_item.start_year }} - {{ exp_end_year }}
                             {% endcapture %}
                         {% endif %}
 
-                        {% assign job_date_range = job_date_range | push: work_duration %}
+                        {% assign exp_date_range = exp_date_range | push: work_duration %}
                         {% assign titlez = titlez | push: day_item.title %}
                         {% assign tagz = tagz | push: day_item.tags %}
                         {% assign company = company | push: day_item.company %}

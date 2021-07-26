@@ -1,5 +1,6 @@
 - title: Responsible Consumption
   company: Avanade Inc.
+  tags:
   start_year: 2020
   start_month: 7
   start_day:
@@ -13,6 +14,7 @@
     - description: Assisted making web pages responsive and functional using Vue.js and Bootstrap.
 - title: Python MIPS Simulator
   company: UIC
+  tags:
   start_year: 2020
   start_month: 2
   start_day:
@@ -25,6 +27,7 @@
     - description: Enabled ability to print the listing of registers and memory addresses onto a Python console and output file.
 - title: Tiva C Series LaunchPad Music Box
   company: UIC
+  tags:
   start_year: 2019
   start_month: 11
   start_day:

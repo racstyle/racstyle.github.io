@@ -1,0 +1,18 @@
+<div>
+    <h3 class="experience-headers h5">{{ include.title | upcase }}</h3>
+    {% for exp in include.exp_list %}
+        {% if tagz[forloop.index0] contains include.tagger %}
+            <div class="grid-x grid-padding-x">
+                <p class="cell auto"><strong>{{ company[forloop.index0] }}</strong>, {{ location[forloop.index0] }}</p>
+                <p class="cell large-shrink medium-shrink small-auto">{{ exp_date_range[forloop.index0] }}</p>
+            </div>
+            <p><i>{{ titlez[forloop.index0] }}</i></p>
+            <ul>
+                {% for task_item in tasks[forloop.index0] %}
+                    <li>{{ task_item.description }}</li>
+                {% endfor %}
+            </ul>
+            <br>
+        {% endif %}
+    {% endfor %}
+</div>

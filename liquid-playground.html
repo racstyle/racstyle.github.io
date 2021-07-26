@@ -29,7 +29,7 @@ title: 🎊 Oh wow!  You have found a secret dev page! 😱
     {% assign com_com_com = "" | split: "," %}
 
     <!-- Sort by year -->
-    {% assign job_by_end_year = site.data.work_experiences | sort: "end_year" | group_by: "end_year" %}
+    {% assign job_by_end_year = site.data.experiences | sort: "end_year" | group_by: "end_year" %}
     {% for year in job_by_end_year reversed %}
         {% assign job_end_year = year.name %}
 
@@ -88,7 +88,7 @@ title: 🎊 Oh wow!  You have found a secret dev page! 😱
     {% endfor %}    <!-- end year loop -->
 
     <!-- Then put it together with the experiences -->
-    {% for job in site.data.work_experiences %}
+    {% for job in site.data.experiences %}
         <p>{{ pos_pos_pos[forloop.index0] }}</p>
         <p>{{ data_data_data[forloop.index0] }}</p>
         <p>{{ com_com_com[forloop.index0] }}</p>
@@ -99,7 +99,7 @@ title: 🎊 Oh wow!  You have found a secret dev page! 😱
     <div style="display: none;">
     {% assign work_duration = "" %}
     <!-- Sort by year -->
-    {% assign job_by_end_year = site.data.work_experiences | sort: "end_year" | group_by: "end_year" %}
+    {% assign job_by_end_year = site.data.experiences | sort: "end_year" | group_by: "end_year" %}
     {% for year in job_by_end_year reversed %}
         {% assign job_end_year = year.name %}
 

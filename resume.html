@@ -1,0 +1,183 @@
+---
+layout: default
+title: Resume
+---
+
+<!-- Main header -->
+<header><h1>{{ page.title }}</h1></header>
+
+<!-- Main content -->
+<!-- Description box -->
+<div class="callout">
+    <p>This is the resume version of the About me page, a bit more formal and detailed compared to said page.</p>
+</div>
+
+<!-- Summary -->
+<header><h2>SUMMARY</h2></header>
+<section class="grid-x grid-padding-x">
+    <div class="large-12 cell">
+        <p>Recent Computer Engineer graduate.  (More stuff to be added soon)</p>
+    </div>
+</section>
+
+<!-- Education -->
+<hr>
+<header><h2>EDUCATION</h2></header>
+<section class="grid-x grid-padding-x">
+    <div class="large-12 cell">
+        <h5>University of Illinois at Chicago (College of Engineering)</h5>
+        <p>Bachelor's degree in Computer Engineering &nbsp; | &nbsp; 2016 - 2021 </p>
+        <br>
+        <h5>Homeschooled</h5>
+        <p>1999 - 2015</p>
+    </div>
+</section>
+
+<!-- Skills -->
+<hr>
+<header><h2>SKILLS</h2></header>
+<section class="grid-x grid-padding-x">
+    <!-- Coding languages -->
+    <div class="large-12 cell">
+        <header><h3>Languages</h3></header>
+        <div class="grid-x grid-margin-x small-up-2 medium-up-5 large-up-7">
+            {% for item in site.data.languages %}
+                <section class="cell card shrink">
+                    <!-- Language name -->
+                    <header><h5 class="card-divider text-center align-center custom-card-text-height"><strong>{{ item.language }}</strong></h5></header>
+                    <!-- Language icon -->
+                    <div class="grid-x align-center">{{ item.icon }}</div>
+                    <!-- Progress/knowledge bar -->
+                    <div class="progress">
+                        <span class="progress-meter" style="width: {{ item.knowledge }}%">
+                            <span class="progress-meter-text">{{ item.knowledge }}%</span>
+                        </span>
+                    </div>
+                </section>
+            {% endfor %}
+        </div>
+    </div>
+    <!-- Frameworks -->
+    <div class="large-12 cell">
+        <br>
+        <header><h3>Frameworks</h3></header>
+        <div class="grid-x grid-margin-x small-up-2 medium-up-5 large-up-7">
+            {% for item in site.data.frameworks %}
+                <section class="cell card shrink">
+                    <!-- Language name -->
+                    <header><h5 class="card-divider text-center align-center custom-card-text-height"><strong>{{ item.framework }}</strong></h5></header>
+                    <!-- Language icon -->
+                    <div class="grid-x align-center">{{ item.icon }}</div>
+                    <!-- Progress/knowledge bar -->
+                    <div class="progress">
+                        <span class="progress-meter" style="width: {{ item.knowledge }}%">
+                            <span class="progress-meter-text">{{ item.knowledge }}%</span>
+                        </span>
+                    </div>
+                </section>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<!-- Tools -->
+<hr>
+<header><h2>TOOLS</h2></header>
+<section class="grid-x grid-padding-x">
+    <!-- Graphics tools -->
+    <div class="large-12 cell">
+        <header><h3>Graphics</h3></header>
+        <div class="grid-x grid-margin-x small-up-2 medium-up-5 large-up-7">
+            {% for item in site.data.tools_graphics %}
+                <section class="cell card shrink">
+                    <!-- Graphic tool name -->
+                    <header><h5 class="card-divider text-center align-center custom-card-text-height"><strong>{{ item.tool }}</strong></h5></header>
+                    <!-- Graphic ool icon -->
+                    <div class="grid-x align-center">{{ item.icon }}</div>
+                    <!-- Progress/knowledge bar -->
+                    <div class="progress">
+                        <span class="progress-meter" style="width: {{ item.knowledge }}%">
+                            <span class="progress-meter-text">{{ item.knowledge }}%</span>
+                        </span>
+                    </div>
+                </section>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<!-- Experience -->
+<hr>
+<header><h2>EXPERIENCE</h2></header>
+<section class="grid-x grid-padding-x">
+    <div class="large-6 cell">
+        <!-- Experiences -->
+        {% assign exp_listz = site.data.experiences %}
+
+        <!-- Experience date range for work duration, rest self-explanatory -->
+        {% assign exp_date_range = "" | split: "," %}
+        {% assign titlez = "" | split: "," %}
+        {% assign tagz = "" | split: "," %}
+        {% assign company = "" | split: "," %}
+        {% assign location = "" | split: "," %}
+        {% assign tasks = "" | split: "," %}
+        
+        <!-- Sorting experiences; no display yet, setup first -->
+        {% include sorting_exp.html exp_list=exp_listz %}
+
+        <!-- Displaying experiences -->
+        
+        <!-- Display internship experience -->
+        {% include showing_exp.html title="Internship Experience" exp_list=exp_listz tagger="internship" %}
+        
+        <!-- Display technical experiences -->
+        {% include showing_exp.html title="Technical Experiences" exp_list=exp_listz tagger="tech-exp" %}
+
+        <hr class="medium-12">
+    </div>
+    <div class="large-6 cell">
+        <h3>Volunteer Experience</h3>
+        
+    </div>
+    
+</section>
+
+
+<!-- Projects -->
+<hr>
+<header><h2>PROJECTS</h2></header>
+<section class="grid-x grid-padding-x">
+    <div class="large-6 cell">
+        <!-- Projects -->
+        {% assign exp_listz = site.data.projects %}
+
+        <!-- Experience date range for work duration, rest self-explanatory -->
+        {% assign exp_date_range = "" | split: "," %}
+        {% assign titlez = "" | split: "," %}
+        {% assign tagz = "" | split: "," %}
+        {% assign company = "" | split: "," %}
+        {% assign location = "" | split: "," %}
+        {% assign tasks = "" | split: "," %}
+        
+        <!-- Sorting projects; no display yet, setup first -->
+        {% include sorting_exp.html exp_list=exp_listz %}
+        
+        <!-- Displaying projects -->
+        <div>
+            {% for project in exp_listz %}
+                <div class="grid-x grid-padding-x">
+                    <p class="cell auto"><strong>{{ titlez[forloop.index0] }}</strong> – {{ company[forloop.index0] }}</p>
+                    <p class="cell large-shrink medium-shrink small-auto">{{ exp_date_range[forloop.index0] }}</p>
+                </div>
+                <ul>
+                    {% for task_item in tasks[forloop.index0] %}
+                        <li>{{ task_item.description }}</li>
+                    {% endfor %}
+                </ul>
+                <br>
+            {% endfor %}
+        </div>
+
+        <hr class="medium-12">
+    </div>
+</section>
