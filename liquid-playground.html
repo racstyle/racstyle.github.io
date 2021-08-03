@@ -165,3 +165,21 @@ title: 🎊 Oh wow!  You have found a secret dev page! 😱
     {% endfor %}    <!-- end year loop -->
     </div>
 </div>
+
+<!-- Liquid nested navigation -->
+<h2>Testing nested navigation</h2>
+<div class="callout">
+    <p>Something cool to doo</p>
+    <ul class="vertical dropdown medium-horizontal" data-dropdown-menu>
+        {% for item in site.data.navigation %}
+            <li class="{% if item.url == page.url %}is-active{% endif %}"><a href="{{ item.url }}">{{ item.name }}</a></li>
+
+            {% if item.subnav %}
+                {% assign subs = item.subnav %}
+                <ul>
+                    <li><a href="{{ subs[0].url }}">{{ subs[0].name }}</a></li>
+                </ul>
+            {% endif %}
+        {% endfor %}
+    </ul>
+</div>
