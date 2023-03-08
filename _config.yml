@@ -1,0 +1,28 @@
+# title: Welcome to my page!
+# author: Rachel Estilo
+# description: >- # this means to ignore newlines until "baseurl:"
+#   Page description, a short description of this page coming soon.
+# url: http://racstyle.github.io/ # the base hostname & protocol for your site, e.g. http://example.com
+# year: 2021
+
+# Build settings
+# markdown: kramdown
+# skip_initial_build: true
+
+# Prevent Jekyll from processing these files BUT include in the build folder.
+include:
+  - node_modules/
+
+# Exclude from processing.
+# exclude:
+#   - .jekyll-cache/
+#   - .vscode
+#   - Gemfile
+#   - Gemfile.lock
+#   - package.json
+#   - package-lock.json
+#   - config.codekit3
+#   - yarn.lock
+#   - node_modules/foundation-sites-custom/
+#   - node_modules/foundation-sites/docs/
+#   - node_modules/foundation-sites/meteor-README.md
