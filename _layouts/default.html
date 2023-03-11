@@ -1,0 +1,42 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rachel Estilo</title>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href={{ site.path }}{{ "/css/app.css" }}>
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href={{ site.path }}{{ "/node_modules/@fortawesome/fontawesome-free/css/all.min.css" }}>
+  </head>
+  <body>
+    
+    <!-- Content -->
+    <div class="grid-container">
+      <!-- Nav bar -->
+      <!-- Responsive menu bar icon -->
+      <!-- <div class="title-bar" data-responsive-toggle="menu" data-hide-for="medium">
+          <button class="menu-icon" type="button" data-toggle="menu"></button>
+          <div class="title-bar-title">Menu</div>
+      </div> -->
+  
+      <!-- Menu bar content -->
+      <nav class="top-bar" id="menu" data-animate="hinge-in-from-top spin-out">
+          {% include nav.html %}
+      </nav>
+      <br>
+      
+      <!-- Main content -->
+      {{ content }}
+      
+      <!-- Footer -->
+      {% include foot.html %}
+    </div>
+
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="node_modules/what-input/dist/what-input.js"></script>
+    <script src="node_modules/foundation-sites/dist/js/foundation.js"></script>
+    <script src="js/app-min.js"></script>
+  </body>
+</html>
