@@ -9,9 +9,11 @@
     </div> -->
 
     <!-- Menu bar content -->
+    <!-- TODO: Liquid dynamic url link as scrolling -->
     <!-- "data-sticky" enables menu to be sticky -->
     <!-- "data-sticky-on" enables menu on small screens to be sticky -->
-    <!-- "data-options" can have many parameters, but "marginTop" tells where on screen menu sticks -->
+    <!-- "data-margin-top" tells how much space above can be shown when scrolling -->
+    <!-- "data-options" can have many parameters, but "marginTop" tells where on screen menu sticks (I also believe it can take semicolon-separated args like ^above (e.g. "data-margin-top="0"" becomes "data-options="marginTop:0;"")) -->
     <nav class="top-bar" data-sticky data-margin-top="0" data-sticky-on="small" data-options="marginTop:0;" id="menu">
         <ul class="menu">
             <li class="menu-text">Rachel Estilo</li>
@@ -20,6 +22,20 @@
                 <li {% if page.url == item.url %} class="is-active" {% endif %}>
                     <!-- List rest of links -->
                     <a href="{{ item.url }}"><i class="{{ item.icon }}"></i>  {{ item.title }}</a>
+                    
+
+                    <!-- TESTING -->
+                    <!-- {{ % comment %}}
+                    <a href="{{ page.url }}#{{ item.url }}"><i class="{{ item.icon }}"></i>  {{ item.title }}</a>
+                    <p>Site {{ site.url }}</p>
+                    <p>Item #{{ item.url }}</p>
+                    <p>Page {{ page.url }}</p>
+                    <p>Conditional
+                        {{ % if item.url == blank % }}
+                            mah
+                        {{ % endif % }}
+                    </p>
+                    {{ % endcomment % }} -->
                 </li>
             {% endfor %}
         </ul>
