@@ -1,12 +1,27 @@
 <!-- Navigation bar that will appear in every page -->
 
-<ul class="menu">
-    <li class="menu-text">Rachel Estilo</li>
-    {% for item in site.data.navi %}
-        <!-- Check if current page is active -->
-        <li {% if page.url == item.url %} class="is-active" {% endif %}>
-            <!-- List rest of links -->
-            <a href="{{ item.url }}"><i class="{{ item.icon }}"></i>  {{ item.title }}</a>
-        </li>
-    {% endfor %}
-</ul>
+<!-- This top-most div will enable sticky nav -->
+<div data-sticky-container>
+    <!-- Responsive menu bar icon -->
+    <!-- <div class="title-bar" data-responsive-toggle="menu" data-hide-for="medium">
+        <button class="menu-icon" type="button" data-toggle="menu"></button>
+        <div class="title-bar-title">Menu</div>
+    </div> -->
+
+    <!-- Menu bar content -->
+    <!-- "data-sticky" enables menu to be sticky -->
+    <!-- "data-sticky-on" enables menu on small screens to be sticky -->
+    <!-- "data-options" can have many parameters, but "marginTop" tells where on screen menu sticks -->
+    <nav class="top-bar" data-sticky data-margin-top="0" data-sticky-on="small" data-options="marginTop:0;" id="menu">
+        <ul class="menu">
+            <li class="menu-text">Rachel Estilo</li>
+            {% for item in site.data.navi %}
+                <!-- Check if current page is active -->
+                <li {% if page.url == item.url %} class="is-active" {% endif %}>
+                    <!-- List rest of links -->
+                    <a href="{{ item.url }}"><i class="{{ item.icon }}"></i>  {{ item.title }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+    </nav>
+</div>

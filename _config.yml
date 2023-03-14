@@ -15,7 +15,8 @@ url: http://racstyle.github.io/ # the base hostname & protocol for your site, e.
 # Prevent Jekyll from processing these files BUT include in the build folder.
 include:
   - node_modules
-  - _pages
+  - pages
+  - .htaccess
 
 
 # Exclude from processing.
