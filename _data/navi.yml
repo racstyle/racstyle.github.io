@@ -11,12 +11,10 @@
 #   url: /kitchen.html
 #   icon: fa-solid fa-sink
 
-
-# # TESTING DYNAMIC URL CHANGE HEAD
-# # Head 1
-# - title: Head 1
-#   url: '#head1'
-#   icon: fa-solid fa-house
+# About
+- title: About
+  url: 'about'
+  icon: fa-solid fa-address-card
 
 # # Head 2
 # - title: Head 2

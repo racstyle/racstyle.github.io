@@ -5,10 +5,10 @@ title: Rachel Estilo
 url: http://racstyle.github.io/ # the base hostname & protocol for your site, e.g. http://example.com
 
 
-# # Collection for pages
-# collections:
-#   pages:
-#     output: true
+# Collection for pages
+collections:
+  pages:
+    output: true
 #     permalink: /:collection/:path
 
 
