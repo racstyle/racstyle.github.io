@@ -12,6 +12,10 @@ url: http://racstyle.github.io/ # the base hostname & protocol for your site, e.
 #     permalink: /:collection/:path
 
 
+# Includes dir can be outside of '_includes' folder
+# includes_dir: '.'
+
+
 # Prevent Jekyll from processing these files BUT include in the build folder.
 include:
   - node_modules

@@ -19,23 +19,25 @@
             <li class="menu-text">Rachel Estilo</li>
             {% for item in site.data.navi %}
                 <!-- Check if current page is active -->
-                <li {% if page.url == item.url %} class="is-active" {% endif %}>
+                <!-- <li {% if page.url == item.url %} class="is-active" {% endif %}> -->
                     <!-- List rest of links -->
-                    <a href="{{ item.url }}"><i class="{{ item.icon }}"></i>  {{ item.title }}</a>
+                    <!-- <a href="{{ item.url }}"><i class="{{ item.icon }}"></i>  {{ item.title }}</a> -->
                     
-
+                    
                     <!-- TESTING -->
-                    <!-- {{ % comment %}}
-                    <a href="{{ page.url }}#{{ item.url }}"><i class="{{ item.icon }}"></i>  {{ item.title }}</a>
+                    {{ % comment %}}
+                <li {% if page.url == item.url %} class="is-active" {% endif %}>
+                    <a href="{{ item.url }}"><i class="{{ item.icon }}"></i>  {{ item.title }}</a>
+                    <!--
                     <p>Site {{ site.url }}</p>
-                    <p>Item #{{ item.url }}</p>
                     <p>Page {{ page.url }}</p>
+                    <p>Item {{ item.url }}</p>
                     <p>Conditional
                         {{ % if item.url == blank % }}
                             mah
                         {{ % endif % }}
-                    </p>
-                    {{ % endcomment % }} -->
+                    </p> -->
+                    {{ % endcomment % }}
                 </li>
             {% endfor %}
         </ul>
