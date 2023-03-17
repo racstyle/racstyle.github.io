@@ -15,4 +15,3 @@ config.codekit3
 yarn.lock
 .DS_Store
 .nojekyll
-racstyle.github.io.code-workspace
