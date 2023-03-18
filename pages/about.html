@@ -1,12 +1,22 @@
 <!-- ---
 layout: default
-permalink: /#head1
+permalink: /#about
 --- -->
 
-<!-- <div class="grid-x grid-padding-x">
-    <div class="large-12 cell"> -->
-        <h1 id="{{ site.data.navi[1].url }}">{{ site.data.navi[1].title }}</h1>
-        <h2>Hi!  I'm Rachel</h2>
-        <p>[Description coming soon]</p>
-    <!-- </div>
-</div> -->
+<!-- NOTE: no need for front matter for these pages bc it is linked inside the 'index.html' file, which already has the 'default.html' layout, front matter ^above is just for reference -->
+
+<section class="grid-x" id="{{ site.data.navi[1].url }}">
+    <div class="large-12 cell">
+        <header><h1 class="text-center">{{ site.data.navi[1].title }}</h1></header>
+
+        <div class="media-object stack-for-small margin-small">
+            <div class="media-object-section">
+                <img class="thumbnail round" src="assets/IMG_0106.jpeg" alt="profile picture of Rachel Estilo">
+            </div>
+            <div class="media-object-section vcenter margin-side-left">
+                <h2 class="h3 text-center medium-text-left">I am a Front-End Developer</h2>
+                <p>I possess broad knowledge of software engineering concepts and ability to develop innovative software solutions/applications by studying information needs, system flow, and work processes.</p>
+            </div>
+        </div>
+    </div>
+</section>

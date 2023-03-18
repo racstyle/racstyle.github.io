@@ -2,6 +2,7 @@
 
 <!-- This top-most div will enable sticky nav -->
 <div data-sticky-container>
+    <!-- TODO: responsive menu -->
     <!-- Responsive menu bar icon -->
     <!-- <div class="title-bar" data-responsive-toggle="menu" data-hide-for="medium">
         <button class="menu-icon" type="button" data-toggle="menu"></button>
@@ -15,8 +16,10 @@
     <!-- "data-margin-top" tells how much space above can be shown when scrolling -->
     <!-- "data-options" can have many parameters, but "marginTop" tells where on screen menu sticks (I also believe it can take semicolon-separated args like ^above (e.g. "data-margin-top="0"" becomes "data-options="marginTop:0;"")) -->
     <nav class="top-bar" data-sticky data-margin-top="0" data-sticky-on="small" data-options="marginTop:0;" id="menu">
-        <ul class="menu">
-            <li class="menu-text">Rachel Estilo</li>
+        <ul class="menu top-bar-left">
+            <li class="menu-text top-bar-left">Rachel Estilo</li>
+        </ul>
+        <ul class="menu top-bar-right">
             {% for item in site.data.navi %}
                 <!-- Check if current page is active -->
                 <li {% if page.url == item.url %} class="is-active" {% endif %}>
