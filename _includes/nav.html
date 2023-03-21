@@ -19,7 +19,7 @@
         <ul class="menu top-bar-left">
             <li class="menu-text top-bar-left">Rachel Estilo</li>
         </ul>
-        <ul class="menu top-bar-right">
+        <ul class="menu top-bar-right" data-smooth-scroll>
             {% for item in site.data.navi %}
                 <!-- Check if current page is active -->
                 <li {% if page.url == item.url %} class="is-active" {% endif %}>

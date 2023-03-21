@@ -64,22 +64,48 @@
 @include motion-ui-transitions;
 @include motion-ui-animations;
 
+// Foundation color palette
+@include add-foundation-colors;
+
 
 // Start of custom SCSS
 
-/* ----------------------------------- Media queries for sizes ----------------------------------- */
+// TODO: Foundation media queries variables/breakpoints + import
+/* ------------------ Media queries for sizes (copy/paste) ------------------ */
 // small: @media screen and (max-width: 39.99875em)
 // medium: @media screen and (min-width: 39.99876em)
 
 
-/* ----------------------------------- Globals ----------------------------------- */
-// Enable smooth scrolling
-html {
-    scroll-behavior: smooth;
+/* --------------------------------- Globals -------------------------------- */
+// Smooth scrolling is enabled w/ Foundation's "data-smooth-scroll" in nav
+
+// Vertically center elements with margins IF NOT INSIDE A DIV ESP WITH BG STYLING
+@mixin vcenter-margin {        // mixin to be reused inside SCSS
+    display: block;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.vcenter-margin { @include vcenter-margin; }
+
+// Vertically center elements with paddings IF INSIDE A DIV
+@mixin vcenter-padding($value) {        // mixin to be reused inside SCSS
+    height: $value;
+    padding-top: calc($value/2);
+    padding-bottom: calc($value/2);
+
+    // .clearfix hack to keep elements inside div or else they will float
+    content: "";
+    clear: both;
+    display: table;
 }
 
+// Horizontally center elements via "float-center".  This is used for @mixin only
+@mixin hcenter {        // mixin to be reused inside SCSS
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
 
-/* ----------------------------------- About page ----------------------------------- */
 // Add more margin to side for small screens
 $margin-gutter: 2.5em;
 @media screen and (max-width: 39.99875em) {
@@ -89,6 +115,22 @@ $margin-gutter: 2.5em;
     }
 }
 
+
+/* ---------------------------- Introduction page --------------------------- */
+// Custom height for intro div area
+.introduction {
+    @include vcenter-padding(15em);     // div height + vertically center elements
+    background-color: $primary-color;
+    margin-bottom: 5em;
+}
+
+// White text for intro contrast
+.contrast-white {
+    color: white;
+}
+
+
+/* ------------------------------- About page ------------------------------- */
 // Customize thumbnail cropping (medium-large screens)
 .round {
     object-fit: cover;          // prevent image from stretching
@@ -102,20 +144,12 @@ $margin-gutter: 2.5em;
 @media screen and (max-width: 39.99875em) {
     .stack-for-small .media-object-section img {
         width: 13em;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
+        @include hcenter;   // center left/right
     }
 }
 
-// Vertically center text
-.vcenter {
-    display: block;
-    margin-top: auto;
-    margin-bottom: auto;
-}
 
-// Add more margin to side of text in media-object container
+// Add more margin to side of text in media-object container for medium+ screen sizes
 @media screen and (min-width: 39.99876em) {
     .margin-side-left {
         margin-left: 3em;
