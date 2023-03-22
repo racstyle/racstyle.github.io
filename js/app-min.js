@@ -1,1 +1,1 @@
-$(document).foundation();
+console.log("hello world?"),$(document).foundation();var prev=0,$window=$(window),nav=$(".scroll-hide-nav");$window.on("scroll",(function(){var o=$window.scrollTop();nav.toggleClass("hidden",o>prev),prev=o}));

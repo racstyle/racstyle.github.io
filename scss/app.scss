@@ -116,6 +116,15 @@ $margin-gutter: 2.5em;
 }
 
 
+/* --------------------------------- Nav bar -------------------------------- */
+// Auto hide nav bar when scrolling
+$scroll-hide-nav-trans-speed: 1s;
+.scroll-hide-nav {
+    transition: transform $scroll-hide-nav-trans-speed cubic-bezier(0.86, 0, 0.07, 1);
+    &.hidden { transform: translateY(-100%); }
+}
+
+
 /* ---------------------------- Introduction page --------------------------- */
 // Custom height for intro div area
 .introduction {
