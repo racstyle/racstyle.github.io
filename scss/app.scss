@@ -79,6 +79,10 @@
 /* --------------------------------- Globals -------------------------------- */
 // Smooth scrolling is enabled w/ Foundation's "data-smooth-scroll" in nav
 
+// body {
+//     padding-top: 2em;
+// }
+
 // Vertically center elements with margins IF NOT INSIDE A DIV ESP WITH BG STYLING
 @mixin vcenter-margin {        // mixin to be reused inside SCSS
     display: block;
@@ -117,12 +121,91 @@ $margin-gutter: 2.5em;
 
 
 /* --------------------------------- Nav bar -------------------------------- */
-// Auto hide nav bar when scrolling
-$scroll-hide-nav-trans-speed: 1s;
-.scroll-hide-nav {
-    transition: transform $scroll-hide-nav-trans-speed cubic-bezier(0.86, 0, 0.07, 1);
-    &.hidden { transform: translateY(-100%); }
+// Prevent flash of unstyled content
+.no-js .top-bar { display: none; } 
+@media screen and (min-width: 40em) {
+    .no-js .top-bar { display: block; }
+    .no-js .title-bar { display: none; }
 }
+
+// TODO: get this part working
+// // Auto hide nav bar when scrolling
+// $scroll-hide-nav-trans-speed: 1s;
+// .scroll-hide-nav {
+//     transition: transform $scroll-hide-nav-trans-speed cubic-bezier(0.86, 0, 0.07, 1);
+//     &.hidden { transform: translateY(-100%); }
+// }
+
+
+$sticky-shrinknav-menu-height: rem-calc(60);
+$sticky-shrinknav-hero-height: 300px;
+
+body {
+  padding-top: $sticky-shrinknav-hero-height + 30px;
+}
+
+.sticky-shrinknav-menu {
+  @include horizontal-center;
+  bottom: 0;
+  height: $sticky-shrinknav-menu-height;
+  line-height: $sticky-shrinknav-menu-height;
+  width: 100%;
+  background-color: rgba($primary-color, 0.1);
+  transition: all 0.5s ease;
+
+  li {
+    border-radius: 2px;
+    transition: all 0.3s ease;
+
+    &:hover {
+      box-shadow: 0 0 0 1px $white;
+    }
+  }
+
+  a {
+    color: $white;
+  }
+}
+
+.sticky-shrinknav-header-title {
+  transition: all 0.3s ease;
+  position: relative;
+  transform: translateY(-1 * calc($sticky-shrinknav-menu-height / 2));
+  margin-bottom: 0;
+  color: $white;
+}
+
+.sticky-shrinknav-header {
+  width: 100%;
+  height: $sticky-shrinknav-hero-height;
+  // display: flex;
+  @include vcenter-padding($sticky-shrinknav-hero-height - 30px);
+  align-items: center;
+  justify-content: center;
+  background-color: lighten($primary-color, 10%);
+  text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  transition: all 0.5s ease;
+}
+
+body.sticky-shrinknav-wrapper {
+  padding-top: 130px;
+
+  .sticky-shrinknav-header{
+    height: $sticky-shrinknav-menu-height;
+    background-color: rgba($primary-color, 0.9);
+
+    .sticky-shrinknav-header-title{
+      transform: scale(0);
+      transition: all 0.3s ease;
+    }
+  }
+}
+
+
 
 
 /* ---------------------------- Introduction page --------------------------- */

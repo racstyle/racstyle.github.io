@@ -13,8 +13,16 @@
   <body>
     <!-- Content -->
     <div class="grid-container">
-      <!-- Nav bar -->
-      {% include nav.html %}
+      <!-- TODO: follow HTML of this: https://get.foundation/building-blocks/blocks/sticky-shrinknav.html -->
+      <!-- Nav bar + header -->
+      <header class="sticky-shrinknav-header">
+        <h1 class="sticky-shrinknav-header-title">Rachel Estilo</h1>
+        <h2 class="sticky-shrinknav-header-title h3">Software Engineer</h2>
+        <!-- <button class="button float-center secondary sticky-shrinknav-header-title" href="#" data-open="resume_modal">Download Resume</button> -->
+        
+        <!-- Nav -->
+        {% include nav.html %}
+      </header>
       <br>
       
       <!-- Main content -->

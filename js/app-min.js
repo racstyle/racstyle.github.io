@@ -1,1 +1,1 @@
-console.log("hello world?"),$(document).foundation();var prev=0,$window=$(window),nav=$(".scroll-hide-nav");$window.on("scroll",(function(){var o=$window.scrollTop();nav.toggleClass("hidden",o>prev),prev=o}));
+$(document).foundation(),$((function(){$(window).on("scroll",(function(){$(window).scrollTop()>=30?$("body").addClass("sticky-shrinknav-wrapper"):$("body").removeClass("sticky-shrinknav-wrapper")}))}));
