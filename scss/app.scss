@@ -79,10 +79,6 @@
 /* --------------------------------- Globals -------------------------------- */
 // Smooth scrolling is enabled w/ Foundation's "data-smooth-scroll" in nav
 
-// body {
-//     padding-top: 2em;
-// }
-
 // Vertically center elements with margins IF NOT INSIDE A DIV ESP WITH BG STYLING
 @mixin vcenter-margin {        // mixin to be reused inside SCSS
     display: block;
@@ -130,8 +126,8 @@ $margin-gutter: 2.5em;
 }
 
 // Stick collapsible/shrinking menu header
-$sticky-shrinknav-menu-height: rem-calc(60);
-$sticky-shrinknav-hero-height: 18.75em;
+$sticky-shrinknav-menu-height: rem-calc(60);    // menu height (returns 3.75rem)
+$sticky-shrinknav-hero-height: 18.75em + 30em;  // header container height
 
 // Need to move main content below menu/header bar
 body {
@@ -163,15 +159,6 @@ body {
   }
 }
 
-// Header text
-.sticky-shrinknav-header-title {
-  transition: all 0.3s ease;
-  position: relative;
-  transform: translateY(-1 * calc($sticky-shrinknav-menu-height / 2));
-  margin-bottom: 0;
-  color: $white;
-}
-
 // Header container
 .sticky-shrinknav-header {
   width: 100%;
@@ -190,9 +177,18 @@ body {
   transition: all 0.5s ease;
 }
 
-// Body gets wrapped for nav/header
+// Header text
+.sticky-shrinknav-header-title {
+  transition: all 0.3s ease;
+  position: relative;
+  transform: translateY(-1 * calc($sticky-shrinknav-menu-height / 2));
+  margin-bottom: 0;
+  color: $white;
+}
+
+// Applies to <body>, it gets wrapped for nav/header
 body.sticky-shrinknav-wrapper {
-  padding-top: 1.875em;
+  padding-top: $sticky-shrinknav-menu-height + 1.875rem; // 1.875em / 30px;
   
   .sticky-shrinknav-header{
     height: $sticky-shrinknav-menu-height;
@@ -208,19 +204,18 @@ body.sticky-shrinknav-wrapper {
 // For any additional flex elements needing to line break
 .line-break { width: 100% }
 
-
-
-
-/* ---------------------------- Introduction page --------------------------- */
-
+// Without this, the callout element will appear on top of the menu nav
 .callout {
-  display: flex;
+  position: static;
 }
 
 // Padding above elements
 .resume-padding {
   margin-top: 1.7em;
 }
+
+
+/* ---------------------------- Introduction page --------------------------- */
 
 
 // Custom height for intro div area
