@@ -102,6 +102,7 @@
     clear: both;
     display: table;
 }
+.vcenter-padding { @include vcenter-padding(4em); }
 
 // Horizontally center elements via "float-center".  This is used for @mixin only
 @mixin hcenter {        // mixin to be reused inside SCSS
@@ -128,24 +129,19 @@ $margin-gutter: 2.5em;
     .no-js .title-bar { display: none; }
 }
 
-// TODO: get this part working
-// // Auto hide nav bar when scrolling
-// $scroll-hide-nav-trans-speed: 1s;
-// .scroll-hide-nav {
-//     transition: transform $scroll-hide-nav-trans-speed cubic-bezier(0.86, 0, 0.07, 1);
-//     &.hidden { transform: translateY(-100%); }
-// }
-
-
+// Stick collapsible/shrinking menu header
 $sticky-shrinknav-menu-height: rem-calc(60);
-$sticky-shrinknav-hero-height: 300px;
+$sticky-shrinknav-hero-height: 18.75em;
 
+// Need to move main content below menu/header bar
 body {
-  padding-top: $sticky-shrinknav-hero-height + 30px;
+  padding-top: $sticky-shrinknav-hero-height + 1.875em;
 }
 
+// Menu bar
 .sticky-shrinknav-menu {
   @include horizontal-center;
+  padding-top: .7em;
   bottom: 0;
   height: $sticky-shrinknav-menu-height;
   line-height: $sticky-shrinknav-menu-height;
@@ -154,11 +150,11 @@ body {
   transition: all 0.5s ease;
 
   li {
-    border-radius: 2px;
+    border-radius: 0.125em;
     transition: all 0.3s ease;
 
     &:hover {
-      box-shadow: 0 0 0 1px $white;
+      box-shadow: 0 0 0 0.0625em $white;
     }
   }
 
@@ -167,6 +163,7 @@ body {
   }
 }
 
+// Header text
 .sticky-shrinknav-header-title {
   transition: all 0.3s ease;
   position: relative;
@@ -175,12 +172,14 @@ body {
   color: $white;
 }
 
+// Header container
 .sticky-shrinknav-header {
   width: 100%;
   height: $sticky-shrinknav-hero-height;
-  // display: flex;
-  @include vcenter-padding($sticky-shrinknav-hero-height - 30px);
+  display: flex;
+  flex-wrap: wrap;          // allows any extra text lines to go to next line
   align-items: center;
+  align-content: center;    // align flex content vertically
   justify-content: center;
   background-color: lighten($primary-color, 10%);
   text-align: center;
@@ -191,13 +190,14 @@ body {
   transition: all 0.5s ease;
 }
 
+// Body gets wrapped for nav/header
 body.sticky-shrinknav-wrapper {
-  padding-top: 130px;
-
+  padding-top: 1.875em;
+  
   .sticky-shrinknav-header{
     height: $sticky-shrinknav-menu-height;
     background-color: rgba($primary-color, 0.9);
-
+    
     .sticky-shrinknav-header-title{
       transform: scale(0);
       transition: all 0.3s ease;
@@ -205,10 +205,24 @@ body.sticky-shrinknav-wrapper {
   }
 }
 
+// For any additional flex elements needing to line break
+.line-break { width: 100% }
+
 
 
 
 /* ---------------------------- Introduction page --------------------------- */
+
+.callout {
+  display: flex;
+}
+
+// Padding above elements
+.resume-padding {
+  margin-top: 1.7em;
+}
+
+
 // Custom height for intro div area
 .introduction {
     @include vcenter-padding(15em);     // div height + vertically center elements
