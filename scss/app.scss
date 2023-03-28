@@ -125,11 +125,25 @@ $margin-gutter: 2.5em;
     .no-js .title-bar { display: none; }
 }
 
+// TODO: dynamic header container size b/w screens?
+// Dynamic header hero container height
+@mixin header-hero-height($sticky-shrinknav-hero-height) {
+  // Change header height for small screens
+  @media screen and (max-width: 39.99875em) {
+    height: $sticky-shrinknav-hero-height - 40em;
+  }
+
+  // Change header height for medium and up screens
+  @media screen and (min-width: 39.99876em) {
+    height: $sticky-shrinknav-hero-height;
+  }
+}
+
 // Stick collapsible/shrinking menu header
 $sticky-shrinknav-menu-height: rem-calc(60);    // menu height (returns 3.75rem)
-$sticky-shrinknav-hero-height: 18.75em + 30em;  // header container height
+$sticky-shrinknav-hero-height: 18.75em + 6em;   // header container height
 
-// Need to move main content below menu/header bar
+// Need to move main content below menu/header bar when header container is expanded
 body {
   padding-top: $sticky-shrinknav-hero-height + 1.875em;
 }
@@ -161,6 +175,7 @@ body {
 
 // Header container
 .sticky-shrinknav-header {
+  padding-top: 2.3em;
   width: 100%;
   height: $sticky-shrinknav-hero-height;
   display: flex;
@@ -188,11 +203,12 @@ body {
 
 // Applies to <body>, it gets wrapped for nav/header
 body.sticky-shrinknav-wrapper {
-  padding-top: $sticky-shrinknav-menu-height + 1.875rem; // 1.875em / 30px;
+  padding-top: $sticky-shrinknav-menu-height + 3.875rem; // 1.875em / 30px;
   
   .sticky-shrinknav-header{
     height: $sticky-shrinknav-menu-height;
     background-color: rgba($primary-color, 0.9);
+    margin-bottom: 3em;
     
     .sticky-shrinknav-header-title{
       transform: scale(0);
@@ -209,11 +225,23 @@ body.sticky-shrinknav-wrapper {
   position: static;
 }
 
-// Padding above elements
+// Padding above elements (e.g. resume button)
 .resume-padding {
   margin-top: 1.7em;
 }
 
+// Space when scrolling
+.grid-container {
+  scroll-padding: 500px;
+}
+
+// .cell {
+//   scroll-snap-align: start;
+// }
+
+.section-padding {
+  padding-top: $sticky-shrinknav-menu-height + 1rem;
+}
 
 /* ---------------------------- Introduction page --------------------------- */
 
