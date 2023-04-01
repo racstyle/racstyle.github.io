@@ -1,6 +1,10 @@
 // Enable Foundation Sites library
 $(document).foundation();
 
+// Scroll padding when nav scrolling to section
+var navHeight = document.querySelector('.sticky-shrinknav-header').offsetHeight;
+document.documentElement.style.setProperty('--scroll-pad', navHeight + 'px');
+
 // Dynamic shrinking nav/header container
 $(function() {
   $(window).on('scroll', function() {
@@ -13,5 +17,3 @@ $(function() {
     }
   });
 });
-
-
