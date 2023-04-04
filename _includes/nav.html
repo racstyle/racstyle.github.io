@@ -12,23 +12,10 @@
     <!-- Menu bar content -->
     <!-- TODO: Liquid dynamic url link as scrolling -->
     <div id="menu">
-        <!-- <ul class="menu">
-            <li class="menu-text">Rachel Estilo</li>
-        </ul> -->
         <ul class="menu align-center" data-smooth-scroll>
-            {% for item in site.data.navi %}
-                <!-- Check if current page is active -->
-                <li {% if page.url == item.url %} class="is-active" {% endif %}>
-                    <!-- List rest of links -->
-                    <!-- Conditional if the selected nav is the root/home page or not -->
-                    <!-- Selected nav is root -->
-                    {% if item.url == '/' %}
-                        <a href="{{ item.url }}"><i class="{{ item.icon }}"></i>  {{ item.title }}</a>
-                    <!-- Not root, need to add id '#' for jumping -->
-                    {% else %}
-                        <a href="#{{ item.url }}"><i class="{{ item.icon }}"></i>  {{ item.title }}</a>
-                    {% endif %}
-                </li>
+            {% for item in site.pages %}
+                <!-- List rest of links -->
+                <li><a href="#{{ item.nav }}"><i class="{{ item.icon }}"></i>  {{ item.title }}</a></li>
             {% endfor %}
         </ul>
     </div>
