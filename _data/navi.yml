@@ -1,6 +1,8 @@
 # This is a list of the navigation links
 # TODO find a way to get dynamic links in permalink front matter and/or here
 
+# TODO: use 'collections' for page + front matter (including nav links) for management?
+
 # Home page
 - title: Home
   url: '/'

@@ -125,20 +125,6 @@ $margin-gutter: 2.5em;
     .no-js .title-bar { display: none; }
 }
 
-// TODO: dynamic header container size b/w screens?
-// Dynamic header hero container height
-@mixin header-hero-height($sticky-shrinknav-hero-height) {
-  // Change header height for small screens
-  @media screen and (max-width: 39.99875em) {
-    height: $sticky-shrinknav-hero-height - 40em;
-  }
-
-  // Change header height for medium and up screens
-  @media screen and (min-width: 39.99876em) {
-    height: $sticky-shrinknav-hero-height;
-  }
-}
-
 // Padding above elements (e.g. resume button)
 .resume-padding {
   margin-top: 1.7em;
@@ -147,12 +133,6 @@ $margin-gutter: 2.5em;
 // Stick collapsible/shrinking menu header
 $sticky-shrinknav-menu-height: rem-calc(60);    // menu height (returns 3.75rem)
 $sticky-shrinknav-hero-height: 18.75em + 6em;   // header container height
-
-// Section spaces when nav-scrolling to that section
-// NOTE: need to make 'body' tag margin-top, not padding-top as other answers have said, to make it work
-// html {
-//   scroll-padding-top: var(--scroll-pad, $sticky-shrinknav-hero-height);
-// }
 
 // Menu bar
 .sticky-shrinknav-menu {
@@ -209,14 +189,12 @@ $sticky-shrinknav-hero-height: 18.75em + 6em;   // header container height
 
 // Need to move main content below menu/header bar when header container is expanded
 body {
-  padding-top: var(--scroll-pad, $sticky-shrinknav-hero-height);
-  // padding-top: $sticky-shrinknav-hero-height + 1.875em;
+  padding-top: var(--scroll-pad, $sticky-shrinknav-hero-height);    // `var` for dynamic scroll-padding-top size for shrinking header nav
 }
 
 // Applies to <body>, it gets wrapped for nav/header
 body.sticky-shrinknav-wrapper {
-  padding-top: var(--scroll-pad, $sticky-shrinknav-menu-height);
-  // padding-top: $sticky-shrinknav-menu-height + 3.875rem; // 1.875em / 30px;
+  padding-top: var(--scroll-pad, $sticky-shrinknav-menu-height);    // `var` for dynamic scroll-padding-top size for shrinking header nav
   
   .sticky-shrinknav-header{
     height: $sticky-shrinknav-menu-height;

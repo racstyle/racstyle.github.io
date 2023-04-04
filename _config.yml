@@ -9,6 +9,8 @@ url: http://racstyle.github.io/ # the base hostname & protocol for your site, e.
 collections:
   pages:
     output: true
+  abc:
+    output: true
 
 
 # Prevent Jekyll from processing these files BUT include in the build folder.
