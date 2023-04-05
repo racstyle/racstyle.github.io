@@ -1,0 +1,11 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"gitdoc.enabled": false,
+		"markdown-todo.sortByCount": true
+	}
+}

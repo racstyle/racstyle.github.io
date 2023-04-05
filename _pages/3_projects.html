@@ -1,0 +1,36 @@
+---
+nav: "projects"
+title: Projects
+icon: fa-solid fa-file-lines
+---
+
+<br>
+<div class="grid-x grid-margin-x small-up-1 medium-up-2 large-up-3">
+    <!-- Loop through each project data -->
+    {% for proj in site.data.projects %}
+        <!-- Separate .cell and .card if you want fixed card sizes regardless of screen size.  Otherwise, to stretch some cards, put them in the same div/level -->
+        <div class="cell">
+            <div class="card">
+                <img src="{{ proj.screenshot }}">
+                <div class="card-section">
+                    <h2 class="h4">{{ proj.name }}</h2>
+                    <p>{{ proj.start_date }} - {{ proj.end_date }}</p>
+
+                    <!-- Loop through bulleted description -->
+                    <ul>{% for desc in proj.description %}
+                        <li>{{ desc }}</li>
+                    {% endfor %}</ul>
+
+                    <!-- Button group -->
+                    <div class="center-buttons">
+                        {% if proj.github %}<a href="{{ proj.github }}" class="button proj-button"><i class="fa-brands fa-github"></i>  GitHub</a>{% endif %}
+                        {% if proj.demo %}<a href="{{ proj.demo }}" class="button proj-button"><i class="fa-solid fa-code"></i>  Demo</a>{% endif %}
+                    </div>
+
+                    <!-- Skills/frameworks used -->
+                    <!-- TODO: add skills here (via reusing data file/conditional access?) -->
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+</div>

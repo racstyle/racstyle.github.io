@@ -98,12 +98,20 @@
     clear: both;
     display: table;
 }
+.vcenter-padding { @include vcenter-padding(4em); }
 
 // Horizontally center elements via "float-center".  This is used for @mixin only
 @mixin hcenter {        // mixin to be reused inside SCSS
     display: block;
     margin-left: auto;
     margin-right: auto;
+}
+
+// Horizontally center group of elements
+@mixin hcenter-items($gap-val) {
+  display: flex;
+  justify-content: center;
+  gap: $gap-val;
 }
 
 // Add more margin to side for small screens
@@ -115,15 +123,135 @@ $margin-gutter: 2.5em;
     }
 }
 
-
-/* --------------------------------- Nav bar -------------------------------- */
-// Auto hide nav bar when scrolling
-$scroll-hide-nav-trans-speed: 1s;
-.scroll-hide-nav {
-    transition: transform $scroll-hide-nav-trans-speed cubic-bezier(0.86, 0, 0.07, 1);
-    &.hidden { transform: translateY(-100%); }
+// Scroll to top button
+#scrollTop {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: $primary-color;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+#scrollTop:hover {
+  background-color: rgba($primary-color, 0.8);
 }
 
+
+/* --------------------------------- Nav bar -------------------------------- */
+// Prevent flash of unstyled content
+.no-js .top-bar { display: none; } 
+@media screen and (min-width: 40em) {
+    .no-js .top-bar { display: block; }
+    .no-js .title-bar { display: none; }
+}
+
+// Padding above elements (e.g. resume button)
+.resume-padding {
+  margin-top: 1.7em;
+}
+
+// Stick collapsible/shrinking menu header
+$sticky-shrinknav-menu-height: rem-calc(60);    // menu height (returns 3.75rem)
+$sticky-shrinknav-hero-height: 18.75em + 6em;   // header container height
+
+// Menu bar
+.sticky-shrinknav-menu {
+  @include horizontal-center;
+  padding-top: .7em;
+  bottom: 0;
+  height: $sticky-shrinknav-menu-height;
+  line-height: $sticky-shrinknav-menu-height;
+  width: 100%;
+  background-color: rgba($primary-color, 0.1);
+  transition: all 0.5s ease;
+
+  // Each menu item
+  // TODO: spacing between items
+  li {
+    border-radius: 0.125em;
+    transition: all 0.3s ease;
+
+    &:hover {
+      box-shadow: 0 0 0 0.0625em $white;
+    }
+  }
+
+  // Menu text
+  a {
+    color: $white;
+  }
+}
+
+// Header container
+.sticky-shrinknav-header {
+  padding-top: 2.3em;
+  width: 100%;
+  height: $sticky-shrinknav-hero-height;
+  display: flex;
+  flex-wrap: wrap;          // allows any extra text lines to go to next line
+  align-items: center;
+  align-content: center;    // align flex content vertically
+  justify-content: center;
+  background-color: lighten($primary-color, 10%);
+  text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  transition: all 0.5s ease;
+}
+
+// Header text
+.sticky-shrinknav-header-title {
+  transition: all 0.3s ease;
+  position: relative;
+  transform: translateY(-1 * calc($sticky-shrinknav-menu-height / 2));
+  margin-bottom: 0;
+  color: $white;
+}
+
+// Need to move main content below menu/header bar when header container is expanded
+body {
+  padding-top: var(--scroll-pad, $sticky-shrinknav-hero-height);    // `var` for dynamic scroll-padding-top size for shrinking header nav
+}
+
+// Applies to <body>, it gets wrapped for nav/header
+body.sticky-shrinknav-wrapper {
+  padding-top: var(--scroll-pad, $sticky-shrinknav-menu-height);    // `var` for dynamic scroll-padding-top size for shrinking header nav
+  
+  .sticky-shrinknav-header{
+    height: $sticky-shrinknav-menu-height;
+    background-color: rgba($primary-color, 0.9);
+    margin-bottom: 3em;
+    
+    .sticky-shrinknav-header-title{
+      transform: scale(0);
+      transition: all 0.3s ease;
+    }
+  }
+}
+
+// For any additional flex elements needing to line break
+.line-break { width: 100% }
+
+// Without this, the callout element will appear on top of the menu nav
+.callout {
+  position: static;
+}
+
+// Give each section some space in between sections
+// TODO: make it padding-bottom (it messes up the "scroll-padding-top")
+.section-padding {
+  padding-top: $sticky-shrinknav-menu-height + 1rem;
+  padding-bottom: 5em;
+}
 
 /* ---------------------------- Introduction page --------------------------- */
 // Custom height for intro div area
@@ -157,10 +285,37 @@ $scroll-hide-nav-trans-speed: 1s;
     }
 }
 
-
 // Add more margin to side of text in media-object container for medium+ screen sizes
 @media screen and (min-width: 39.99876em) {
     .margin-side-left {
         margin-left: 3em;
     }
+}
+
+
+/* ------------------------------- Skills page ------------------------------ */
+// 
+
+
+
+/* ------------------------------ Projects page ----------------------------- */
+// Center project buttons
+.center-buttons {
+  @include hcenter-items(1.5em);
+  margin-top: 2em;
+}
+
+// Fix project buttons bottom margin
+.proj-button {
+  margin-bottom: 0;
+}
+
+// Card rounded corners
+.card {
+  border-radius: 3%;
+}
+
+// Adjust card section/text padding
+.card-section {
+  padding: 1.5em;
 }
