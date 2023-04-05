@@ -124,6 +124,8 @@ $margin-gutter: 2.5em;
 }
 
 // Scroll to top button
+// TODO: fix pixel values to more responsive ones
+// TODO: animation esp. scrolling up
 #scrollTop {
   display: none;
   position: fixed;
@@ -206,6 +208,7 @@ $sticky-shrinknav-hero-height: 18.75em + 6em;   // header container height
   left: 0;
   overflow: hidden;
   transition: all 0.5s ease;
+  z-index: 500;             // prevents main body elements from overlapping menu/header bar when scrolling
 }
 
 // Header text
@@ -241,17 +244,14 @@ body.sticky-shrinknav-wrapper {
 // For any additional flex elements needing to line break
 .line-break { width: 100% }
 
-// Without this, the callout element will appear on top of the menu nav
-.callout {
-  position: static;
-}
-
 // Give each section some space in between sections
 // TODO: make it padding-bottom (it messes up the "scroll-padding-top")
 .section-padding {
   padding-top: $sticky-shrinknav-menu-height + 1rem;
   padding-bottom: 5em;
 }
+
+
 
 /* ---------------------------- Introduction page --------------------------- */
 // Custom height for intro div area
@@ -294,8 +294,38 @@ body.sticky-shrinknav-wrapper {
 
 
 /* ------------------------------- Skills page ------------------------------ */
-// 
+// Vertically center progress bar inside card
+.progress {
+  margin-top: $progress-margin-bottom;
+}
 
+// Progress rounded corners
+.progress, .progress-meter {
+  border-radius: 10px;
+}
+
+// Pass parameter for skill proficiency front matter
+.skill-proficiency {
+  width: var(--proficiency);
+}
+
+// Make sure all icons are the same size and positioned the same way
+.icon-size {
+  width: 48px;
+  height: 48px;
+}
+
+
+/* ------------------------- Skills + Projects pages ------------------------ */
+// Card rounded corners
+.card {
+  border-radius: 15px;
+}
+
+// Adjust card section/text padding
+.card-section {
+  padding: 1.5em;
+}
 
 
 /* ------------------------------ Projects page ----------------------------- */
@@ -308,14 +338,4 @@ body.sticky-shrinknav-wrapper {
 // Fix project buttons bottom margin
 .proj-button {
   margin-bottom: 0;
-}
-
-// Card rounded corners
-.card {
-  border-radius: 3%;
-}
-
-// Adjust card section/text padding
-.card-section {
-  padding: 1.5em;
 }
