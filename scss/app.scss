@@ -223,11 +223,13 @@ $sticky-shrinknav-hero-height: 18.75em + 6em;   // header container height
 // Need to move main content below menu/header bar when header container is expanded
 body {
   padding-top: var(--scroll-pad, $sticky-shrinknav-hero-height);    // `var` for dynamic scroll-padding-top size for shrinking header nav
+  transition: all 0.5s ease;
 }
 
 // Applies to <body>, it gets wrapped for nav/header
 body.sticky-shrinknav-wrapper {
   padding-top: var(--scroll-pad, $sticky-shrinknav-menu-height);    // `var` for dynamic scroll-padding-top size for shrinking header nav
+  transition: all 0.5s ease;
   
   .sticky-shrinknav-header{
     height: $sticky-shrinknav-menu-height;
@@ -327,14 +329,14 @@ body.sticky-shrinknav-wrapper {
   padding: 1.5em;
 }
 
-
-/* ------------------------------ Projects page ----------------------------- */
-// Center project buttons
-.center-buttons {
+// Center project buttons + skills used icons
+.center-element-group {
   @include hcenter-items(1.5em);
   margin-top: 2em;
 }
 
+
+/* ------------------------------ Projects page ----------------------------- */
 // Fix project buttons bottom margin
 .proj-button {
   margin-bottom: 0;

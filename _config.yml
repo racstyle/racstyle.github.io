@@ -11,6 +11,10 @@ collections:
     output: true
 
 
+# Excerpt separator to prevent warning due to Jekyll's auto-generated post excerpts
+excerpt_separator: ""
+
+
 # Prevent Jekyll from processing these files BUT include in the build folder.
 include:
   - node_modules

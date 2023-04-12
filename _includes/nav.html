@@ -15,7 +15,7 @@
         <ul class="menu align-center" data-smooth-scroll>
             {% for item in site.pages %}
                 <!-- List rest of links -->
-                <li><a href="#{{ item.nav }}"><i class="{{ item.icon }}"></i>  {{ item.title }}</a></li>
+                <li class="menuItem"><a href="#{{ item.nav }}"><i class="{{ item.icon }}"></i>  {{ item.title }}</a></li>
             {% endfor %}
         </ul>
     </div>
