@@ -19,7 +19,6 @@ $(function() {
   $(window).on('scroll', function() {
     // Viewport position on scroll
     var winTop = $(window).scrollTop();
-    console.log(winTop);
 
     // TODO: dynamic padding-top when scrolling via 'document.documentElement.style....' in if-else statements is conflicting with scroll nav positioning (just need to change the conditions?)
     // User scrolled down

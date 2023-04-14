@@ -4,15 +4,15 @@
 <nav class="sticky-shrinknav-menu">
     <!-- TODO: responsive menu -->
     <!-- Responsive menu bar icon -->
-    <!-- <div class="title-bar" data-responsive-toggle="menu" data-hide-for="medium">
+    <div data-responsive-toggle="menu" data-hide-for="medium">
         <button class="menu-icon" type="button" data-toggle="menu"></button>
-        <div class="title-bar-title">Menu</div>
-    </div> -->
+        <div class="sticky-shrinknav-header-title">Menu</div>
+    </div>
 
     <!-- Menu bar content -->
     <!-- TODO: Liquid dynamic url link as scrolling -->
     <div id="menu">
-        <ul class="menu align-center" data-smooth-scroll>
+        <ul class="menu align-center vertical medium-horizontal" data-smooth-scroll>
             {% for item in site.pages %}
                 <!-- List rest of links -->
                 <li class="menuItem"><a href="#{{ item.nav }}"><i class="{{ item.icon }}"></i>  {{ item.title }}</a></li>
