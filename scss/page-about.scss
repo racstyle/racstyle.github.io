@@ -1,0 +1,27 @@
+// @import '_includes';
+// @import 'globals';
+
+/* ------------------------------- About page ------------------------------- */
+// Customize thumbnail cropping (medium-large screens)
+.round {
+    object-fit: cover;          // prevent image from stretching
+    object-position: 0% 25%;    // move the crop around, [left/right] [up/down]
+    aspect-ratio: 1/1;          // crops to a square
+    border-radius: 50%;         // round corners
+    width: 17em;                // size of image
+}
+
+// Adjust thumbnail size and centered when stacked in small devices
+@media screen and (max-width: 39.99875em) {
+    .stack-for-small .media-object-section img {
+        width: 13em;
+        @include hcenter;   // center left/right
+    }
+}
+
+// Add more margin to side of text in media-object container for medium+ screen sizes
+@media screen and (min-width: 39.99876em) {
+    .margin-side-left {
+        margin-left: 3em;
+    }
+}

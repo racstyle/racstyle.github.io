@@ -1,0 +1,94 @@
+// @import '_includes';
+
+// TODO: Foundation media queries variables/breakpoints + import
+/* ------------------ Media queries for sizes (copy/paste) ------------------ */
+// small: @media screen and (max-width: 39.99875em)
+// medium: @media screen and (min-width: 39.99876em)
+
+
+/* --------------------------------- Globals -------------------------------- */
+// Smooth scrolling is enabled w/ Foundation's "data-smooth-scroll" in nav
+
+// Vertically center elements with margins IF NOT INSIDE A DIV ESP WITH BG STYLING
+@mixin vcenter-margin {        // mixin to be reused inside SCSS
+    display: block;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.vcenter-margin { @include vcenter-margin; }
+
+// Vertically center elements with paddings IF INSIDE A DIV
+@mixin vcenter-padding($value) {        // mixin to be reused inside SCSS
+    height: $value;
+    padding-top: calc($value/2);
+    padding-bottom: calc($value/2);
+
+    // .clearfix hack to keep elements inside div or else they will float
+    content: "";
+    clear: both;
+    display: table;
+}
+.vcenter-padding { @include vcenter-padding(4em); }
+
+// Horizontally center elements via "float-center".  This is used for @mixin only
+@mixin hcenter {        // mixin to be reused inside SCSS
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+// Horizontally center group of elements
+@mixin hcenter-items($gap-val) {
+  display: flex;
+  justify-content: center;
+  gap: $gap-val;
+}
+
+// Add more margin to side for small screens
+$margin-gutter: 2.5em;
+@media screen and (max-width: 39.99875em) {
+    .margin-small {
+        margin-left: $margin-gutter;
+        margin-right: $margin-gutter;
+    }
+}
+
+// Scroll to top button
+// TODO: fix pixel values to more responsive ones
+// TODO: animation esp. scrolling up
+#scrollTop {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: $primary-color;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+#scrollTop:hover {
+  background-color: rgba($primary-color, 0.8);
+}
+
+
+/* ------------------------- Skills + Projects pages ------------------------ */
+// Card rounded corners
+.card {
+  border-radius: 15px;
+}
+
+// Adjust card section/text padding
+.card-section {
+  padding: 1.5em;
+}
+
+// Center project buttons + skills used icons
+.center-element-group {
+  @include hcenter-items(1.5em);
+  margin-top: 2em;
+}
