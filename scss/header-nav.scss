@@ -22,49 +22,33 @@
   margin-top: 1.7em;
 }
 
-// TODO: get dynamic menu height for responsiveness esp. when adding more menu items
-// TODO: fix nav viewport for mobile menu?  Unless able to make it collapsible
+// TODO: rebuild shrinking RESPONSIVE nav fr scratch while basing off of templates
 // Stick collapsible/shrinking menu header
 $sticky-shrinknav-menu-height: rem-calc(60);    // menu height (returns 3.75rem)
 $sticky-shrinknav-hero-height: 18.75em + 6em;   // header container height
 
-@mixin responsive-menu() {
-  @include breakpoint(medium) {
-      height: rem-calc(60);
-    }
-    @include breakpoint(small only) {
-      height: rem-calc(83);
-    }
-    @include vcenter-margin();
-}
-
-// Responsive nav bar
-.responsive-menu-bar {
-  height: $sticky-shrinknav-menu-height;
-  padding: 0;
+// Need to move main content below menu/header bar when header container is expanded
+body {
+  padding-top: var(--scroll-pad, $sticky-shrinknav-hero-height);    // `var` for dynamic scroll-padding-top size for shrinking header nav when one-page nav'ing
 }
 
 // Menu bar
 .sticky-shrinknav-menu {
   @include horizontal-center;
-  // padding: auto 0em;
-  padding-top: .3em;
-  // padding-bottom: .7em;
+  padding-top: .3em;  // used to be .7em
   bottom: 0;
-  // height: $sticky-shrinknav-menu-height;
-  @include responsive-menu();
-  // height: $testing-responsive-val;
+  height: $sticky-shrinknav-menu-height;
   line-height: $sticky-shrinknav-menu-height;
   width: 100%;
   background-color: rgba($primary-color, 0.1);
   transition: all 0.5s ease;
 
   // Each menu item
+  // TODO: spacing between items
   li {
     border-radius: 0.125em;
-    transition: all 0.3s ease;
-    // spacing b/w items
     padding: 0.35em 0.5em;  // top/bottom, left/right
+    transition: all 0.3s ease;
 
     &:hover {
       box-shadow: 0 0 0 0.0625em $white;
@@ -106,21 +90,12 @@ $sticky-shrinknav-hero-height: 18.75em + 6em;   // header container height
   color: $white;
 }
 
-// Need to move main content below menu/header bar when header container is expanded
-body {
-  padding-top: var(--scroll-pad, $sticky-shrinknav-hero-height);    // `var` for dynamic scroll-padding-top size for shrinking header nav
-  transition: all 0.5s ease;
-}
-
 // Applies to <body>, it gets wrapped for nav/header
 body.sticky-shrinknav-wrapper {
-  padding-top: var(--scroll-pad, $sticky-shrinknav-menu-height);    // `var` for dynamic scroll-padding-top size for shrinking header nav
-  transition: all 0.5s ease;
+  padding-top: var(--scroll-pad, $sticky-shrinknav-menu-height);    // `var` for dynamic scroll-padding-top size for shrinking header nav when one-page nav'ing
   
   .sticky-shrinknav-header{
-    // height: $sticky-shrinknav-menu-height;
-    @include responsive-menu();
-    // height: $testing-responsive-val;
+    height: $sticky-shrinknav-menu-height;
     background-color: rgba($primary-color, 0.9);
     margin-bottom: 3em;
     
@@ -130,6 +105,128 @@ body.sticky-shrinknav-wrapper {
     }
   }
 }
+
+
+
+
+// // TODO: get dynamic menu height for responsiveness esp. when adding more menu items
+// // TODO: fix nav viewport for mobile menu?  Unless able to make it collapsible
+// // Stick collapsible/shrinking menu header
+// $sticky-shrinknav-menu-height: rem-calc(60);    // menu height (returns 3.75rem)
+// $sticky-shrinknav-hero-height: 18.75em + 6em;   // header container height
+
+// @mixin responsive-menu() {
+//   @include breakpoint(medium) {
+//       height: rem-calc(60);
+//     }
+//     @include breakpoint(small only) {
+//       height: rem-calc(83);
+//     }
+//     @include vcenter-margin();
+// }
+
+// // Responsive nav bar
+// // TODO: Re-evaluate after deconstructing this template
+// // .responsive-menu-bar {
+// //   height: $sticky-shrinknav-menu-height;
+// //   padding: 0;
+// // }
+
+// // Menu bar
+// .sticky-shrinknav-menu {
+//   // @include horizontal-center;  // horizontally center elements (https://get.foundation/sites/docs/sass-mixins.html#horizontal-center) (could conflict with 'align-center' class)
+//   padding: auto 0em;
+//   // padding-top: .3em;
+//   // padding-bottom: .7em;
+//   bottom: 0;
+//   // // height: $sticky-shrinknav-menu-height;
+//   // @include responsive-menu();
+//   // // height: $testing-responsive-val;
+//   line-height: $sticky-shrinknav-menu-height;   // sets height of 'nav line'/nav element especially w/ responsive vertical elements even w/ padding on (gives parent div more horizontal space so we can add such padding) (https://www.w3schools.com/cssref/pr_dim_line-height.php)
+//   width: 100%;    // stretches menu + color, also breaks 'horizontal-center' mixin? (w/o 'align-center' class?)
+//   // background-color: rgba($primary-color, 0.1);
+//   // transition: all 0.5s ease;    // animation for 
+
+//   // Each menu item
+//   li {
+//     border-radius: 0.125em;
+//     // transition: all 0.3s ease;
+//     // spacing b/w items
+//     padding: 0.35em 0.5em;  // top/bottom, left/right
+
+//     &:hover {
+//       box-shadow: 0 0 0 0.0625em $white;
+//     }
+//   }
+
+//   // Menu text
+//   a {
+//     color: $white;
+//   }
+// }
+
+// // Header container (also contains nav bar)
+// .sticky-shrinknav-header {
+//   // padding-top: 2.3em;
+//   padding-top: $sticky-shrinknav-menu-height;
+//   width: 100%;   // needed bc there are (side) margins by default + fixed position messes it up
+//   height: $sticky-shrinknav-hero-height;    // make header look less crowded especially w/ menu bar at bottom w/ fixed position
+  
+//   // padding-top: calc($sticky-shrinknav-hero-height / 2);
+//   // padding-bottom: calc($sticky-shrinknav-hero-height / 2);
+//   // content: "";
+//   // clear: both;
+//   // display: table;
+  
+//   display: flex;
+//   flex-wrap: wrap;          // allows any extra text lines to go to next line
+//   justify-content: center;  // center the flex content, but not necessarily allow line breaks (for text)
+//   // align-items: center;
+//   // align-content: center;      // align flex content vertically
+//   background-color: lighten($primary-color, 10%);
+//   text-align: center;       // align any extra header text
+//   position: fixed;  // keep header still when scrolling + menu bar goes to bottom of header this time
+//   top: 0;
+//   left: 0;          // w/ fixed position + 100% width, everything looks shifted from left margin
+//   // overflow: hidden;
+//   // transition: all 0.5s ease;
+//   z-index: 500;             // prevents main body elements from overlapping menu/header bar when scrolling
+// }
+
+// // Header text
+// .sticky-shrinknav-header-title {
+//   // transition: all 0.3s ease;
+//   position: relative;
+//   // transform: translateY(-1 * calc($sticky-shrinknav-menu-height / 2));
+//   // margin-bottom: 0;
+//   color: $white;
+// }
+
+// // Need to move main content below menu/header bar when header container is expanded
+// body {
+// // 'padding-top' value snaps the body content "flush" underneath the menu bar when it shrinks (oh dear, I really mangled it smh)
+//   padding-top: var(--scroll-pad, $sticky-shrinknav-hero-height);    // `var` for dynamic scroll-padding-top size for shrinking header nav
+//   transition: all 0.5s ease;
+// }
+
+// // Applies to <body>, it gets wrapped for nav/header
+// body.sticky-shrinknav-wrapper {
+//   padding-top: var(--scroll-pad, $sticky-shrinknav-menu-height);    // `var` for dynamic scroll-padding-top size for shrinking header nav
+//   transition: all 0.5s ease;
+  
+//   .sticky-shrinknav-header{
+//     // height: $sticky-shrinknav-menu-height;
+//     @include responsive-menu();
+//     // height: $testing-responsive-val;
+//     background-color: rgba($primary-color, 0.9);
+//     margin-bottom: 3em;
+    
+//     .sticky-shrinknav-header-title{
+//       transform: scale(0);
+//       transition: all 0.3s ease;
+//     }
+//   }
+// }
 
 // For any additional flex elements needing to line break
 .line-break { width: 100% }
