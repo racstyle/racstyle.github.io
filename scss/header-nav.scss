@@ -22,91 +22,34 @@
   margin-top: 1.7em;
 }
 
-// TODO: rebuild shrinking RESPONSIVE nav fr scratch while basing off of templates
-// Stick collapsible/shrinking menu header
-$sticky-shrinknav-menu-height: rem-calc(60);    // menu height (returns 3.75rem)
-$sticky-shrinknav-hero-height: 18.75em + 6em;   // header container height
-
-// Need to move main content below menu/header bar when header container is expanded
-body {
-  padding-top: var(--scroll-pad, $sticky-shrinknav-hero-height);    // `var` for dynamic scroll-padding-top size for shrinking header nav when one-page nav'ing
+// header-nav section
+.section-header {
+  z-index: 500;
 }
 
-// Menu bar
-.sticky-shrinknav-menu {
-  @include horizontal-center;
-  padding-top: .3em;  // used to be .7em
-  bottom: 0;
-  height: $sticky-shrinknav-menu-height;
-  line-height: $sticky-shrinknav-menu-height;
-  width: 100%;
-  background-color: rgba($primary-color, 0.1);
-  transition: all 0.5s ease;
-
-  // Each menu item
-  // TODO: spacing between items
-  li {
-    border-radius: 0.125em;
-    padding: 0.35em 0.5em;  // top/bottom, left/right
-    transition: all 0.3s ease;
-
-    &:hover {
-      box-shadow: 0 0 0 0.0625em $white;
-    }
-  }
-
-  // Menu text
-  a {
-    color: $white;
-  }
-}
-
-// Header container
-.sticky-shrinknav-header {
-  padding-top: 2.3em;
-  width: 100%;
-  height: $sticky-shrinknav-hero-height;
-  display: flex;
-  flex-wrap: wrap;          // allows any extra text lines to go to next line
-  align-items: center;
-  align-content: center;    // align flex content vertically
-  justify-content: center;
+// header
+.header-hero {
+  padding: 10rem 0;
   background-color: lighten($primary-color, 10%);
-  text-align: center;
-  position: fixed;
-  top: 0;
-  left: 0;
-  overflow: hidden;
-  transition: all 0.5s ease;
-  z-index: 500;             // prevents main body elements from overlapping menu/header bar when scrolling
+  background-size: cover;
+  color: white;
 }
 
-// Header text
-.sticky-shrinknav-header-title {
-  transition: all 0.3s ease;
-  position: relative;
-  transform: translateY(-1 * calc($sticky-shrinknav-menu-height / 2));
-  margin-bottom: 0;
-  color: $white;
+// menu bar
+.menu {
+  box-shadow: 0 4px 8px rgba(0,0,0,0.25);
 }
 
-// Applies to <body>, it gets wrapped for nav/header
-body.sticky-shrinknav-wrapper {
-  padding-top: var(--scroll-pad, $sticky-shrinknav-menu-height);    // `var` for dynamic scroll-padding-top size for shrinking header nav when one-page nav'ing
-  
-  .sticky-shrinknav-header{
-    height: $sticky-shrinknav-menu-height;
-    background-color: rgba($primary-color, 0.9);
-    margin-bottom: 3em;
-    
-    .sticky-shrinknav-header-title{
-      transform: scale(0);
-      transition: all 0.3s ease;
-    }
-  }
+// make mobile menu button "flush"
+.mobile-menu {
+  margin: 0;
+  background-color: lighten($primary-color, 10%);
 }
 
-
+// keep the callout from overlapping with nav items
+.callout {
+  z-index: -1;
+}
 
 
 // // TODO: get dynamic menu height for responsiveness esp. when adding more menu items
@@ -234,6 +177,6 @@ body.sticky-shrinknav-wrapper {
 // Give each section some space in between sections
 // TODO: make it padding-bottom (it messes up the "scroll-padding-top")
 .section-padding {
-  padding-top: $sticky-shrinknav-menu-height + 1rem;
-  padding-bottom: 5em;
+  padding-top: 3em;
+  padding-bottom: 3em;
 }

@@ -14,31 +14,62 @@
     <!-- Scroll to top button -->
     <button onclick="topFunction()" id="scrollTop" title="Go to top of page">Top</button>
 
+    <!-- Temp modal for upcoming resume (I will need to update it, anyway lol) -->
+    <div class="reveal" id="resume_modal" data-reveal>
+      <h1>Hello!  A resume will be coming soon!</h1>
+      <p>I have some stuff I want to modify, but you will see it soon!</p>
+      <button class="close-button" data-close aria-label="Close modal" type="button">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+
+    <!-- Nav bar + header (outside .grid-container + added nested .cell bc we want full page width) -->
+    <div class="grid-x">
+      <div class="expanded cell">
+        <!-- Header -->
+        <header id="header-hero" class="header-hero text-center">
+          <!-- Header title -->
+          <h1 class="">Rachel Estilo</h1>
+          <h2 class="">Software Engineer</h2>
+          <button class="button secondary resume-padding" href="#" data-open="resume_modal">Download Resume</button>
+        </header>
+        
+        <!-- Nav -->
+        {% include nav.html %}
+      </div>
+    </div>
+    <br>
+
     <!-- Content -->
     <div class="grid-container">
-      <!-- Temp modal for upcoming resume (I will need to update it, anyway lol) -->
-      <div class="reveal" id="resume_modal" data-reveal>
-        <h1>Hello!  A resume will be coming soon!</h1>
-        <p>I have some stuff I want to modify, but you will see it soon!</p>
-        <button class="close-button" data-close aria-label="Close modal" type="button">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
 
-      <!-- Nav bar + header -->
-      <header class="sticky-shrinknav-header">
-        <!-- Header title -->
+
+
+
+
+
+      <!-- <header class="sticky-shrinknav-header">
+        
         <h1 class="sticky-shrinknav-header-title">Rachel Estilo</h1>
         <h2 class="sticky-shrinknav-header-title h3 line-break">Software Engineer</h2>
         <button class="button secondary sticky-shrinknav-header-title resume-padding" href="#" data-open="resume_modal">Download Resume</button>
         
-        <!-- Nav -->
+        {% comment %}
         {% include nav.html %}
+        {% endcomment %}
       </header>
-      <br>
+      <br> -->
       
+
+
+
+
+
+
       <!-- Main content -->
-      {{ content }}
+      <div id="section-content">
+        {{ content }}
+      </div>
       
       <!-- Footer -->
       {% include foot.html %}
