@@ -1,0 +1,15 @@
+// @import '_includes';
+// @import 'globals';
+
+/* ---------------------------- Introduction page --------------------------- */
+// Custom height for intro div area
+.introduction {
+    @include vcenter-padding(15em);     // div height + vertically center elements
+    background-color: $primary-color;
+    margin-bottom: 5em;
+}
+
+// White text for intro contrast
+.contrast-white {
+    color: white;
+}

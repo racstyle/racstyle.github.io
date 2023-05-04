@@ -1,0 +1,24 @@
+// @import '_includes';
+// @import 'globals';
+
+/* ------------------------------- Skills page ------------------------------ */
+// Vertically center progress bar inside card
+.progress {
+    margin-top: $progress-margin-bottom;
+  }
+  
+  // Progress rounded corners
+  .progress, .progress-meter {
+    border-radius: 10px;
+  }
+  
+  // Pass parameter for skill proficiency front matter
+  .skill-proficiency {
+    width: var(--proficiency);
+  }
+  
+  // Make sure all icons are the same size and positioned the same way
+  .icon-size {
+    width: 48px;
+    height: 48px;
+  }
