@@ -22,11 +22,6 @@
   margin-top: 1.7em;
 }
 
-// header-nav section
-.section-header {
-  z-index: 500;
-}
-
 // header
 .header-hero {
   padding: 10rem 0;
@@ -38,6 +33,12 @@
 // menu bar
 .menu {
   box-shadow: 0 4px 8px rgba(0,0,0,0.25);
+  
+  // active nav link when scrolling
+  .is-active {
+    font-weight: bold;
+  }
+
 }
 
 // make mobile menu button "flush"
@@ -46,13 +47,8 @@
   background-color: lighten($primary-color, 10%);
 }
 
-// keep the callout from overlapping with nav items
-.callout {
-  z-index: -1;
-}
-
 // Give each section some space in between sections
-// TODO: make it padding-bottom (it messes up the "scroll-padding-top")
+// TODO: make it padding-bottom via Foundation JS plugin options
 .section-padding {
   padding-top: 3em;
   padding-bottom: 3em;
