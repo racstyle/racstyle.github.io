@@ -5,11 +5,6 @@ $(document).foundation();
 // Scroll to top button via id
 let myButton = document.getElementById("scrollTop");
 
-// Get all links in menu bar
-var links = [];
-$("#menu").find("li").each(function() { links.push($(this).find('a').attr('href')); });
-console.log(links);
-
 
 // Main script
 $(function() {
