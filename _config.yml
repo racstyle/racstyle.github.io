@@ -5,7 +5,7 @@ title: Rachel Estilo
 url: http://racstyle.github.io/ # the base hostname & protocol for your site, e.g. http://example.com
 
 
-# Collection for "pages"
+# Collection for "pages" to be able to loop through "_pages" folder
 collections:
   pages:
     output: true
@@ -22,7 +22,7 @@ include:
   - .htaccess
 
 
-# Exclude from processing.
+# Exclude from Jekyll processing.
 exclude:
   - node_modules/foundation-sites/docs/
   - config.codekit3

@@ -1,12 +1,13 @@
-# This is a list of my personal projects
+# This is a list of selected personal projects
 
-# Software Engineer Sr. Analyst
+# Caught You Phone-Handed
 - name: Caught You Phone-Handed
   start_date: Aug. 2020
   end_date: Apr. 2021
   demo: https://spark.adobe.com/page/rNh1NAZyYFG9T/
   github: https://github.com/racstyle/Caught-You-Phone-Handed
   screenshot: https://placehold.co/190x120
+  screenshot_desc: A screenshot of the project demo page
   description:
     - This project was created for the UIC Engineering Expo Spring 2021 which is where engineering seniors create innovative projects and present them to a panel.
     - It has won first not only in the category (Machine Learning) but in the overall Expo, across all engineering disciplines.

@@ -1,12 +1,7 @@
-# This is a list of my skills and proficiencies
+# This is a selected list of my skills and proficiencies
+# Not all of them are shown since I did use them, but I don't want to show I want to keep using it on the long run
 
-# HTML5
-- skill_name: HTML5
-  proficiency: 95%
-  icon: assets/icons8-html-5.svg
-  icon_source: https://icons8.com/icon/20909/html-5
-  skill_page: https://en.wikipedia.org/wiki/HTML5
-  in_project: 
+# TODO: sort by proficiency?
 
 # Git
 - skill_name: Git
@@ -15,6 +10,16 @@
   icon_source: https://icons8.com/icon/20906/git
   skill_page: https://git-scm.com/
   in_project: Caught You Phone-Handed
+  show_in_skills_list: true
+
+# HTML5
+- skill_name: HTML5
+  proficiency: 95%
+  icon: assets/icons8-html-5.svg
+  icon_source: https://icons8.com/icon/20909/html-5
+  skill_page: https://en.wikipedia.org/wiki/HTML5
+  in_project: 
+  show_in_skills_list: true
 
 # SASS
 - skill_name: SASS
@@ -23,6 +28,7 @@
   icon_source: https://icons8.com/icon/vEiU8UeAmv0x/sass-avatar
   skill_page: https://sass-lang.com/
   in_project: 
+  show_in_skills_list: true
 
 # CSS
 - skill_name: CSS
@@ -31,6 +37,7 @@
   icon_source: https://icons8.com/icon/21278/css3
   skill_page: https://www.w3.org/Style/CSS/Overview.en.html
   in_project: 
+  show_in_skills_list: true
 
 # Angular
 - skill_name: Angular
@@ -39,6 +46,7 @@
   icon_source: https://icons8.com/icon/71257/angularjs
   skill_page: https://angular.io/
   in_project: 
+  show_in_skills_list: true
 
 # TypeScript
 - skill_name: TypeScript
@@ -47,6 +55,7 @@
   icon_source: https://icons8.com/icon/uJM6fQYqDaZK/typescript
   skill_page: https://www.typescriptlang.org/
   in_project: 
+  show_in_skills_list: true
 
 # Python
 - skill_name: Python
@@ -55,6 +64,8 @@
   icon_source: https://icons8.com/icon/13441/python
   skill_page: https://www.python.org/
   in_project: 
+    - Caught-You-Phone-Handed
+  show_in_skills_list: true
 
 # Streamlit
 - skill_name: Streamlit
@@ -63,11 +74,14 @@
   icon_source: https://streamlit.io/brand
   skill_page: https://streamlit.io/
   in_project: 
+  show_in_skills_list: true
 
 # TensorFlow
 - skill_name: TensorFlow
-  proficiency: 60%
+  proficiency: 40%
   icon: assets/icons8-tensorflow.svg
   icon_source: https://icons8.com/icon/n3QRpDA7KZ7P/tensorflow
   skill_page: https://www.tensorflow.org/
-  in_project: Caught-You-Phone-Handed
+  in_project:
+    - Caught-You-Phone-Handed
+  show_in_skills_list: false

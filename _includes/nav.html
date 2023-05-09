@@ -3,7 +3,7 @@
 <!-- This top-most div will enable sticky nav -->
 <nav data-sticky-container>
     <div class="sticky" data-sticky data-margin-top="0" data-top-anchor="header-hero:bottom" data-btm-anchor="section-content:bottom" data-sticky-on="small">
-        <!-- TODO: do away with '.top-bar' class and make it look prettier -->
+        <!-- TODO: do away with '.top-bar' class and make nav bar look prettier -->
 
         <!-- Responsive menu bar icon -->
         <div class="menu top-bar align-center" data-responsive-toggle="menu" data-hide-for="medium">
@@ -14,7 +14,7 @@
         <ul id="menu" class="menu top-bar align-center vertical medium-horizontal" data-smooth-scroll data-magellan>
             {% for item in site.pages %}
                 <!-- List rest of links -->
-                <li class="menuItem"><a href="#{{ item.nav }}"><i class="{{ item.icon }}"></i>  {{ item.title }}</a></li>
+                <li class="menuItem text-center"><a class="menuItemLink" href="#{{ item.nav }}"><i class="{{ item.icon }}"></i>  {{ item.title }}</a></li>
             {% endfor %}
         </ul>
     </div>
