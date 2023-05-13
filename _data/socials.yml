@@ -1,0 +1,11 @@
+# List of social media links + icons
+
+# GitHub
+- social_name: GitHub
+  social_link: https://github.com/racstyle/
+  social_icon: fab fa-github icon-foot
+
+# LinkedIn
+- social_name: LinkedIn
+  social_link: https://www.linkedin.com/in/rachel-estilo
+  social_icon: fab fa-linkedin icon-foot

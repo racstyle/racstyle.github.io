@@ -30,6 +30,7 @@
   color: white;
 }
 
+// TODO: cleanup menu item styling
 // menu bar
 .menu {
   box-shadow: 0 4px 8px rgba(0,0,0,0.25);
@@ -40,12 +41,11 @@
     background-color: lighten($primary-color, 10%);
     color: white;
 
-    // only for small screens
+    // expand active menu item to full width in small screens
     @include breakpoint(small only) {
       width: 100%;
     }
   }
-  
 }
 
 // each menu item (does not cover link styling)
@@ -57,7 +57,7 @@
     background-color: lighten($primary-color, 40%);
   }
   
-  // only for small screens
+  // expand each menu item to full width in small screens
   @include breakpoint(small only) {
     margin: .5em .5em;    // top/bottom, left/right
     width: 100%;
@@ -66,7 +66,7 @@
 
 // for the nav link styling
 .menuItemLink {
-  // only for small screens
+  // expand each menu item link to full width in small screens
   @include breakpoint(small only) {
     width: 100%;
   }

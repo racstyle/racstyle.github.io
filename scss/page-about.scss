@@ -11,17 +11,26 @@
     width: 17em;                // size of image
 }
 
+// Add more margin to side for small screens
+$margin-gutter: 2.5em;
+.margin-small {
+    @include breakpoint(small only) {
+        margin-left: $margin-gutter;
+        margin-right: $margin-gutter;
+    }
+}
+
 // Adjust thumbnail size and centered when stacked in small devices
-@media screen and (max-width: 39.99875em) {
-    .stack-for-small .media-object-section img {
+.stack-for-small .media-object-section img {
+    @include breakpoint(small only) {
         width: 13em;
         @include hcenter;   // center left/right
     }
 }
 
 // Add more margin to side of text in media-object container for medium+ screen sizes
-@media screen and (min-width: 39.99876em) {
-    .margin-side-left {
+.margin-side-left {
+    @include breakpoint(medium) {
         margin-left: 3em;
     }
 }

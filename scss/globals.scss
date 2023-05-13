@@ -3,12 +3,6 @@
 // TODO: Dark mode?
 // TODO: Clean up custom sass mixins
 
-// TODO: Foundation media queries variables/breakpoints + import
-/* ------------------ Media queries for sizes (copy/paste) ------------------ */
-// small: @media screen and (max-width: 39.99875em)
-// medium: @media screen and (min-width: 39.99876em)
-
-
 /* --------------------------------- Globals -------------------------------- */
 // Smooth scrolling is enabled w/ Foundation's "data-smooth-scroll" in nav
 
@@ -45,15 +39,6 @@
   display: flex;
   justify-content: center;
   gap: $gap-val;
-}
-
-// Add more margin to side for small screens
-$margin-gutter: 2.5em;
-@media screen and (max-width: 39.99875em) {
-    .margin-small {
-        margin-left: $margin-gutter;
-        margin-right: $margin-gutter;
-    }
 }
 
 // Scroll to top button
