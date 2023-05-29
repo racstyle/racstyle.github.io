@@ -1,21 +1,22 @@
 <!-- Navigation bar that will appear in every page -->
 
-<!-- This top-most div will enable sticky nav -->
-<nav data-sticky-container>
-    <div class="sticky" data-sticky data-margin-top="0" data-top-anchor="header-hero:bottom" data-btm-anchor="section-content:bottom" data-sticky-on="small">
-        <!-- TODO: do away with '.top-bar' class and make nav bar look prettier -->
-
+<nav id="navBar" class="navbar navbar-expand-md sticky-top navbar-dark bg-primary">
+    <!-- Flush menu on both sides, no margins -->
+    <div class="container-fluid">
         <!-- Responsive menu bar icon -->
-        <div class="menu top-bar align-center" data-responsive-toggle="menu" data-hide-for="medium">
-            <button class="button mobile-menu" type="button" data-toggle="menu"><i class="fa fa-md fa-bars"></i> Menu</button>
-        </div>
-    
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuBar" aria-controls="menuBar" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+
         <!-- Menu bar content -->
-        <ul id="menu" class="menu top-bar align-center vertical medium-horizontal" data-smooth-scroll data-magellan>
-            {% for item in site.pages %}
-                <!-- List rest of links -->
-                <li class="menuItem text-center"><a class="menuItemLink" href="#{{ item.nav }}"><i class="{{ item.icon }}"></i>  {{ item.title }}</a></li>
-            {% endfor %}
-        </ul>
+        <div class="collapse navbar-collapse" id="menuBar">
+            <!-- Future nav branding here -->
+            <!-- <a class="navbar-brand" href="/">Rachel Estilo</a> -->
+
+            <!-- Menu links (.text-center for centering on small screens) -->
+            <ul class="navbar-nav mx-auto text-center">
+                {% for item in site.pages %}
+                    <li class="nav-item"><a class="nav-link" href="#{{ item.nav }}"><i class="{{ item.icon }}"></i>    {{ item.title }}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
     </div>
 </nav>

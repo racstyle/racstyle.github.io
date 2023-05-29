@@ -1,7 +1,7 @@
-// @import '_includes';
-// @import 'globals';
+// // @import '_includes';
+// // @import 'globals';
 
-/* ------------------------------- About page ------------------------------- */
+// /* ------------------------------- About page ------------------------------- */
 // Customize thumbnail cropping (medium-large screens)
 .round {
     object-fit: cover;          // prevent image from stretching
@@ -12,25 +12,18 @@
 }
 
 // Add more margin to side for small screens
-$margin-gutter: 2.5em;
+$margin-gutter: 2em;
 .margin-small {
-    @include breakpoint(small only) {
+    @include media-breakpoint-down(sm) {
         margin-left: $margin-gutter;
         margin-right: $margin-gutter;
     }
 }
 
-// Adjust thumbnail size and centered when stacked in small devices
-.stack-for-small .media-object-section img {
-    @include breakpoint(small only) {
-        width: 13em;
-        @include hcenter;   // center left/right
-    }
-}
-
-// Add more margin to side of text in media-object container for medium+ screen sizes
-.margin-side-left {
-    @include breakpoint(medium) {
-        margin-left: 3em;
+// Adjust thumbnail size + spacing b/w thumbnail/header for small screens
+.thumbnail-small {
+    @include media-breakpoint-down(sm) {
+        width: 70%;
+        margin-bottom: 1.5em;
     }
 }

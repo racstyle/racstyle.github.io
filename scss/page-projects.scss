@@ -2,7 +2,7 @@
 // @import 'globals';
 
 /* ------------------------------ Projects page ----------------------------- */
-// Fix project buttons bottom margin
+// Custom project buttons width bc Bootstrap
 .proj-button {
-    margin-bottom: 0;
+    width: 45%;
 }

@@ -1,30 +1,24 @@
-// Enable Foundation Sites library
-$(document).foundation();
-
-
+/* ------------------------------ Scroll to top ----------------------------- */
 // Scroll to top button via id
 let myButton = document.getElementById("scrollTop");
 
-
-// Main script
-$(function() {
-  // Show/hide scroll to top button
-  $(window).on('scroll', function() {
-    // Viewport position on scroll
-    var winTop = $(window).scrollTop();
-
-    // User scrolled down
-    if (winTop >= 30) {
-      myButton.style.display = "block";                   // show "scroll to top" button
+// Showing/hiding scroll to top button
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        myButton.style.display = "block";
     }
-    // User scrolled to top
-    else  {
-      myButton.style.display = "none";                    // hide "scroll to top" button
+    else {
+        myButton.style.display = "none";
     }
-  });
+}
 
-  // 
-});
+// Check if to show scroll to top button on user scroll
+window.onscroll = function() {
+    scrollFunction();
+};
+
+// Event listener when user clicks on button
+myButton.addEventListener("click", topFunction);
 
 // Scrolling to top function
 function topFunction() {

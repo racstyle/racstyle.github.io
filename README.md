@@ -21,25 +21,11 @@ In the meantime, while you see the chaos, check out what I (will) use in this re
 - [Git](https://git-scm.com/) for project management
 - [HTML5](https://www.w3schools.com/html/html_intro.asp) for the web skeleton and content
 - [CSS](https://www.w3schools.com/Css/) / [SCSS](https://sass-lang.com/) for the appealing looks
+- [Bootstrap 5.2](https://getbootstrap.com/) for responsive pages.  It used to be [Foundation Sites 6](https://get.foundation/), which based the starting point from [this repo](https://github.com/daigofuji/jekyll-foundation-6-starter), it was/is a Godsend
 - [JavaScript](https://www.javascript.com/) and [jQuery](https://jquery.com/) for the functionality
-- [Foundation Sites 6](https://get.foundation/) for responsive pages (I almost gave up on this but I took the starting point from [this repo](https://github.com/daigofuji/jekyll-foundation-6-starter), it was/is a Godsend)
-- [Jekyll](http://jekyllrb.com) for viewing my live results on my local dev environment (needed to install Ruby 3.1.3 and the `jekyll` gem to get that running)
 - [Liquid](https://jekyllrb.com/docs/liquid/) for reusable code for my nav and footer elements (NOTE: being a newb at static pages I am, it used to be [PHP](https://php.net) but I have learned my lesson lol)
+- [Jekyll](http://jekyllrb.com) for viewing my live results on my local dev environment to see the Liquid compiled (needed to install Ruby 3.1.3 and the `jekyll` gem to get that running)
 - [Font Awesome](https://fontawesome.com/), [Icons8](https://icons8.com), and [Foundation Icon Fonts 3](https://zurb.com/playground/foundation-icon-fonts-3) for awesome icons!
-
-<!-- # Do I plan to implement any other languages?
-Most definitely!  Here is what I plan to add to my coding playground as soon as I can:
-- [Vue.js](https://vuejs.org)
-- [Bootstrap](https://getbootstrap.com) and hopefully [BootstrapVue](https://bootstrap-vue.org/)
-- [React.js](https://reactjs.org/)
-- [Angular.js](https://angularjs.org/)
-- [Svelte JS](https://svelte.dev/)
-- [Flutter](https://flutter.dev/)
-- .....And hopefully more! -->
-
-<!-- The purpose of these crazy implementations are just for building my DEV skills (hence the playground), but they may end up in the main functionality of my site, who knows? 🤷🏻‍♀️ -->
-
-<!-- It is all experimental here, so not all of these implementations may not happen, but hey, I say it would be worth a shot! (*'Cause I am not throwing away my shot!* 😜) -->
 
 # WAIT, are you still here reading this?
 Well, what are you waiting for???  Now that you know what this site is about, [go check it out and enjoy](https://racstyle.github.io)!

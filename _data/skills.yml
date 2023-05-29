@@ -1,9 +1,11 @@
 # This is a selected list of my skills and proficiencies
 # Not all of them are shown since I did use them, but I don't want to show I want to keep using it on the long run
 
+# TODO: categorize by tech stack category
+
 # Git
 - skill_name: Git
-  proficiency: 85%
+  proficiency: 85
   icon: assets/icons8-git.svg
   icon_source: https://icons8.com/icon/20906/git
   skill_page: https://git-scm.com/
@@ -12,7 +14,7 @@
 
 # HTML5
 - skill_name: HTML5
-  proficiency: 95%
+  proficiency: 95
   icon: assets/icons8-html-5.svg
   icon_source: https://icons8.com/icon/20909/html-5
   skill_page: https://en.wikipedia.org/wiki/HTML5
@@ -21,7 +23,7 @@
 
 # SASS
 - skill_name: SASS
-  proficiency: 80%
+  proficiency: 80
   icon: assets/icons8-sass-avatar.svg
   icon_source: https://icons8.com/icon/vEiU8UeAmv0x/sass-avatar
   skill_page: https://sass-lang.com/
@@ -30,7 +32,7 @@
 
 # CSS
 - skill_name: CSS
-  proficiency: 80%
+  proficiency: 80
   icon: assets/icons8-css3.svg
   icon_source: https://icons8.com/icon/21278/css3
   skill_page: https://www.w3.org/Style/CSS/Overview.en.html
@@ -39,7 +41,7 @@
 
 # Angular
 - skill_name: Angular
-  proficiency: 75%
+  proficiency: 75
   icon: assets/icons8-angularjs.svg
   icon_source: https://icons8.com/icon/71257/angularjs
   skill_page: https://angular.io/
@@ -48,7 +50,7 @@
 
 # TypeScript
 - skill_name: TypeScript
-  proficiency: 75%
+  proficiency: 75
   icon: assets/icons8-typescript.svg
   icon_source: https://icons8.com/icon/uJM6fQYqDaZK/typescript
   skill_page: https://www.typescriptlang.org/
@@ -57,7 +59,7 @@
 
 # Python
 - skill_name: Python
-  proficiency: 75%
+  proficiency: 75
   icon: assets/icons8-python.svg
   icon_source: https://icons8.com/icon/13441/python
   skill_page: https://www.python.org/
@@ -67,7 +69,7 @@
 
 # Streamlit
 - skill_name: Streamlit
-  proficiency: 75%
+  proficiency: 75
   icon: assets/streamlit-mark-color.svg
   icon_source: https://streamlit.io/brand
   skill_page: https://streamlit.io/
@@ -76,7 +78,7 @@
 
 # TensorFlow
 - skill_name: TensorFlow
-  proficiency: 40%
+  proficiency: 40
   icon: assets/icons8-tensorflow.svg
   icon_source: https://icons8.com/icon/n3QRpDA7KZ7P/tensorflow
   skill_page: https://www.tensorflow.org/

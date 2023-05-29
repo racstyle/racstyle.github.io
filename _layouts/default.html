@@ -13,41 +13,34 @@
   </head>
   <body>
     <!-- Scroll to top button -->
-    <button onclick="topFunction()" id="scrollTop" title="Go to top of page" data-smooth-scroll>Top</button>
+    <button id="scrollTop" type="button" class="btn btn-danger btn-floating btn-lg"><i class="fas fa-arrow-up"></i></button>
 
-    <!-- Nav bar + header (outside .grid-container + added nested .cell bc we want full page width) -->
-    <div class="grid-x">
-      <div class="expanded cell">
-        <!-- Header -->
-        <header id="header-hero" class="header-hero text-center">
-          <!-- Header title -->
-          <h1>Rachel Estilo</h1>
-          <h2 class="h3">Software Engineer</h2>
-          <a href="../assets/Rachel_Estilo_RES.pdf" download="Rachel_Estilo_RES"><button class="button secondary resume-padding">Download Resume</button></a>
-        </header>
-        
-        <!-- Nav -->
-        {% include nav.html %}
+    <!-- Header -->
+    <header class="py-5 bg-primary text-center">
+      <div class="container">
+        <h1>Rachel Estilo</h1>
+        <h2 class="h3">Software Engineer</h2>
+        <a href="../assets/Rachel_Estilo_RES.pdf" download="Rachel_Estilo_RES"><button class="btn btn-secondary resume-padding">Download Resume</button></a>
       </div>
-    </div>
+    </header>
+    
+    <!-- Nav -->
+    {% include nav.html %}
+
     <br>
 
-    <!-- Content -->
-    <div class="grid-container">
-      <!-- Main content -->
-      <div id="section-content">
-        {{ content }}
-      </div>
-      
-      <!-- Footer -->
-      <br><br>
-      {% include foot.html %}
-      <br><br><br>
-    </div>
+    <!-- Main content -->
+    {{ content }}
+    
+    <!-- Footer -->
+    <br><br>
+    {% include foot.html %}
+    <br><br><br>
 
-    <script src={{ site.path }}{{ "/node_modules/jquery/dist/jquery.js" }}></script>
-    <script src={{ site.path }}{{ "/node_modules/what-input/dist/what-input.js" }}></script>
-    <script src={{ site.path }}{{ "/node_modules/foundation-sites/dist/js/foundation.js" }}></script>
+    <!-- Bootstrap + dependency JS, needed to get some Bootstrap working -->
+    <script src={{ site.path }}{{ "/node_modules/@popperjs/core/dist/umd/popper.min.js" }}></script>
+    <script src={{ site.path }}{{ "/node_modules/bootstrap/dist/js/bootstrap.min.js" }}></script>
+    <!-- Custom JS -->
     <script src={{ site.path }}{{ "/js/app-min.js" }}></script>
   </body>
 </html>

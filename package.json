@@ -1,40 +1,15 @@
 {
-  "name": "foundation-sites-template",
+  "name": "codekit-project",
   "version": "1.0.0",
-  "description": "Basic template for a new Foundation for Sites project.",
-  "main": "gulpfile.js",
-  "scripts": {
-    "start": "gulp",
-    "build": "gulp sass"
-  },
-  "author": "Foundation Yetinauts <contact@get.foundation> (https://get.foundation)",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/foundation/foundation-sites/issues",
-    "email": "contact@get.foundation"
-  },
+  "description": "CodeKit created this starter package.json file. You should customize it appropriately. (If you intend to publish this project on npm, add an entry in the 'repository' field and remove the 'private' attribute, below.)",
+  "scripts": {},
+  "author": "",
+  "license": "UNLICENSED",
+  "repository": {},
+  "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.4.0",
-    "foundation-sites": "latest",
-    "jquery": "^3.6.4",
-    "motion-ui": "latest",
-    "what-input": ">=5.2.10"
-  },
-  "devDependencies": {
-    "autoprefixer": "^10.3.4",
-    "browser-sync": "^2.18.13",
-    "gulp": "^4.0.0",
-    "gulp-load-plugins": "^2.0.7",
-    "gulp-postcss": "^9.0.1",
-    "gulp-sass": "^4.1.1",
-    "postcss": "^8.3.11"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/foundation/foundation-sites-template.git"
-  },
-  "private": true,
-  "browserslist": [
-    "last 2 versions"
-  ]
+    "@popperjs/core": "^2.11.7",
+    "bootstrap": "^5.2.3"
+  }
 }

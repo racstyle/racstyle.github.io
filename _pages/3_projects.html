@@ -4,40 +4,39 @@ title: Projects
 icon: fa-solid fa-file-lines
 ---
 
-<!-- TODO: Try out Firebase for hosting projects (especially for Angular) before signing up for Netlify (especially) -->
-
 <!-- A quick note -->
-<div class="grid-x grid-margin-x">
-    <div class="cell text-center">
+<div class="row">
+    <div class="col-12 text-center">
         <p>These are my top 5 projects.  To see more projects, check out <a href="https://www.linkedin.com/in/rachel-estilo/details/projects/" target="_blank">my LinkedIn profile</a> and/or <a href="https://github.com/racstyle?tab=repositories" target="_blank">my GitHub repositories</a>.</p>
     </div>
 </div>
 
 <br>
-<div class="grid-x grid-margin-x small-up-1 medium-up-2 large-up-3">
+<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
     <!-- Loop through each project data -->
     {% for proj in site.data.projects %}
         <!-- Separate .cell and .card if you want fixed card sizes regardless of screen size.  Otherwise, to stretch some cards, put them in the same div/level -->
-        <div class="cell">
+        <div class="col">
             <div class="card">
-                <img src="{{ proj.screenshot }}" alt="{{ proj.screenshot_desc }}">
-                <div class="card-section">
-                    <h2 class="h4">{{ proj.name }}</h2>
-                    <p>{{ proj.start_date }} - {{ proj.end_date }}</p>
+                <img class="card-img-top" src="{{ proj.screenshot }}" alt="{{ proj.screenshot_desc }}">
+                <div class="card-body">
+                    <h2 class="card-title h4">{{ proj.name }}</h2>
+                    <p class="card-text">{{ proj.start_date }} - {{ proj.end_date }}</p>
 
                     <!-- Loop through bulleted description -->
-                    <ul>{% for desc in proj.description %}
+                    <ul class="card-text">{% for desc in proj.description %}
                         <li>{{ desc }}</li>
                     {% endfor %}</ul>
 
                     <!-- Button group -->
-                    <div class="center-element-group">
-                        {% if proj.github %}<a href="{{ proj.github }}" target="_blank" class="button proj-button expanded"><i class="fa-brands fa-github"></i>  GitHub</a>{% endif %}
-                        {% if proj.demo %}<a href="{{ proj.demo }}" target="_blank" class="button proj-button expanded"><i class="fa-solid fa-desktop"></i>  Demo</a>{% endif %}
+                    <div class="text-center">
+                        {% if proj.github %}<a href="{{ proj.github }}" target="_blank" class="btn btn-lg btn-primary proj-button mx-1"><i class="fa-brands fa-github"></i>  GitHub</a>{% endif %}
+                        {% if proj.demo %}<a href="{{ proj.demo }}" target="_blank" class="btn btn-lg btn-primary proj-button mx-1"><i class="fa-solid fa-desktop"></i>  Demo</a>{% endif %}
                     </div>
 
                     <!-- Skills/frameworks used -->
-                    <div class="center-element-group">
+                    <br>
+                    <div class="text-center">
                         <!-- Go through skills in project -->
                         {% for proj_skill in proj.skills_used %}
                             <!-- Go through skills in skillset -->

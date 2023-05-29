@@ -1,14 +1,9 @@
-// @import '_includes';
-// @import 'globals';
+// // @import '_includes';
+// // @import 'globals';
 
-/* ------------------------------- Skills page ------------------------------ */
-// Vertically center progress bar inside card
-.progress {
-  margin-top: $progress-margin-bottom;
-}
-
+// /* ------------------------------- Skills page ------------------------------ */
 // Progress rounded corners
-.progress, .progress-meter {
+.progress, .progress-bar {
   border-radius: 10px;
 }
 
