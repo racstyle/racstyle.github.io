@@ -1,6 +1,6 @@
 <!-- Navigation bar that will appear in every page -->
 
-<nav id="navBar" class="navbar navbar-expand-md sticky-top navbar-dark bg-primary">
+<nav class="navbar navbar-expand-md sticky-top navbar-dark bg-primary">
     <!-- Flush menu on both sides, no margins -->
     <div class="container-fluid">
         <!-- Responsive menu bar icon -->
@@ -12,7 +12,7 @@
             <!-- <a class="navbar-brand" href="/">Rachel Estilo</a> -->
 
             <!-- Menu links (.text-center for centering on small screens) -->
-            <ul class="navbar-nav mx-auto text-center">
+            <ul class="nav navbar-nav mx-auto text-center">
                 {% for item in site.pages %}
                     <li class="nav-item"><a class="nav-link" href="#{{ item.nav }}"><i class="{{ item.icon }}"></i>    {{ item.title }}</a></li>
                 {% endfor %}

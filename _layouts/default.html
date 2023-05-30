@@ -11,7 +11,8 @@
     <!-- FontAwesome -->
     <link rel="stylesheet" href={{ site.path }}{{ "/node_modules/@fortawesome/fontawesome-free/css/all.min.css" }}>
   </head>
-  <body>
+  <!-- `data-bs-root-margin` determines scrollspy/magellan `.active` offset -->
+  <body data-bs-spy="scroll" data-bs-target="#menuBar" data-bs-smooth-scroll="true" data-bs-root-margin="0px 0px -85%">
     <!-- Scroll to top button -->
     <button id="scrollTop" role="button" class="btn btn-danger btn-floating btn-lg"><i class="fas fa-arrow-up"></i></button>
 
