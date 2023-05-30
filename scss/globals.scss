@@ -4,10 +4,12 @@
 // // TODO: Clean up custom sass mixins
 
 // /* --------------------------------- Globals -------------------------------- */
-// // Padding between "page" sections
-// .section-padding {
-//     padding-bottom: 3em;
-// }
+// Padding between "page" sections
+$padding-size: 5em;
+.section-padding {
+    padding-top: $padding-size;
+    padding-bottom: $padding-size;
+}
 
 // // Smooth scrolling is enabled w/ Foundation's "data-smooth-scroll" in nav
 

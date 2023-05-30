@@ -24,18 +24,15 @@ layout: default
   - No need for front matter for these pages ONLY WHEN 'include(_relative)'-ing bc it is linked inside the 'index.html' file, which already has the 'default.html' layout, front matter ^above is just for reference.
   - BUT when you are DISPLAYING/EMBEDDING VIA (COLLECTION) LOOPING, you can do the 'title/name' and 'url' (NOT PERMALINK) front matter but still leave out 'layout'
   - Again, leave out 'layout' front matter since the pages are "embedded" inside 'index.html' file as mentioned ^above -->
-<!-- inside a div for the magellan/scrollspy CSS .active class on scroll JS plugin feature -->
-<div data-bs-spy="scroll" data-bs-target="#navBar" data-bs-smooth-scroll="true">
+<!-- TODO: fix scrollspy scroll location bug -->
+  <!-- inside a div for the magellan/scrollspy CSS .active class on scroll JS plugin feature -->
+  <!-- <div data-bs-spy="scroll" data-bs-target="#navBar" data-bs-smooth-scroll="true"> -->
   {% for each_page in site.pages %}
-    <section class="container py-5" id="{{ each_page.nav }}">
-      <div class="row">
-        <div class="col-12">
-          <header><h1 class="text-center">{{ each_page.title }}</h1></header>
-          
-          <!-- Actual page content -->
-          {{ each_page.content }}
-        </div>
-      </div>
+    <section class="container section-padding" id="{{ each_page.nav }}">
+        <header><h1 class="text-center">{{ each_page.title }}</h1></header>
+        
+        <!-- Actual page content -->
+        {{ each_page.content }}
     </section>
   {% endfor %}
-</div>
+  <!-- </div> -->
