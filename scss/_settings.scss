@@ -1,6 +1,6 @@
 //  Bootstrap must be set up in a specific order so that your custom overrides work correctly.
-//      Custom Sass import order: https://getbootstrap.com/docs/5.2/customize/sass/
-//      Default variables you can override: https://getbootstrap.com/docs/5.2/customize/color/
+//      Custom Sass import order: https://getbootstrap.com/docs/5.3/customize/sass/
+//      Default variables you can override: https://getbootstrap.com/docs/5.3/customize/color/
 
 //
 //  1. First, import functions (so you can manipulate colors, SVGs, calc, etc):
@@ -24,6 +24,7 @@ $custom-theme-colors: (
 //
 // Configuration 2
 @import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/variables-dark";
 
 //
 //  4. Then, declare any Sass map overrides (optional). For example:

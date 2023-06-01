@@ -1,6 +1,6 @@
 // Main SCSS file with all modular styles
 
-@import '_includes';     // Bootstrap class includes
+@import '_settings';     // Bootstrap class includes + custom overrides settings
 @import 'globals';       // Global styling
 @import 'header-nav';    // nav header
 @import 'page-intro';    // introduction "page"

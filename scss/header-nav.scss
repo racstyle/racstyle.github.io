@@ -1,6 +1,6 @@
 /* --------------------------------- Header --------------------------------- */
 .header-hero {
-    padding: 7rem 0;    // top/bottom, left/right
+    padding: 6rem 0;    // top/bottom, left/right
     // background-color: lighten($primary-color, 10%);
     background-size: cover;
     color: white;
@@ -23,4 +23,15 @@
   @include media-breakpoint-down(sm) {
     margin: .5em 0em;       // top/bottom, left/right
   }
+}
+
+// // navbar-brand centering + keep on top for sm toggle
+// .navbar-brand {
+//   top: 15%;
+// }
+
+
+/* ------------------------------ Theme toggler ----------------------------- */
+.theme-width, .theme-toggler {
+  width: 20%;
 }
