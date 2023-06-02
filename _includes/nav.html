@@ -3,7 +3,7 @@
 <!-- TODO: dynamic dark/light theme color + apply to header hero? -->
 <nav class="navbar navbar-expand-md sticky-top bg-primary" data-bs-theme="dark">
     <!-- Flush menu on both sides, no margins -->
-    <div class="container-fluid">
+    <div class="container-fluid align-content-between">
         <!-- TODO: Future nav branding here -->
         <a class="navbar-brand position-absolute align-self-start" href="/">Rachel Estilo</a>
         
@@ -11,7 +11,7 @@
         <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#menuBar" aria-controls="menuBar" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
 
         <!-- Menu bar content -->
-        <div class="collapse navbar-collapse mx-auto" id="menuBar" data-bs-target=".theme-toggler">
+        <div class="collapse navbar-collapse mx-auto" id="menuBar">
             <!-- Menu links (.text-center for centering on small screens) -->
             <ul class="nav navbar-nav mx-auto text-center">
                 {% for item in site.pages %}
@@ -20,12 +20,5 @@
             </ul>
         </div>
 
-        <!-- Theme picker -->
-        <!-- <div class="collapse navbar-collapse theme-toggler ms-auto">
-            <select id="themePicker" class="form-select theme-width">
-                <option value="light" selected>Light</option>
-                <option value="dark">Dark</option>
-            </select>
-        </div> -->
     </div>
 </nav>

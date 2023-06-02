@@ -15,7 +15,7 @@
 /* --------------------------------- Nav bar -------------------------------- */
 // TODO: better .active styling?
 
-// each menu item (does not cover link styling)
+// add more spacing b/w each menu item
 .nav-item {
   margin: 0em 1em;    // top/bottom, left/right
 
@@ -23,15 +23,4 @@
   @include media-breakpoint-down(sm) {
     margin: .5em 0em;       // top/bottom, left/right
   }
-}
-
-// // navbar-brand centering + keep on top for sm toggle
-// .navbar-brand {
-//   top: 15%;
-// }
-
-
-/* ------------------------------ Theme toggler ----------------------------- */
-.theme-width, .theme-toggler {
-  width: 20%;
 }

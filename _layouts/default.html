@@ -15,7 +15,7 @@
   <body data-bs-spy="scroll" data-bs-target="#menuBar" data-bs-smooth-scroll="true" data-bs-root-margin="0px 0px -85%">
     <!-- Scroll to top button -->
     <!-- TODO: change the URL to be root/base URL -->
-    <button id="scrollTop" role="button" class="btn btn-danger btn-floating btn-lg"><i class="fas fa-arrow-up"></i></button>
+    <button id="scrollTop" role="button" class="scrollToTop btn btn-danger btn-floating btn-lg"><i class="fas fa-arrow-up"></i></button>
 
     <!-- Header -->
     <header class="header-hero bg-primary text-center">
@@ -28,6 +28,17 @@
     
     <!-- Nav -->
     {% include nav.html %}
+
+    <!-- TODO: right align on navbar + be part of hidden navs -->
+    <!-- Theme picker -->
+    <div class="container">
+      <br>
+      <select id="themePicker" class="form-select">
+        <option value="light" selected>Light</option>
+        <option value="dark">Dark</option>
+      </select>
+      <p><i>Note: the placement of ^this dropdown here is broken, but I am working on a solution to put it in its proper place :D</i></p>
+    </div>
 
     <br>
 
