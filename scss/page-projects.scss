@@ -12,6 +12,11 @@
 // Make card image size equal
 .card-img-top {
     width: 100% !important;
-    height: 200px !important;
+    height: 15em !important;
     object-fit: cover;
+}
+
+// Add some bottom padding to project card
+.project-card {
+    padding-bottom: 2em;
 }

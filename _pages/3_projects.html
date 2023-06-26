@@ -20,7 +20,7 @@ icon: fa-solid fa-file-lines
     {% for proj in projects_sorted reversed %}
         <!-- Separate .cell and .card if you want fixed card sizes regardless of screen size.  Otherwise, to stretch some cards, put them in the same div/level -->
         <div class="col">
-            <div class="card h-100">
+            <div class="card h-100 project-card">
                 <!-- Project screenshot -->
                 <img class="card-img-top" src="{{ proj.screenshot }}" alt="{{ proj.screenshot_desc }}">
                 
@@ -36,24 +36,21 @@ icon: fa-solid fa-file-lines
 
                 </div>
                 
-                <!-- Buttons + skills applied -->
-                <div class="card-footer">
-                    <!-- Button group -->
-                    <div class="text-center center-element-group">
-                        {% if proj.github %}<a href="{{ proj.github }}" target="_blank" class="btn btn-lg btn-primary proj-button mx-1"><i class="fa-brands fa-github"></i>  GitHub</a>{% endif %}
-                        {% if proj.demo %}<a href="{{ proj.demo }}" target="_blank" class="btn btn-lg btn-primary proj-button mx-1"><i class="fa-solid fa-desktop"></i>  Demo</a>{% endif %}
-                    </div>
+                <!-- Button group -->
+                <div class="text-center center-element-group">
+                    {% if proj.github %}<a href="{{ proj.github }}" target="_blank" class="btn btn-lg btn-primary proj-button mx-1"><i class="fa-brands fa-github"></i>  GitHub</a>{% endif %}
+                    {% if proj.demo %}<a href="{{ proj.demo }}" target="_blank" class="btn btn-lg btn-primary proj-button mx-1"><i class="fa-solid fa-desktop"></i>  Demo</a>{% endif %}
+                </div>
 
-                    <!-- Skills/frameworks used in project -->
-                    <div class="text-center">
-                        <!-- Go through skills in project -->
-                        {% for proj_skill in proj.skills_used %}
-                            <!-- Go through skills in skillset -->
-                            {% for used_skill in site.data.skills %}
-                                {% if proj_skill == used_skill.skill_name %}<a href="{{ used_skill.skill_page }}" target="_blank"><img src="{{ used_skill.icon }}" title="{{ used_skill.skill_name }} icon from {{ used_skill.icon_source }}" preserveAspectRatio="xMinYMin" class="icon-size proj-skills"></a>{% endif %}
-                            {% endfor %}
+                <!-- Skills/frameworks used in project -->
+                <div class="text-center">
+                    <!-- Go through skills in project -->
+                    {% for proj_skill in proj.skills_used %}
+                        <!-- Go through skills in skillset -->
+                        {% for used_skill in site.data.skills %}
+                            {% if proj_skill == used_skill.skill_name %}<a href="{{ used_skill.skill_page }}" target="_blank"><img src="{{ used_skill.icon }}" title="{{ used_skill.skill_name }} icon from {{ used_skill.icon_source }}" preserveAspectRatio="xMinYMin" class="icon-size proj-skills"></a>{% endif %}
                         {% endfor %}
-                    </div>
+                    {% endfor %}
                 </div>
             </div>
         </div>
