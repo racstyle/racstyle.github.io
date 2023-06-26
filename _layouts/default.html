@@ -13,9 +13,8 @@
   </head>
   <!-- `data-bs-root-margin` determines scrollspy/magellan `.active` offset -->
   <body data-bs-spy="scroll" data-bs-target="#menuBar" data-bs-smooth-scroll="true" data-bs-root-margin="0px 0px -85%">
-    <!-- Scroll to top button -->
-    <!-- TODO: change the URL to be root/base URL -->
-    <button id="scrollTop" role="button" class="scrollToTop btn btn-danger btn-floating btn-lg"><i class="fas fa-arrow-up"></i></button>
+    <!-- Scroll to top button (needs to be <button> for scrolling animation to happen) -->
+    <button id="scrollTop" role="button" class="scrollToTop btn btn-danger btn-floating btn-lg" type="button"><i class="fas fa-arrow-up"></i></button>
 
     <!-- Header -->
     <header class="header-hero bg-primary text-center">
@@ -46,7 +45,7 @@
     {{ content }}
     
     <!-- Footer -->
-    <br><br>
+    <!-- <br><br> -->
     {% include foot.html %}
     <br><br><br>
 

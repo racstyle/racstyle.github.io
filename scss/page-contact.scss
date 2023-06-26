@@ -1,6 +1,20 @@
 /* ------------------------------ Contact page ------------------------------ */
-// .contact-box {
-//   background-color: $light-gray;
-//   padding-top: 1em;
-//   padding-bottom: .5em;
-// }
+// Contact box size
+.contact-box {
+    @include media-breakpoint-up(md) {
+        width: 70%;
+    }
+}
+
+// Status indicator if I am currently looking for work
+.work-status {
+    color: lightgreen;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+// Type of work I am looking for
+.work-type {
+    color: lightcoral;
+    font-weight: bold;
+}

@@ -34,14 +34,13 @@ icon: fa-solid fa-file-lines
                         {% if proj.demo %}<a href="{{ proj.demo }}" target="_blank" class="btn btn-lg btn-primary proj-button mx-1"><i class="fa-solid fa-desktop"></i>  Demo</a>{% endif %}
                     </div>
 
-                    <!-- Skills/frameworks used -->
-                    <br>
+                    <!-- Skills/frameworks used in project -->
                     <div class="text-center">
                         <!-- Go through skills in project -->
                         {% for proj_skill in proj.skills_used %}
                             <!-- Go through skills in skillset -->
                             {% for used_skill in site.data.skills %}
-                                {% if proj_skill == used_skill.skill_name %}<a href="{{ used_skill.skill_page }}" target="_blank"><img src="{{ used_skill.icon }}" title="{{ used_skill.skill_name }} icon from {{ used_skill.icon_source }}" preserveAspectRatio="xMinYMin" class="icon-size"></a>{% endif %}
+                                {% if proj_skill == used_skill.skill_name %}<a href="{{ used_skill.skill_page }}" target="_blank"><img src="{{ used_skill.icon }}" title="{{ used_skill.skill_name }} icon from {{ used_skill.icon_source }}" preserveAspectRatio="xMinYMin" class="icon-size proj-skills"></a>{% endif %}
                             {% endfor %}
                         {% endfor %}
                     </div>

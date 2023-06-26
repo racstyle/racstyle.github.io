@@ -1,10 +1,6 @@
 {
 	"folders": [
 		{
-			"name": "my-notebook",
-			"path": "../../my-notebook"
-		},
-		{
 			"name": "racstyle.github.io",
 			"path": "."
 		}
