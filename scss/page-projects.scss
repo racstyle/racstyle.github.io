@@ -8,3 +8,10 @@
 .proj-skills {
     margin: 7% 5% 0;  // top, left/right, bottom
 }
+
+// Make card image size equal
+.card-img-top {
+    width: 100% !important;
+    height: 200px !important;
+    object-fit: cover;
+}

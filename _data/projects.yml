@@ -6,7 +6,7 @@
   end_date: Apr. 2021
   demo: https://spark.adobe.com/page/rNh1NAZyYFG9T/
   github: https://github.com/racstyle/Caught-You-Phone-Handed
-  screenshot: https://dummyimage.com/190x120/595959/fff
+  screenshot: /assets/caught-you-phone-handed-screenshot.jpg
   screenshot_desc: A screenshot of the project demo page
   description:
     - This project was created for the UIC Engineering Expo Spring 2021 which is where engineering seniors create innovative projects and present them to a panel.
@@ -14,3 +14,19 @@
   skills_used:
     - Python
     - TensorFlow
+
+# Simple Savings Calculator
+- name: Simple Savings Calculator
+  start_date: Apr. 2022
+  end_date: May 2022
+  demo: https://racstyle-simple-savings-calc-calc-mjxejf.streamlit.app/
+  github: https://github.com/racstyle/Simple-Savings-Calc
+  screenshot: /assets/Simple-Savings-Calculator.png
+  screenshot_desc: A screenshot of the project demo page
+  description:
+    - This project was created to help me learn a new Python library Streamlit (which allows you to create simple data science web applications via Python) for a client project.
+    - This simple calculator essentially helps me know how much to transfer my paychecks to my savings.
+    - Note that this is still a work in progress as I plan to make improvements, but it does work. :)
+  skills_used:
+    - Python
+    - Streamlit

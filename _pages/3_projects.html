@@ -13,12 +13,18 @@ icon: fa-solid fa-file-lines
 
 <br>
 <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+    <!-- Sort through projects by recently finished/ongoing -->
+    {% assign projects_sorted = site.data.projects | sort: 'end_date', 'first' %}
+    
     <!-- Loop through each project data -->
-    {% for proj in site.data.projects %}
+    {% for proj in projects_sorted reversed %}
         <!-- Separate .cell and .card if you want fixed card sizes regardless of screen size.  Otherwise, to stretch some cards, put them in the same div/level -->
         <div class="col">
-            <div class="card">
+            <div class="card h-100">
+                <!-- Project screenshot -->
                 <img class="card-img-top" src="{{ proj.screenshot }}" alt="{{ proj.screenshot_desc }}">
+                
+                <!-- Project name + description -->
                 <div class="card-body">
                     <h2 class="card-title h4">{{ proj.name }}</h2>
                     <p class="card-text">{{ proj.start_date }} - {{ proj.end_date }}</p>
@@ -28,6 +34,10 @@ icon: fa-solid fa-file-lines
                         <li>{{ desc }}</li>
                     {% endfor %}</ul>
 
+                </div>
+                
+                <!-- Buttons + skills applied -->
+                <div class="card-footer">
                     <!-- Button group -->
                     <div class="text-center center-element-group">
                         {% if proj.github %}<a href="{{ proj.github }}" target="_blank" class="btn btn-lg btn-primary proj-button mx-1"><i class="fa-brands fa-github"></i>  GitHub</a>{% endif %}
