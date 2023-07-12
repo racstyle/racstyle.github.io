@@ -1,87 +1,175 @@
 # This is a selected list of my skills and proficiencies
 # Not all of them are shown since I did use them, but I don't want to show I want to keep using it on the long run
 
-# TODO: categorize by tech stack category
+# Categorize by tech stack category:
+    # - Programming languages
+    # - Front-end frameworks
+    # - Back-end frameworks
+    # - Data storage
+    # - Server
+    # - Tools
+    # - Other stack (e.g. Adobe Creative Cloud)
 
-# Git
-- skill_name: Git
-  proficiency: 85
-  icon: assets/icons8-git.svg
-  icon_source: https://icons8.com/icon/20906/git
-  skill_page: https://git-scm.com/
-  in_project: Caught You Phone-Handed
-  show_in_skills_list: true
+    # Source: https://www.heap.io/topics/what-is-a-tech-stack
 
-# HTML5
-- skill_name: HTML5
-  proficiency: 95
-  icon: assets/icons8-html-5.svg
-  icon_source: https://icons8.com/icon/20909/html-5
-  skill_page: https://en.wikipedia.org/wiki/HTML5
-  in_project: 
-  show_in_skills_list: true
 
-# SASS
-- skill_name: SASS
-  proficiency: 80
-  icon: assets/icons8-sass-avatar.svg
-  icon_source: https://icons8.com/icon/vEiU8UeAmv0x/sass-avatar
-  skill_page: https://sass-lang.com/
-  in_project: 
-  show_in_skills_list: true
+# DEV tools
+- category: Developer tools
+  accordion_id: devTools
+  skills:
+  # Git
+  - skill_name: Git
+    proficiency: 85
+    icon: assets/icons8-git.svg
+    icon_source: https://icons8.com/icon/20906/git
+    skill_page: https://git-scm.com/
+    in_project: Caught You Phone-Handed
+    show_in_skills_list: true
 
-# CSS
-- skill_name: CSS
-  proficiency: 80
-  icon: assets/icons8-css3.svg
-  icon_source: https://icons8.com/icon/21278/css3
-  skill_page: https://www.w3.org/Style/CSS/Overview.en.html
-  in_project: 
-  show_in_skills_list: true
+  # NPM
+  - skill_name: NPM
+    proficiency: 85
+    icon: assets/icons8-npm.svg
+    icon_source: https://icons8.com/icon/24895/npm
+    skill_page: https://www.npmjs.com/
+    in_project: 
+    show_in_skills_list: true
+  
+  # Azure (DevOps)
+  - skill_name: Azure DevOps
+    proficiency: 80
+    icon: assets/icons8-azure.svg
+    icon_source: https://icons8.com/icon/81727/azure
+    skill_page: https://azure.microsoft.com/en-us/products/devops/
+    in_project: 
+    show_in_skills_list: true
 
-# Angular
-- skill_name: Angular
-  proficiency: 75
-  icon: assets/icons8-angularjs.svg
-  icon_source: https://icons8.com/icon/71257/angularjs
-  skill_page: https://angular.io/
-  in_project: 
-  show_in_skills_list: true
 
-# TypeScript
-- skill_name: TypeScript
-  proficiency: 75
-  icon: assets/icons8-typescript.svg
-  icon_source: https://icons8.com/icon/uJM6fQYqDaZK/typescript
-  skill_page: https://www.typescriptlang.org/
-  in_project: 
-  show_in_skills_list: true
+# Front-end tools
+- category: Front-end languages
+  accordion_id: frontEndLangs
+  skills:
+    # HTML5
+    - skill_name: HTML5
+      proficiency: 95
+      icon: assets/icons8-html-5.svg
+      icon_source: https://icons8.com/icon/20909/html-5
+      skill_page: https://en.wikipedia.org/wiki/HTML5
+      in_project: 
+      show_in_skills_list: true
 
-# Python
-- skill_name: Python
-  proficiency: 75
-  icon: assets/icons8-python.svg
-  icon_source: https://icons8.com/icon/13441/python
-  skill_page: https://www.python.org/
-  in_project: 
-    - Caught-You-Phone-Handed
-  show_in_skills_list: true
+    # SASS
+    - skill_name: SASS
+      proficiency: 80
+      icon: assets/icons8-sass-avatar.svg
+      icon_source: https://icons8.com/icon/vEiU8UeAmv0x/sass-avatar
+      skill_page: https://sass-lang.com/
+      in_project: 
+      show_in_skills_list: true
 
-# Streamlit
-- skill_name: Streamlit
-  proficiency: 75
-  icon: assets/streamlit-mark-color.svg
-  icon_source: https://streamlit.io/brand
-  skill_page: https://streamlit.io/
-  in_project: 
-  show_in_skills_list: true
+    # CSS
+    - skill_name: CSS
+      proficiency: 80
+      icon: assets/icons8-css3.svg
+      icon_source: https://icons8.com/icon/21278/css3
+      skill_page: https://www.w3.org/Style/CSS/Overview.en.html
+      in_project: 
+      show_in_skills_list: true
 
-# TensorFlow
-- skill_name: TensorFlow
-  proficiency: 40
-  icon: assets/icons8-tensorflow.svg
-  icon_source: https://icons8.com/icon/n3QRpDA7KZ7P/tensorflow
-  skill_page: https://www.tensorflow.org/
-  in_project:
-    - Caught-You-Phone-Handed
-  show_in_skills_list: false
+    
+# Front-end frameworks
+- category: Front-end frameworks
+  accordion_id: frontEndFrameworks
+  skills:
+    # Bootstrap
+    - skill_name: Bootstrap
+      proficiency: 90
+      icon: assets/icons8-bootstrap.svg
+      icon_source: https://icons8.com/icon/84710/bootstrap
+      skill_page: https://getbootstrap.com/
+      in_project: 
+      show_in_skills_list: true
+
+    # Tailwind CSS
+    - skill_name: Tailwind CSS
+      proficiency: 85
+      icon: assets/icons8-tailwind-css.svg
+      icon_source: https://icons8.com/icon/4PiNHtUJVbLs/tailwind-css
+      skill_page: https://tailwindcss.com/
+      in_project: 
+      show_in_skills_list: true
+
+    # Angular
+    - skill_name: Angular
+      proficiency: 75
+      icon: assets/icons8-angularjs.svg
+      icon_source: https://icons8.com/icon/71257/angularjs
+      skill_page: https://angular.io/
+      in_project: 
+      show_in_skills_list: true
+
+
+# Programming languages
+- category: Programming languages
+  accordion_id: programmingLangs
+  skills:
+    # JavaScript
+    - skill_name: JavaScript
+      proficiency: 85
+      icon: assets/icons8-javascript.svg
+      icon_source: https://icons8.com/icon/108784/javascript
+      skill_page: https://developer.mozilla.org/en-US/docs/Web/javascript
+      in_project: 
+      show_in_skills_list: true
+    
+    # Python
+    - skill_name: Python
+      proficiency: 75
+      icon: assets/icons8-python.svg
+      icon_source: https://icons8.com/icon/13441/python
+      skill_page: https://www.python.org/
+      in_project: 
+        - Caught-You-Phone-Handed
+      show_in_skills_list: true
+
+
+# Programming libraries
+- category: Programming libraries
+  accordion_id: programmingLibs
+  skills:
+    # TypeScript
+    - skill_name: TypeScript
+      proficiency: 75
+      icon: assets/icons8-typescript.svg
+      icon_source: https://icons8.com/icon/uJM6fQYqDaZK/typescript
+      skill_page: https://www.typescriptlang.org/
+      in_project: 
+      show_in_skills_list: true
+
+    # jQuery
+    - skill_name: jQuery
+      proficiency: 75
+      icon: assets/icons8-jquery.svg
+      icon_source: https://icons8.com/icon/40253/jquery
+      skill_page: https://jquery.com/
+      in_project: 
+      show_in_skills_list: true
+
+    # Streamlit
+    - skill_name: Streamlit
+      proficiency: 75
+      icon: assets/streamlit-mark-color.svg
+      icon_source: https://streamlit.io/brand
+      skill_page: https://streamlit.io/
+      in_project: 
+      show_in_skills_list: true
+
+    # TensorFlow
+    - skill_name: TensorFlow
+      proficiency: 40
+      icon: assets/icons8-tensorflow.svg
+      icon_source: https://icons8.com/icon/n3QRpDA7KZ7P/tensorflow
+      skill_page: https://www.tensorflow.org/
+      in_project:
+        - Caught-You-Phone-Handed
+      show_in_skills_list: false
