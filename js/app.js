@@ -1,4 +1,4 @@
-// TODO: Import just what we need
+// TODO: Import just what we need (see MChapel components later)
 //       https://getbootstrap.com/docs/5.3/customize/optimize/
 
 // import '../node_modules/bootstrap/js/dist/alert';
@@ -62,3 +62,16 @@ setTheme(window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "l
 picker.addEventListener('change', function() {
     setTheme(picker.value);
 });
+
+
+/* ---------------------------- Site last updated --------------------------- */
+// fetch('https://api.github.com/repos/ChocolateLoverRaj/canvideo/commits?per_page=1')
+//     .then(res => res.json())
+//     .then(res => {
+//         document.getElementById('updated').innerHTML = res[0].commit.message;
+//     })
+fetch('https://api.github.com/repos/ChocolateLoverRaj/canvideo/commits?per_page=1')
+  .then(res => res.json())
+  .then(res => {
+    document.getElementById('message').innerHTML = res[0].commit.message
+  })
