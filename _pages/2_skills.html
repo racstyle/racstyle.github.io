@@ -7,94 +7,52 @@ icon: fa-solid fa-toolbox
 <!-- A quick note -->
 <div class="row">
     <div class="col-12 text-center">
-        <p>These are my top 20 skills.  To see more, check out <a href="https://www.linkedin.com/in/rachel-estilo/" target="_blank">my LinkedIn profile</a>.</p>
+        <p>These are my select top skills.  To see more, check out <a href="https://www.linkedin.com/in/rachel-estilo/" target="_blank">my LinkedIn profile</a>.</p>
     </div>
 </div>
 
 <!-- Actual skills cards -->
 <br>
-<div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
     {% for skillCat in site.data.skills %}
         <div class="col">
-            <div class="accordion" id="skillCategory">
-                <div class="accordion-item h-100">
-                    <!-- Header -->
-                    <h2 class="accordion-header">
-                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#{{skillCat.accordion_id}}" aria-expanded="true" aria-controls="{{skillCat.accordion_id}}">
-                            {{ skillCat.category }}
-                        </button>
-                    </h2>
+            <div class="card h-100" id="skillCategory">
+                <!-- Header -->
+                <h2 class="card-header h5">{{ skillCat.category }}</h2>
 
-                    <!-- Content -->
-                    <div id="{{skillCat.accordion_id}}" class="accordion-collapse collapse show">
-                        <div class="accordion-body">
-                            <!-- Sort through skills by proficiency -->
-                            {% assign skills_sorted = skillCat.skills | sort: 'proficiency', 'first' %}
+                <!-- Content -->
+                <div id="{{skillCat.accordion_id}}" class="card-body py-3 d-flex flex-column justify-content-center align-items-center">
+                    <!-- Sort through skills by proficiency -->
+                    {% assign skills_sorted = skillCat.skills | sort: 'proficiency', 'first' %}
 
-                            <!-- Loop through skills data (reversed to go by descending proficiency order) -->
-                            {% for skill_details in skills_sorted reversed %}
-                                <!-- Only show relevant skills, they are there since I did use them in some projects, but I don't want to show I want to keep using it (Can also hide skills if < 50% or something) -->
-                                {% if skill_details.show_in_skills_list %}
-                                    <div class="card h-100">
-                                        <div class="card-body">
-                                            <!-- Need to make "row" to allow "floating" left and right esp. for progress bar -->
-                                            <div class="row align-items-center">
-                                                <!-- Skill icon -->
-                                                <a class="col-3 stretched-link" href="{{ skill_details.skill_page }}" target="_blank"><img class="icon-size" src="{{ skill_details.icon }}" title="{{ skill_details.skill_name }} icon from {{ skill_details.icon_source }}" preserveAspectRatio="xMinYMin"></a>
-                    
-                                                <!-- Proficiency level (may take out later) -->
-                                                <div class="col ms-2">
-                                                <!-- <div class="col pt-3 text-center"> -->
-                                                    <!-- <p class="h5">{{ skill_details.skill_name }}</p> -->
+                    <!-- Loop through skills data (reversed to go by descending proficiency order) -->
+                    {% for skill_details in skills_sorted reversed %}
+                        <!-- Only show relevant skills, they are there since I did use them in some projects, but I don't want to show I want to keep using it (Can also hide skills if < 50% or something) -->
+                        {% if skill_details.show_in_skills_list %}
+                            <div class="card my-2 w-100">
+                                <div class="card-body">
+                                    <!-- Need to make "row" to allow "floating" left and right esp. for progress bar -->
+                                    <div class="row align-items-center">
+                                        <!-- Skill icon -->
+                                        <a class="col-3 stretched-link" href="{{ skill_details.skill_page }}" target="_blank"><img class="icon-size" src="{{ skill_details.icon }}" title="{{ skill_details.skill_name }} icon from {{ skill_details.icon_source }}" preserveAspectRatio="xMinYMin"></a>
+            
+                                        <!-- Proficiency level (may take out later) -->
+                                        <div class="col ms-2">
+                                        <!-- <div class="col pt-3 text-center"> -->
+                                            <!-- <p class="h5">{{ skill_details.skill_name }}</p> -->
 
-                                                    <div class="progress">
-                                                        <!-- Actual proficiency level -->
-                                                        <div class="progress-bar skill-proficiency" style="--proficiency: {{ skill_details.proficiency }}%;" role="progressbar" aria-valuenow="{{ skill_details.proficiency }}" aria-valuemin="0" aria-valuemax="100">{{ skill_details.proficiency }}%</div>
-                                                    </div>
-                                                </div>
+                                            <div class="progress">
+                                                <!-- Actual proficiency level -->
+                                                <div class="progress-bar skill-proficiency" style="--proficiency: {{ skill_details.proficiency }}%;" role="progressbar" aria-valuenow="{{ skill_details.proficiency }}" aria-valuemin="0" aria-valuemax="100">{{ skill_details.proficiency }}%</div>
                                             </div>
                                         </div>
                                     </div>
-                                {% endif %}
-                            {% endfor %}
-                        </div>
-                    </div>
+                                </div>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
                 </div>
             </div>
         </div>
     {% endfor %}
-
-    <!-- {% comment %} -->
-    <!-- Sort through skills by proficiency -->
-    <!-- {% assign skills_sorted = site.data.skills | sort: 'proficiency', 'first' %} -->
-
-    <!-- Loop through skills data (reversed to go by descending proficiency order) -->
-    <!-- Separate .cell and .card if you want fixed card sizes regardless of screen size.  Otherwise, to stretch some cards, put them in the same div/level -->
-    <!-- {% for skill in skills_sorted reversed %} -->
-        <!-- Only show relevant skills, they are there since I did use them in some projects, but I don't want to show I want to keep using it -->
-        <!-- (Can also hide skills if < 50% or something) -->
-        <!-- {% if skill.show_in_skills_list %}
-            <div class="col">
-                <div class="card h-100">
-                    <div class="card-body"> -->
-                        <!-- Need to make "row" to allow "floating" left and right esp. for progress bar -->
-                        <!-- <div class="row align-items-center"> -->
-                            <!-- Skill icon -->
-                            <!-- <a class="col-2 stretched-link" href="{{ skill.skill_page }}" target="_blank"><img class="icon-size" src="{{ skill.icon }}" title="{{ skill.skill_name }} icon from {{ skill.icon_source }}" preserveAspectRatio="xMinYMin"></a> -->
-
-                            <!-- Proficiency level (may take out later) -->
-                            <!-- <div class="col ms-2">
-                                <div class="progress"> -->
-                                    <!-- Actual proficiency level -->
-                                    <!-- <div class="progress-bar skill-proficiency" style="--proficiency: {{ skill.proficiency }}%;" role="progressbar" aria-valuenow="{{ skill.proficiency }}" aria-valuemin="0" aria-valuemax="100">{{ skill.proficiency }}%</div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        {% endif %}
-    {% endfor %}
-    {% endcomment %} -->
 </div>
