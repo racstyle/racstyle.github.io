@@ -19,11 +19,14 @@ $custom-theme-colors: (
 );
 */
 
-// TODO: custom color theme + typography
+// ** CUSTOM THEMES **
+$primary: #558B6E;
+$secondary: #30362F;
+$danger: #8C6057;
 
-
-// TODO: Dark mode
-
+/* Other custom overrides:
+    - button font color
+*/
 
 //
 //  3. Then, import the default Bootstrap variables:
@@ -92,4 +95,4 @@ $theme-colors: map-merge($theme-colors, $custom-theme-colors);
 
 
 // 7. Finally, add your custom Sass below, either directly or via imports:
-// @import "app.scss";
+@import "app.scss";
