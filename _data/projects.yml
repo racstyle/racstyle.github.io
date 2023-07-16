@@ -14,6 +14,7 @@
   skills_used:
     - Python
     - TensorFlow
+    - Git
 
 # Simple Savings Calculator
 - name: Simple Savings Calculator
@@ -30,3 +31,4 @@
   skills_used:
     - Python
     - Streamlit
+    - Git
