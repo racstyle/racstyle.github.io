@@ -21,7 +21,7 @@ icon: fa-solid fa-toolbox
                 <h2 class="card-header h5">{{ skillCat.category }}</h2>
 
                 <!-- Content -->
-                <div id="{{skillCat.accordion_id}}" class="card-body py-3 d-flex flex-column justify-content-center align-items-center">
+                <div id="{{skillCat.cat_id}}" class="card-body py-3 d-flex flex-column justify-content-center align-items-center">
                     <!-- Sort through skills by proficiency -->
                     {% assign skills_sorted = skillCat.skills | sort: 'proficiency', 'first' %}
 

@@ -11,6 +11,20 @@ icon: fa-solid fa-file-lines
     </div>
 </div>
 
+<!-- <br>
+
+<ul class="nav nav-pills justify-content-center">
+    <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="#">Active</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link">Disabled</a>
+    </li>
+</ul> -->
+
 <br>
 <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
     <!-- Sort through projects by recently finished/ongoing -->
@@ -28,7 +42,7 @@ icon: fa-solid fa-file-lines
                 <!-- Project name + description -->
                 <div class="card-body">
                     <h2 class="card-title h4">{{ proj.name }}</h2>
-                    <p class="card-text">{{ proj.start_date }} - {{ proj.end_date }}</p>
+                    <p class="card-text">{{ proj.start_date }} {% if proj.end_date != blank %} - {{ proj.end_date }} {% endif %}</p>
 
                     <!-- Loop through bulleted description -->
                     <ul class="card-text">{% for desc in proj.description %}

@@ -2,20 +2,20 @@
 # Not all of them are shown since I did use them, but I don't want to show I want to keep using it on the long run
 
 # Categorize by tech stack category:
-    # - Programming languages
-    # - Front-end frameworks
-    # - Back-end frameworks
-    # - Data storage
-    # - Server
-    # - Tools
-    # - Other stack (e.g. Adobe Creative Cloud)
+  # - Programming languages
+  # - Front-end frameworks
+  # - Back-end frameworks
+  # - Data storage
+  # - Server
+  # - Tools
+  # - Other stack (e.g. Adobe Creative Cloud)
 
-    # Source: https://www.heap.io/topics/what-is-a-tech-stack
+  # Source: https://www.heap.io/topics/what-is-a-tech-stack
 
 
 # DEV tools
 - category: Developer tools
-  accordion_id: devTools
+  cat_id: devTools
   skills:
   # Git
   - skill_name: Git
@@ -47,7 +47,7 @@
 
 # Front-end tools
 - category: Front-end languages
-  accordion_id: frontEndLangs
+  cat_id: frontEndLangs
   skills:
     # HTML5
     - skill_name: HTML5
@@ -79,7 +79,7 @@
     
 # Front-end frameworks
 - category: Front-end frameworks
-  accordion_id: frontEndFrameworks
+  cat_id: frontEndFrameworks
   skills:
     # Bootstrap
     - skill_name: Bootstrap
@@ -111,7 +111,7 @@
 
 # Programming languages
 - category: Programming languages
-  accordion_id: programmingLangs
+  cat_id: programmingLangs
   skills:
     # JavaScript
     - skill_name: JavaScript
@@ -135,7 +135,7 @@
 
 # Programming libraries
 - category: Programming libraries
-  accordion_id: programmingLibs
+  cat_id: programmingLibs
   skills:
     # TypeScript
     - skill_name: TypeScript
