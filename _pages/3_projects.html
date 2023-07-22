@@ -42,7 +42,7 @@ icon: fa-solid fa-file-lines
                 <!-- Project name + description -->
                 <div class="card-body">
                     <h2 class="card-title h4">{{ proj.name }}</h2>
-                    <p class="card-text">{{ proj.start_date }} {% if proj.end_date != blank %} - {{ proj.end_date }} {% endif %}</p>
+                    <p class="card-text">{% if proj.start_date != proj.end_date %} {{ proj.start_date }} - {% endif %} {{ proj.end_date }}</p>
 
                     <!-- Loop through bulleted description -->
                     <ul class="card-text">{% for desc in proj.description %}
