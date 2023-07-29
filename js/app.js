@@ -70,8 +70,67 @@ picker.addEventListener('change', function() {
 //     .then(res => {
 //         document.getElementById('updated').innerHTML = res[0].commit.message;
 //     })
-fetch('https://api.github.com/repos/ChocolateLoverRaj/canvideo/commits?per_page=1')
-  .then(res => res.json())
-  .then(res => {
-    document.getElementById('message').innerHTML = res[0].commit.message
-  })
+// fetch('https://api.github.com/repos/ChocolateLoverRaj/canvideo/commits?per_page=1')
+//   .then(res => res.json())
+//   .then(res => {
+//     document.getElementById('message').innerHTML = res[0].commit.message
+//   })
+
+
+/* ---------------- Filter by project type: add "show" class ---------------- */
+function showProject(projectCardElement, showClass) {
+    var i = 0;      // index for accessing classes in project card
+    var projectClasses = projectCardElement.className.split(" ");   // list of classes in each project card
+    var projectsToShow = showClass.split(" ");                      // "number" of projects we want to show as a list
+
+    // Go through filtered projects to add the "show" class to them
+    for (i=0; i<projectsToShow.length; i++) {
+        // if the project is "filtered out", add the "show" class
+        if (projectClasses.indexOf(projectsToShow[i]) == -1) projectCardElement.className += " " + projectsToShow[i];
+    }
+}
+
+
+/* --------------- Filter by project type: remove "show" class -------------- */
+function hideProject(projectCardElement, showClass) {
+    var i = 0;      // index for accessing classes in project card
+    var projectClasses = projectCardElement.className.split(" ");   // list of classes in each project card
+    var projectsToHide = showClass.split(" ");                      // "number" of projects we want to hide as a list
+
+    // Go through unfiltered projects to remove the "show" class from them
+    for (i=0; i<projectsToHide.length; i++) {
+        // 
+        while (projectClasses.indexOf(projectsToHide[i]) > -1) projectClasses.splice(projectClasses.indexOf(projectsToHide[i]), 1);
+    }
+    projectCardElement.className = projectClasses.join(" ");
+}
+
+
+/* ------------------ Filter by project type: main function ----------------- */
+function filterProjects(c) {
+    var filtered, i;
+
+    filtered = document.getElementsByClassName('projFilterHide');
+
+    if (c == "Show-All") c = "";
+
+    // Add "show" class to filtered projects + remove "show" class from unselected projects
+    for (i=0; i<filtered.length; i++) {
+        hideProject(filtered[i], "projFilterShow");
+        if (filtered[i].className.indexOf(c) > -1) showProject(filtered[i], "projFilterShow");
+    }
+}
+filterProjects("Show-All");
+
+
+/* ------------------ Filter by project type: .active class ----------------- */
+var btnContainer = document.getElementById("projCatContainer");
+var btns = btnContainer.getElementsByClassName("nav-link");
+
+for (var i=0; i<btns.length; i++) {
+    btns[i].addEventListener("click", function() {
+        var selected = document.getElementsByClassName("active");
+        selected[0].className = selected[0].className.replace(" active", "");
+        this.className += " active";
+    });
+}
