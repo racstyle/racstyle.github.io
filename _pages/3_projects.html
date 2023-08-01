@@ -27,7 +27,7 @@ icon: fa-solid fa-file-lines
 <nav id="projCatContainer" class="nav nav-pills justify-content-center">
     <!-- <a class="nav-link active" onclick="filterProjects('Show-All')">Show All</a> -->
     {% for proj_tag in proj_cat_tags %}
-        <a class="nav-link" onclick="filterProjects('{{ proj_tag }}')">{{ proj_tag | replace: "-", " " }}</a>
+        <a class="nav-link projFilters" onclick="filterProjects('{{ proj_tag }}')">{{ proj_tag | replace: "-", " " }}</a>
     {% endfor %}
 </nav>
 

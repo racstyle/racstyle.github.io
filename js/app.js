@@ -124,13 +124,23 @@ filterProjects("Show-All");
 
 
 /* ------------------ Filter by project type: .active class ----------------- */
-var btnContainer = document.getElementById("projCatContainer");
-var btns = btnContainer.getElementsByClassName("nav-link");
+// TODO : .active here is conflicting with the top navbar .active even though we selected its container, can we import the .active properties into a new class via SASS import?
+var btnContainer = document.getElementById("projCatContainer");     // get container element
+var btns = btnContainer.getElementsByClassName("projFilters");      // get all buttons w/ .projFilters inside container
 
+btns[0].className += " active";
+
+// loop through nav links and add active class to current/clicked button
 for (var i=0; i<btns.length; i++) {
     btns[i].addEventListener("click", function() {
-        var selected = document.getElementsByClassName("active");
-        selected[0].className = selected[0].className.replace(" active", "");
+        var selected = btnContainer.getElementsByClassName("active");
+
+        // if there is no active class
+        if (selected.length > 0) {
+            selected[0].className = selected[0].className.replace(" active", "");
+        }
+
+        // add active class to the current/clicked button
         this.className += " active";
     });
 }
