@@ -25,7 +25,6 @@ icon: fa-solid fa-file-lines
 <!-- Now showing categories and filtering by selection -->
 <br>
 <nav id="projCatContainer" class="nav nav-pills justify-content-center">
-    <!-- <a class="nav-link active" onclick="filterProjects('Show-All')">Show All</a> -->
     {% for proj_tag in proj_cat_tags %}
         <a class="nav-link projFilters" onclick="filterProjects('{{ proj_tag }}')">{{ proj_tag | replace: "-", " " }}</a>
     {% endfor %}
@@ -40,6 +39,7 @@ icon: fa-solid fa-file-lines
     {% assign projects_sorted = site.data.projects | sort: 'end_date', 'first' %}
     
     <!-- TODO: categorize projects (by skill or own category?) -->
+    <!-- TODO: Jekyll is sorting the projects.  Need to find a way to CSS hidden projects (via Jekyll?) -->
     <!-- Loop through each project data -->
     {% for proj in projects_sorted reversed %}
         <div class="col">

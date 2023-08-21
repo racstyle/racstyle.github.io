@@ -1,6 +1,7 @@
 // TODO: Import just what we need (see MChapel components later)
 //       https://getbootstrap.com/docs/5.3/customize/optimize/
 
+
 // import '../node_modules/bootstrap/js/dist/alert';
 // import '../node_modules/bootstrap/js/dist/button';
 // import '../node_modules/bootstrap/js/dist/carousel';
@@ -124,21 +125,20 @@ filterProjects("Show-All");
 
 
 /* ------------------ Filter by project type: .active class ----------------- */
-// TODO : .active here is conflicting with the top navbar .active even though we selected its container, can we import the .active properties into a new class via SASS import?
 var btnContainer = document.getElementById("projCatContainer");     // get container element
 var btns = btnContainer.getElementsByClassName("projFilters");      // get all buttons w/ .projFilters inside container
 
+// set the first item in project category "list" (i.e. "Show All") to have .active class upon init page load
 btns[0].className += " active";
 
 // loop through nav links and add active class to current/clicked button
 for (var i=0; i<btns.length; i++) {
+    // when a category button is clicked/selected
     btns[i].addEventListener("click", function() {
-        var selected = btnContainer.getElementsByClassName("active");
+        var selected = btnContainer.getElementsByClassName("active");   // make sure to use CONTAINER name instead of "document" to only look inside category container to prevent conflict w/ navbar
 
         // if there is no active class
-        if (selected.length > 0) {
-            selected[0].className = selected[0].className.replace(" active", "");
-        }
+        if (selected.length > 0) { selected[0].className = selected[0].className.replace(" active", ""); }
 
         // add active class to the current/clicked button
         this.className += " active";

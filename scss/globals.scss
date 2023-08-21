@@ -1,8 +1,34 @@
 /* ------------------------- Custom theme overrides ------------------------- */
+// Importing close module to fix X not showing
+@import "../node_modules/bootstrap/scss/close";
+
 // Buttons use dark font color in custom primary for some reason?
 .btn-primary {
   color: #fff;
-}  
+}
+
+
+// ** CUSTOM ORDERING (map merged later) **
+$custom-order: (
+    "order": (
+        responsive: true,
+        property: order,
+        values: (
+            first: -1,
+            0: 0,
+            1: 1,
+            2: 2,
+            3: 3,
+            4: 4,
+            5: 5,
+            6: 6,
+            last: 7,
+        ),
+    ),
+);
+
+// ** CUSTOM ORDERING (merging) **
+$utilities: map-merge($utilities, $custom-order);
 
 
 /* --------------------------------- Globals -------------------------------- */
