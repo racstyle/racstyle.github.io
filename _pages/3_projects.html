@@ -38,13 +38,11 @@ icon: fa-solid fa-file-lines
     <!-- Sort through projects by recently finished/ongoing -->
     {% assign projects_sorted = site.data.projects | sort: 'end_date', 'first' %}
     
-    <!-- TODO: categorize projects (by skill or own category?) -->
-    <!-- TODO: Jekyll is sorting the projects.  Need to find a way to CSS hidden projects (via Jekyll?) -->
-    <!-- Loop through each project data -->
+    <!-- Loop through each project data, categorized by category (maybe one day skills?) -->
     {% for proj in projects_sorted reversed %}
-        <div class="col">
+        <div class="col projFilterHide {% for proj_cats in proj.proj_category_tags %} {{ proj_cats }} {% endfor %}">
             <!-- Assign category classes for filtering -->
-            <div class="card h-100 project-card projFilterHide {% for proj_cats in proj.proj_category_tags %} {{ proj_cats }} {% endfor %}">
+            <div class="card h-100 project-card">
                 <!-- Project screenshot -->
                 <img class="card-img-top" src="{{ proj.screenshot }}" alt="{{ proj.screenshot_desc }}">
                 

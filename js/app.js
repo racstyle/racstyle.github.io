@@ -124,7 +124,7 @@ function filterProjects(c) {
 filterProjects("Show-All");
 
 
-/* ------------------ Filter by project type: .active class ----------------- */
+/* ------- Filter by project type: .active class for cat nav pill tabs ------ */
 var btnContainer = document.getElementById("projCatContainer");     // get container element
 var btns = btnContainer.getElementsByClassName("projFilters");      // get all buttons w/ .projFilters inside container
 
@@ -135,7 +135,7 @@ btns[0].className += " active";
 for (var i=0; i<btns.length; i++) {
     // when a category button is clicked/selected
     btns[i].addEventListener("click", function() {
-        var selected = btnContainer.getElementsByClassName("active");   // make sure to use CONTAINER name instead of "document" to only look inside category container to prevent conflict w/ navbar
+        var selected = btnContainer.getElementsByClassName("active");   // make sure to use CONTAINER name instead of `document` to only look inside category container to prevent conflict w/ navbar
 
         // if there is no active class
         if (selected.length > 0) { selected[0].className = selected[0].className.replace(" active", ""); }
