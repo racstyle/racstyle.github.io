@@ -1,6 +1,6 @@
 # This is a list of selected personal projects
 
-# Categorize by:
+# Categorize by (add dashes "-" for the filtering functionality to work!):
   # - Skill(?)
   # - Tech category:
     # - Data Science
@@ -8,6 +8,9 @@
 
 # Caught You Phone-Handed
 - name: Caught You Phone-Handed
+  proj_category_tags:
+    - Data-Science
+    - Machine-Learning
   start_date: Aug. 2020
   end_date: Apr. 2021
   demo: https://spark.adobe.com/page/rNh1NAZyYFG9T/
@@ -24,6 +27,8 @@
 
 # Simple Savings Calculator
 - name: Simple Savings Calculator
+  proj_category_tags:
+    - Data-Science
   start_date: Apr. 2022
   end_date: Apr. 2022
   demo: https://racstyle-simple-savings-calc-calc-mjxejf.streamlit.app/

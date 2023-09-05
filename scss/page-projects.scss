@@ -21,4 +21,12 @@
     padding-bottom: 2em;
 }
 
-// Filter elements with matching tags
+// Default for filtering projects with matching tags
+.projFilterHide {
+    display: none;
+}
+
+// Show filtered projects
+.projFilterShow {
+    display: flex;
+}

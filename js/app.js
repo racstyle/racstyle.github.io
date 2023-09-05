@@ -1,6 +1,7 @@
 // TODO: Import just what we need (see MChapel components later)
 //       https://getbootstrap.com/docs/5.3/customize/optimize/
 
+
 // import '../node_modules/bootstrap/js/dist/alert';
 // import '../node_modules/bootstrap/js/dist/button';
 // import '../node_modules/bootstrap/js/dist/carousel';
@@ -70,8 +71,76 @@ picker.addEventListener('change', function() {
 //     .then(res => {
 //         document.getElementById('updated').innerHTML = res[0].commit.message;
 //     })
-fetch('https://api.github.com/repos/ChocolateLoverRaj/canvideo/commits?per_page=1')
-  .then(res => res.json())
-  .then(res => {
-    document.getElementById('message').innerHTML = res[0].commit.message
-  })
+// fetch('https://api.github.com/repos/ChocolateLoverRaj/canvideo/commits?per_page=1')
+//   .then(res => res.json())
+//   .then(res => {
+//     document.getElementById('message').innerHTML = res[0].commit.message
+//   })
+
+
+/* ---------------- Filter by project type: add "show" class ---------------- */
+function showProject(projectCardElement, showClass) {
+    var i = 0;      // index for accessing classes in project card
+    var projectClasses = projectCardElement.className.split(" ");   // list of classes in each project card
+    var projectsToShow = showClass.split(" ");                      // "number" of projects we want to show as a list
+
+    // Go through filtered projects to add the "show" class to them
+    for (i=0; i<projectsToShow.length; i++) {
+        // if the project is "filtered out", add the "show" class
+        if (projectClasses.indexOf(projectsToShow[i]) == -1) projectCardElement.className += " " + projectsToShow[i];
+    }
+}
+
+
+/* --------------- Filter by project type: remove "show" class -------------- */
+function hideProject(projectCardElement, showClass) {
+    var i = 0;      // index for accessing classes in project card
+    var projectClasses = projectCardElement.className.split(" ");   // list of classes in each project card
+    var projectsToHide = showClass.split(" ");                      // "number" of projects we want to hide as a list
+
+    // Go through unfiltered projects to remove the "show" class from them
+    for (i=0; i<projectsToHide.length; i++) {
+        // 
+        while (projectClasses.indexOf(projectsToHide[i]) > -1) projectClasses.splice(projectClasses.indexOf(projectsToHide[i]), 1);
+    }
+    projectCardElement.className = projectClasses.join(" ");
+}
+
+
+/* ------------------ Filter by project type: main function ----------------- */
+function filterProjects(c) {
+    var filtered, i;
+
+    filtered = document.getElementsByClassName('projFilterHide');
+
+    if (c == "Show-All") c = "";
+
+    // Add "show" class to filtered projects + remove "show" class from unselected projects
+    for (i=0; i<filtered.length; i++) {
+        hideProject(filtered[i], "projFilterShow");
+        if (filtered[i].className.indexOf(c) > -1) showProject(filtered[i], "projFilterShow");
+    }
+}
+filterProjects("Show-All");
+
+
+/* ------- Filter by project type: .active class for cat nav pill tabs ------ */
+var btnContainer = document.getElementById("projCatContainer");     // get container element
+var btns = btnContainer.getElementsByClassName("projFilters");      // get all buttons w/ .projFilters inside container
+
+// set the first item in project category "list" (i.e. "Show All") to have .active class upon init page load
+btns[0].className += " active";
+
+// loop through nav links and add active class to current/clicked button
+for (var i=0; i<btns.length; i++) {
+    // when a category button is clicked/selected
+    btns[i].addEventListener("click", function() {
+        var selected = btnContainer.getElementsByClassName("active");   // make sure to use CONTAINER name instead of `document` to only look inside category container to prevent conflict w/ navbar
+
+        // if there is no active class
+        if (selected.length > 0) { selected[0].className = selected[0].className.replace(" active", ""); }
+
+        // add active class to the current/clicked button
+        this.className += " active";
+    });
+}

@@ -11,30 +11,37 @@ icon: fa-solid fa-file-lines
     </div>
 </div>
 
-<!-- <br>
+<!-- Attempting to categorize + enable filtering projects by category -->
+<!-- Setting up categories to loop through first -->
+{% assign proj_cat_tags = "Show-All" | split: ',' %}
+<!-- Access project data -->
+{% for project in site.data.projects %}
+    <!-- Go through each project's tags and get each project's UNIQUE tags -->
+    {% for proj_cat_tags_list in project.proj_category_tags %}
+        {% assign proj_cat_tags = proj_cat_tags | push: proj_cat_tags_list | uniq %}
+    {% endfor %}
+{% endfor %}
 
-<ul class="nav nav-pills justify-content-center">
-    <li class="nav-item">
-        <a class="nav-link active" aria-current="page" href="#">Active</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link">Disabled</a>
-    </li>
-</ul> -->
-
+<!-- Now showing categories and filtering by selection -->
 <br>
-<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+<nav id="projCatContainer" class="nav nav-pills justify-content-center">
+    {% for proj_tag in proj_cat_tags %}
+        <a class="nav-link projFilters" onclick="filterProjects('{{ proj_tag }}')">{{ proj_tag | replace: "-", " " }}</a>
+    {% endfor %}
+</nav>
+
+
+
+<!-- Actual projects -->
+<br>
+<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 justify-content-start">
     <!-- Sort through projects by recently finished/ongoing -->
     {% assign projects_sorted = site.data.projects | sort: 'end_date', 'first' %}
     
-    <!-- TODO: categorize projects (by skill or own category?) -->
-    <!-- Loop through each project data -->
+    <!-- Loop through each project data, categorized by category (maybe one day skills?) -->
     {% for proj in projects_sorted reversed %}
-        <!-- Separate .cell and .card if you want fixed card sizes regardless of screen size.  Otherwise, to stretch some cards, put them in the same div/level -->
-        <div class="col">
+        <div class="col projFilterHide {% for proj_cats in proj.proj_category_tags %} {{ proj_cats }} {% endfor %}">
+            <!-- Assign category classes for filtering -->
             <div class="card h-100 project-card">
                 <!-- Project screenshot -->
                 <img class="card-img-top" src="{{ proj.screenshot }}" alt="{{ proj.screenshot_desc }}">
