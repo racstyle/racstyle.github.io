@@ -121,7 +121,7 @@ function filterProjects(c) {
         if (filtered[i].className.indexOf(c) > -1) showProject(filtered[i], "projFilterShow");
     }
 }
-filterProjects("Show-All");
+filterProjects("Show-All");   // need this to show all projects on page load for some reason
 
 
 /* ------- Filter by project type: .active class for cat nav pill tabs ------ */
