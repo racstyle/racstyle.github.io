@@ -19,7 +19,7 @@ headerTemplate.innerHTML = /*html*/ `
             display: inline;
         }
 
-        a, p {
+        a, .nav-p {
             font-weight: 700;
             margin: 0 25px;
             color: #fff;
@@ -39,9 +39,15 @@ headerTemplate.innerHTML = /*html*/ `
                 <li><a href="work.html">Work</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
+
             <!-- Dynamic content! -->
-            <p></p>
+            <p class="nav-p"></p>
         </nav>
+
+        <!-- Looping -->
+        <div id="loop">
+            Nisi cupidatat esse nisi id do mollit. Do Lorem aute reprehenderit dolore occaecat. Commodo amet magna cupidatat dolore ad do sit proident cillum irure ipsum enim occaecat. Proident Lorem aliquip ad. Officia mollit aliqua dolor dolore pariatur sint dolor mollit veniam laborum aliqua ea. Adipisicing laborum labore quis nisi amet ullamco est qui sint quis officia cupidatat cupidatat officia sit.
+        </div>
     </header>
 `;
 
@@ -56,6 +62,30 @@ class Header extends HTMLElement {
 
     // Dynamic content coming into component
     this.shadowRoot.querySelector('p').textContent = this.getAttribute('email') || 'Email';
+    // this.shadowRoot.querySelector('#loop').textContent = 'Beef';
+
+    // Looping through data
+    const obj = {
+        "company": 'GeeksforGeeks',
+        "contact": '+91-9876543210',
+        "city": 'Noida'
+    };
+    
+    Object.keys(obj).forEach(key => {
+        var item = document.createElement('p');
+        item.setAttribute('id', `${key}`);
+        item.innerHTML = /*html*/ `
+            <p>${obj[key]}</p>
+        `;
+        this.shadowRoot.querySelector('#loop').appendChild(item);
+    });
+
+    const reader = new FileReader();
+    console.log(reader);
+    // reader.onload = (evt) => {
+    //     console.log(evt.target.result);
+    // };
+    // reader.readAsText('./../data/menu.json');
   }
 }
 
