@@ -19,7 +19,7 @@ headerTemplate.innerHTML = /*html*/ `
             display: inline;
         }
 
-        a {
+        a, p {
             font-weight: 700;
             margin: 0 25px;
             color: #fff;
@@ -39,6 +39,8 @@ headerTemplate.innerHTML = /*html*/ `
                 <li><a href="work.html">Work</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
+            <!-- Dynamic content! -->
+            <p></p>
         </nav>
     </header>
 `;
@@ -49,8 +51,11 @@ class Header extends HTMLElement {
   }
 
   connectedCallback() {
-    const shadowRoot = this.attachShadow({ mode: 'closed' });
+    const shadowRoot = this.attachShadow({ mode: 'open' });   // must be 'open' for dynamic content to work!
     shadowRoot.appendChild(headerTemplate.content);
+
+    // Dynamic content coming into component
+    this.shadowRoot.querySelector('p').textContent = this.getAttribute('email') || 'Email';
   }
 }
 
