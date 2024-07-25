@@ -65,27 +65,45 @@ class Header extends HTMLElement {
     // this.shadowRoot.querySelector('#loop').textContent = 'Beef';
 
     // Looping through data
-    const obj = {
-        "company": 'GeeksforGeeks',
-        "contact": '+91-9876543210',
-        "city": 'Noida'
-    };
-    
-    Object.keys(obj).forEach(key => {
-        var item = document.createElement('p');
-        item.setAttribute('id', `${key}`);
-        item.innerHTML = /*html*/ `
-            <p>${obj[key]}</p>
-        `;
-        this.shadowRoot.querySelector('#loop').appendChild(item);
-    });
-
-    const reader = new FileReader();
-    console.log(reader);
-    // reader.onload = (evt) => {
-    //     console.log(evt.target.result);
+    // const obj = {
+    //     "company": 'GeeksforGeeks',
+    //     "contact": '+91-9876543210',
+    //     "city": 'Noida'
     // };
-    // reader.readAsText('./../data/menu.json');
+    
+    // Object.keys(obj).forEach(key => {
+    //     var item = document.createElement('p');
+    //     item.setAttribute('id', `${key}`);
+    //     item.innerHTML = /*html*/ `
+    //         <p>${obj[key]}</p>
+    //     `;
+    //     this.shadowRoot.querySelector('#loop').appendChild(item);
+    // });
+
+    // Looping though data: local JSON file style
+    async function getJSON(url) {
+        try {
+          const response = (await fetch(url)).json();
+          return response;
+        }
+        catch (error) {
+          console.error(error);
+        }
+    }
+
+    getJSON('./../data/menu.json').then(data => {
+        console.log('can only access JSON fr inside .then?');
+        console.log(data);
+
+        Object.keys(data).forEach(key => {
+            var item = document.createElement('p');
+            item.setAttribute('id', `${key}`);
+            item.innerHTML = /*html*/ `
+                <p>${data[key]}</p>
+            `;
+            this.shadowRoot.querySelector('#loop').appendChild(item);
+        });
+    });
   }
 }
 
