@@ -7,6 +7,8 @@
 	],
 	"settings": {
 		"gitdoc.enabled": false,
-		"markdown-todo.sortByCount": true
+		"markdown-todo.sortByCount": true,
+		"pieces.cloudCapabilities": "Blended",
+		"pieces.telemetry": true
 	}
 }

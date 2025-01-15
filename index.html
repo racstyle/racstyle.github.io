@@ -14,11 +14,16 @@
 
     <!-- Custom components -->
     <script src="components/header.js" type="module" defer></script>
+    <script src="components/header-child.js" type="module" defer></script>
   </head>
   <body>
     
 
     <!-- Custom JS -->
-    <header-component email="wowow"></header-component>
+    <header-component email="wowow">
+      <header-child-component></header-child-component>
+      <p>Inside parent</p>
+    </header-component>
+    <p>Outside parent</p>
   </body>
 </html>
