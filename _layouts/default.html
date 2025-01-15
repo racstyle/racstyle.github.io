@@ -7,54 +7,8 @@
     <title>Rachel Estilo</title>
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="/assets/favicon_io/favicon.ico">
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href={{ site.path }}{{ "/css/app-custom-min.css" }}>
-    <!-- FontAwesome -->
-    <link rel="stylesheet" href={{ site.path }}{{ "/node_modules/@fortawesome/fontawesome-free/css/all.min.css" }}>
   </head>
-  <!-- `data-bs-root-margin` determines scrollspy/magellan `.active` offset -->
-  <body data-bs-spy="scroll" data-bs-target="#menuBar" data-bs-smooth-scroll="true" data-bs-root-margin="0px 0px -85%">
-    <!-- Scroll to top button (needs to be <button> for scrolling animation to happen) -->
-    <button id="scrollTop" role="button" class="scrollToTop btn btn-danger btn-floating btn-lg" type="button"><i class="fas fa-arrow-up"></i></button>
-
-    <!-- Header -->
-    <header class="header-hero bg-primary text-center">
-      <div class="container">
-        <h1 class="text-white">Rachel Estilo</h1>
-        <h2 class="h3 text-white">Software Engineer</h2>
-        <a href="../assets/Rachel_Estilo_RES.pdf" download="Rachel_Estilo_RES"><button class="btn btn-secondary resume-padding">Download Resume</button></a>
-      </div>
-    </header>
+  <body>
     
-    <!-- Nav -->
-    {% include nav.html %}
-
-    <!-- TODO: right align on navbar + be part of hidden navs -->
-    <!-- Theme picker -->
-    <div class="container">
-      <br>
-      <label for="themePicker">Choose your side of the Force:</label>
-      <select id="themePicker" class="form-select">
-        <option value="light" selected>Light side</option>
-        <option value="dark">Dark side</option>
-      </select>
-      <p><i>Note: the placement of ^this dropdown here is broken, but I am working on a solution to put it in its proper place :D</i></p>
-    </div>
-
-    <br>
-
-    <!-- Main content -->
-    {{ content }}
-    
-    <!-- Footer -->
-    <!-- <br><br> -->
-    {% include foot.html %}
-    <br><br><br>
-
-    <!-- Bootstrap + dependency JS, needed to get some Bootstrap working -->
-    <script src={{ site.path }}{{ "/node_modules/@popperjs/core/dist/umd/popper.min.js" }}></script>
-    <script src={{ site.path }}{{ "/node_modules/bootstrap/dist/js/bootstrap.min.js" }}></script>
-    <!-- Custom JS -->
-    <script src={{ site.path }}{{ "/js/app-min.js" }}></script>
   </body>
 </html>
