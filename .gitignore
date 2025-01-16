@@ -16,3 +16,4 @@ yarn.lock
 .DS_Store
 .nojekyll
 .hintrc
+node_modules/
