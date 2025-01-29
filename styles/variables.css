@@ -1,0 +1,45 @@
+/* small screen size */
+:root {
+    /* colors */
+    --color-primary: #66a182;
+    --color-secondary: #c0d461;
+    --color-third: #caffb9;
+    --color-fourth: #56638a;
+    --color-fifth: #071013;
+    
+    /* typography  */
+    --color-primary-text: #2E2E2E;
+
+    /* spacing */
+    --container-padding: 1rem;
+}
+
+/* medium screen size */
+@media screen and (min-width: 768px) {
+    :root {
+        /* colors */
+        
+
+        /* typography  */
+
+
+        /* spacing */
+        --container-padding: 2rem;
+    }
+    
+}
+
+/* large screen size */
+@media screen and (min-width: 1024px) {
+    :root {
+        /* colors */
+        
+
+        /* typography  */
+
+
+        /* spacing */
+        --container-padding: 3rem;
+    }
+    
+}

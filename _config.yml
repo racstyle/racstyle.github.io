@@ -1,7 +1,8 @@
-title: Rachel Estilo
-# author: Rachel Estilo
+title: Rachel Gijon
+# author: Rachel Gijon
 # description: >- # this means to ignore newlines until "baseurl:"
 #   Page description, a short description of this page coming soon.
+baseurl: /
 url: http://racstyle.github.io/ # the base hostname & protocol for your site, e.g. http://example.com
 
 

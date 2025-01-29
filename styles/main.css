@@ -1,0 +1,89 @@
+@import url('./variables.css');
+
+/* --------------------------------- Globals -------------------------------- */
+/* reset html styles */
+* {
+    /* remove default spacing */
+    margin: 0;
+    padding: 0;
+}
+
+/* main container */
+.main-container {
+    padding: var(--container-padding) 0;
+}
+
+/* button design */
+.button {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: purple;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s;  /* change button color on hover w color described below */
+}
+.button:hover {
+    background-color: blue;
+}
+
+
+/* ---------------------------------- Theme --------------------------------- */
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--color-primary-text);
+}
+
+/* ------------------------------ Hero section ------------------------------ */
+/* hero container */
+#hero {
+    background-color: var(--color-primary);
+    color: #FFFFE4;
+    height: 70vh;
+    width: 100vw;
+
+    /* to center the text in hero */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* new line break */
+    flex-flow: column;
+}
+
+/* full name */
+.hero-title {
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+@media screen and (min-width: 768px) {
+    .hero-title {
+        font-size: 3rem;
+    }
+}
+
+/* job title */
+.hero-subtitle {    /* mobile */
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+@media screen and (min-width: 768px) {  /* tablet */
+    .hero-subtitle {
+        font-size: 2rem;
+    }
+}
+
+
+/* -------------------------------- About me -------------------------------- */
+/* about me container */
+#about-me {
+
+}
