@@ -8,22 +8,37 @@
     padding: 0;
 }
 
-/* main container */
-.main-container {
-    padding: var(--container-padding) 0;
+/* remove link decorations */
+a {
+    text-decoration: none;
 }
 
+/* main container */
+.main-container {
+    padding: 0rem var(--container-padding);
+}
+
+/* add padding to each section (below hero) */
+section {
+    padding: 2rem 0;
+}
+
+
+/* ------------------------------- Components ------------------------------- */
 /* button design */
 .button {
-    padding: 0.5rem 1rem;
+    padding: 1rem 3rem;
+    white-space: nowrap;    /* keeps text from wrapping */
     border: none;
-    border-radius: 5px;
+    border-radius: 23px;
     cursor: pointer;
     background-color: purple;
     color: white;
     font-size: 1rem;
     font-weight: bold;
     text-transform: uppercase;
+    text-align: center;
+    line-height: 1;   /* to make buttons regardless of tag the same height */
     transition: background-color 0.3s;  /* change button color on hover w color described below */
 }
 .button:hover {
@@ -44,16 +59,41 @@ body {
 #hero {
     background-color: var(--color-primary);
     color: #FFFFE4;
-    height: 70vh;
-    width: 100vw;
 
-    /* to center the text in hero */
+    /* to center content in hero */
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
+
+    /* to extend the background color */
+    position: relative;
+    padding: var(--container-padding);
+    z-index: 1;
 
     /* new line break */
     flex-flow: column;
+}
+#hero::before {
+    content: "";    /* needed for background-color to work! */
+    position: absolute;
+    left: calc(-1 * var(--container-padding));
+    right: calc(-1 * var(--container-padding));
+    top: 0;
+    bottom: 0;
+    background-color: var(--color-primary);
+    z-index: -1;    /* needed to put the color behind the text */
+}
+@media screen and (min-width: 768px) {  /* tablet */
+    #hero {
+        flex-direction: row;
+        gap: 5rem;
+    }
+}
+
+/* image */
+.profile-img {
+    border-radius: 50%;
 }
 
 /* full name */
@@ -64,7 +104,7 @@ body {
 }
 @media screen and (min-width: 768px) {
     .hero-title {
-        font-size: 3rem;
+        font-size: 2.5rem;
     }
 }
 
@@ -81,9 +121,23 @@ body {
     }
 }
 
+/* summary */
+.hero-paragraph {
+    font-size: 1rem;
+    text-align: left;
+    margin-bottom: 2rem;
+}
 
-/* -------------------------------- About me -------------------------------- */
-/* about me container */
-#about-me {
-
+/* button group */
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+@media screen and (min-width: 768px) {  /* tablet */
+    .hero-buttons {
+        flex-direction: row;
+    }
 }

@@ -11,20 +11,14 @@
     --color-primary-text: #2E2E2E;
 
     /* spacing */
-    --container-padding: 1rem;
+    --container-padding: 3rem;
 }
 
 /* medium screen size */
 @media screen and (min-width: 768px) {
     :root {
-        /* colors */
-        
-
-        /* typography  */
-
-
         /* spacing */
-        --container-padding: 2rem;
+        --container-padding: 9rem;
     }
     
 }
@@ -32,14 +26,8 @@
 /* large screen size */
 @media screen and (min-width: 1024px) {
     :root {
-        /* colors */
-        
-
-        /* typography  */
-
-
         /* spacing */
-        --container-padding: 3rem;
+        --container-padding: 15rem;
     }
     
 }
