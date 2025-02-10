@@ -60,21 +60,11 @@ body {
     background-color: var(--color-primary);
     color: #FFFFE4;
 
-    /* to center content in hero */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-
     /* to extend the background color */
     position: relative;
-    padding: var(--container-padding);
     z-index: 1;
-
-    /* new line break */
-    flex-flow: column;
 }
-#hero::before {
+#hero::before {   /* extending background-color beyond container */
     content: "";    /* needed for background-color to work! */
     position: absolute;
     left: calc(-1 * var(--container-padding));
@@ -84,8 +74,23 @@ body {
     background-color: var(--color-primary);
     z-index: -1;    /* needed to put the color behind the text */
 }
-@media screen and (min-width: 768px) {  /* tablet */
-    #hero {
+
+/* hero content, stays inside container */
+.hero-content-wrapper {
+    /* to center content in hero */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    /* new line break */
+    flex-flow: column;
+
+    /* up/down padding */
+    padding: 20vh 0;    /* no padding left/right bc already managed by #hero container */
+}
+@media screen and (min-width: 1026px) {  /* desktop + 2px */
+    .hero-content-wrapper {
         flex-direction: row;
         gap: 5rem;
     }
