@@ -1,6 +1,7 @@
 @import url('./variables.css');
 
 /* --------------------------------- Globals -------------------------------- */
+/* #region */
 /* reset html styles */
 * {
     /* remove default spacing */
@@ -23,8 +24,11 @@ section {
     padding: 2rem 0;
 }
 
+/* #endregion */
+
 
 /* ------------------------------- Components ------------------------------- */
+/* #region */
 /* button design */
 .button {
     padding: 1rem 3rem;
@@ -45,16 +49,22 @@ section {
     background-color: blue;
 }
 
+/* #endregion */
+
 
 /* ---------------------------------- Theme --------------------------------- */
+/* #region */
 body {
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
     line-height: 1.5;
-    color: var(--color-primary-text);
+    color: var(--color-text-black);
 }
 
+/* #endregion */
+
 /* ------------------------------ Hero section ------------------------------ */
+/* #region */
 /* hero container */
 #hero {
     background-color: var(--color-primary);
@@ -87,7 +97,7 @@ body {
     flex-flow: column;
 
     /* up/down padding */
-    padding: 20vh 0;    /* no padding left/right bc already managed by #hero container */
+    padding: 20vh 0;    /* no padding left/right bc already managed by .main-container */
 }
 @media screen and (min-width: 1026px) {  /* desktop + 2px */
     .hero-content-wrapper {
@@ -146,3 +156,14 @@ body {
         flex-direction: row;
     }
 }
+
+/* #endregion */
+
+/* ----------------------------- Skills section ----------------------------- */
+/* #region */
+/* skills container */
+#skills {
+    
+}
+
+/* #endregion */
