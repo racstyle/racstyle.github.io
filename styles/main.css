@@ -31,7 +31,7 @@ section {
 /* #region */
 /* button design */
 .button {
-    padding: 1rem 3rem;
+    padding: .85rem 2rem;
     white-space: nowrap;    /* keeps text from wrapping */
     border: none;
     border-radius: 23px;
@@ -89,7 +89,7 @@ body {
 .hero-content-wrapper {
     /* to center content in hero */
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     text-align: center;
 
@@ -97,12 +97,18 @@ body {
     flex-flow: column;
 
     /* up/down padding */
-    padding: 20vh 0;    /* no padding left/right bc already managed by .main-container */
+    padding: 5vh 0;    /* no padding left/right bc already managed by .main-container */
 }
-@media screen and (min-width: 1026px) {  /* desktop + 2px */
+@media screen and (min-width: 768px) {  /* tablet */
+    .hero-content-wrapper {
+        padding: 15vh 0;
+    }
+}
+@media screen and (min-width: calc(1024px + 2px)) {  /* desktop + 2px */
     .hero-content-wrapper {
         flex-direction: row;
-        gap: 5rem;
+        padding: 20vh 0;
+        gap: 4.3rem;
     }
 }
 

@@ -43,4 +43,4 @@ class Comp extends HTMLElement {
 }
 
 // define the custom element name to be used in HTML
-customElements.define('comp-name', Comp);
+customElements.define('card-comp', Comp);
