@@ -5,12 +5,16 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rachel Gijon</title>
+
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="/assets/favicon_io/favicon.ico">
+
     <!-- CSS -->
-    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="./css/main.css">
+
     <!-- Components -->
-    <script src="./components/card.js" type="module" defer></script>
+    <script src="./components/skill-card.js" type="module" defer></script>
+    <script src="./components/project-card.js" type="module" defer></script>
   </head>
   <body>
     <div class="main-container">
@@ -38,8 +42,13 @@
       <!-- -------------------------- Skills section --------------------------- -->
       <section id="skills">
         <h1 class="section-title">My Skills</h1>
-          <card-comp></card-comp>
+        <div class="skills-container">
+          <!-- skill cards will appear here -->
+        </div>
       </section>
     </div>
+
+    <!-- Custom JS -->
+    <script src="./js/main.js"></script>
   </body>
 </html>

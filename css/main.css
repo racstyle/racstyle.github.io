@@ -168,8 +168,18 @@ body {
 /* ----------------------------- Skills section ----------------------------- */
 /* #region */
 /* skills container */
-#skills {
-    
+.skills-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin: 10px 0;
+}
+@media screen and (min-width: 768px) {  /* tablet */
+    .skills-container {
+        flex-direction: row;
+        flex-wrap: wrap; /* Allow items to wrap within the container */
+        justify-content: center;
+    }
 }
 
 /* #endregion */
