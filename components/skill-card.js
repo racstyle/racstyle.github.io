@@ -20,23 +20,20 @@ class Comp extends HTMLElement {
                 border-radius: 8px;
                 box-shadow: 0 2px 4px rgba(0,0,0,0.1);
                 transition: background 0.3s ease;
+                width: 100%;
+                box-sizing: border-box; /* Include padding and border in the element's total width */
             }
             .category:hover {   /* change BG color on hover */
                 background: var(--color-secondary);
             }
-            @media screen and (min-width: 768px) { /* tablet */
-                .category {
-                    width: 45vw;
-                }
-            }
             @media screen and (min-width: 1024px) { /* desktop */
                 .category {
-                    width: 21.5vw;
+                    width: 25vw;
                 }
             }
             @media screen and (min-width: 1440px) { /* desktop XL */
                 .category {
-                    width: 15vw;
+                    width: 20vw;
                 }
             }
 

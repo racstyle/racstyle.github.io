@@ -18,8 +18,16 @@ class Comp extends HTMLElement {
                 border-radius: 8px;
                 box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
                 overflow: hidden;
-                width: 100%;
-                /* margin: 20px; */
+            }
+            @media screen and (min-width: 768px) { /* tablet */
+                .card {
+                    width: 45vw;
+                }
+            }
+            @media screen and (min-width: 1024px) { /* desktop */
+                .card {
+                    width: 21.5vw;
+                }
             }
             
             /* card image */
@@ -43,8 +51,13 @@ class Comp extends HTMLElement {
             .card-description {
                 font-size: 1em;
                 color: #666;
+                text-align: left;
             }
         `;
+
+
+        // get attributes here ONLY (don't add to HTML below (yet))
+        const projData = JSON.parse(this.getAttribute('proj-data')) || 'default';
 
 
         // component HTML (to be able to nest into molecules)
@@ -54,8 +67,8 @@ class Comp extends HTMLElement {
             <div class="card">
                 <img src="https://placehold.co/270x200" alt="Card Image" class="card-img">
                 <div class="card-content">
-                    <h2 class="card-title">Card Title</h2>
-                    <p class="card-description">This is a description of the card. It provides additional details about the content of the card.</p>
+                    <h2 class="card-title">${projData.proj_name}</h2>
+                    <div class="card-description"></div>
                 </div>
                 <slot></slot> <!-- enables nesting other components -->
             </div>
@@ -66,15 +79,16 @@ class Comp extends HTMLElement {
         this.shadowRoot.appendChild(compCss);
         this.shadowRoot.appendChild(compHtml.content.cloneNode(true));
 
-        // get attributes
-        // const attr = this.getAttribute('attr') || 'default';
-        // this.shadowRoot.querySelector('div').textContent = attr;
-
 
         // component JS
-        // other JS here
+        // project description
+        projData.description.forEach(desc => {
+            const p = document.createElement('p');
+            p.textContent = desc;
+            this.shadowRoot.querySelector('.card-description').appendChild(p);
+        });
     }
 }
 
 // define the custom element name to be used in HTML
-customElements.define('project-card-comp', Comp);
+customElements.define('project-card', Comp);

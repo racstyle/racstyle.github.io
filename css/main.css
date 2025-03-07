@@ -22,6 +22,12 @@ a {
 /* add padding to each section (below hero) */
 section {
     padding: 2rem 0;
+    text-align: center;
+}
+
+/* add space below the section title */
+.section-title {
+    margin-bottom: 2rem;
 }
 
 /* #endregion */
@@ -174,11 +180,52 @@ body {
     gap: 2rem;
     margin: 10px 0;
 }
-@media screen and (min-width: 768px) {  /* tablet */
+@media screen and (min-width: 1024px) {  /* desktop */
     .skills-container {
         flex-direction: row;
         flex-wrap: wrap; /* Allow items to wrap within the container */
-        justify-content: center;
+        justify-content: space-between;
+    }
+
+    /* Center items if there are fewer than 3 in the last row */
+    .skills-container > *:nth-last-child(2):nth-child(odd),
+    .skills-container > *:nth-last-child(1):nth-child(odd) {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+@media screen and (min-width: 1440px) {  /* desktop XL */
+    .skills-container {
+        justify-content: flex-start;
+    }
+
+    /* Center items if there are fewer than 3 in the last row */
+    .skills-container > *:nth-last-child(3):nth-child(odd),
+    .skills-container > *:nth-last-child(3):nth-child(even),
+    .skills-container > *:nth-last-child(2):nth-child(odd),
+    .skills-container > *:nth-last-child(2):nth-child(even),
+    .skills-container > *:nth-last-child(1) {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* #endregion */
+
+/* ----------------------------- Projects section --------------------------- */
+/* #region */
+/* projects container */
+.projects-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin: 10px 0;
+}
+@media screen and (min-width: 768px) {  /* tablet */
+    .projects-container {
+        flex-direction: row;
+        flex-wrap: wrap; /* Allow items to wrap within the container */
+        justify-content: space-between;
     }
 }
 
