@@ -200,10 +200,12 @@ body {
     }
 
     /* Center items if there are fewer than 3 in the last row */
-    .skills-container > *:nth-last-child(3):nth-child(odd),
-    .skills-container > *:nth-last-child(3):nth-child(even),
+    /* .skills-container > *:nth-last-child(3):nth-child(odd),
+    .skills-container > *:nth-last-child(3):nth-child(even), */
     .skills-container > *:nth-last-child(2):nth-child(odd),
     .skills-container > *:nth-last-child(2):nth-child(even),
+    /* .skills-container > *:nth-last-child(3),
+    .skills-container > *:nth-last-child(2), */
     .skills-container > *:nth-last-child(1) {
         margin-left: auto;
         margin-right: auto;
