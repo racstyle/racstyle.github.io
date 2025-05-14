@@ -15,7 +15,7 @@ class Comp extends HTMLElement {
             /* each category */
             .category {
                 background: #ffffff;
-                padding: 25px 15px;
+                padding: 15px 20px;
                 border: 1px solid #ddd;
                 border-radius: 8px;
                 box-shadow: 0 2px 4px rgba(0,0,0,0.1);
@@ -135,7 +135,7 @@ class Comp extends HTMLElement {
             div.innerHTML = `
                 <a href="${skill.skill_page}" target="_blank" rel="noopener">
                     <img src="${skill.icon}" alt="${skill.skill_name} icon">
-                    <div>${skill.skill_name}<div>
+                    <div>${skill.skill_name}</div>
                 </a>
             `;
             div.classList.add('skill-item');
