@@ -184,31 +184,7 @@ body {
     .skills-container {
         flex-direction: row;
         flex-wrap: wrap; /* Allow items to wrap within the container */
-        justify-content: space-between;
-    }
-
-    /* Center items if there are fewer than 3 in the last row */
-    .skills-container > *:nth-last-child(2):nth-child(odd),
-    .skills-container > *:nth-last-child(1):nth-child(odd) {
-        margin-left: auto;
-        margin-right: auto;
-    }
-}
-@media screen and (min-width: 1440px) {  /* desktop XL */
-    .skills-container {
-        justify-content: flex-start;
-    }
-
-    /* Center items if there are fewer than 3 in the last row */
-    .skills-container > *:nth-last-child(4):nth-child(odd),
-    .skills-container > *:nth-last-child(4):nth-child(even),
-    .skills-container > *:nth-last-child(2):nth-child(odd),
-    .skills-container > *:nth-last-child(2):nth-child(even),
-    /* .skills-container > *:nth-last-child(3),
-    .skills-container > *:nth-last-child(2), */
-    .skills-container > *:nth-last-child(1) {
-        margin-left: auto;
-        margin-right: auto;
+        justify-content: center;
     }
 }
 
@@ -227,7 +203,7 @@ body {
     .projects-container {
         flex-direction: row;
         flex-wrap: wrap; /* Allow items to wrap within the container */
-        justify-content: space-between;
+        justify-content: center;
     }
 }
 
