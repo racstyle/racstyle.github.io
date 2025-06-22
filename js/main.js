@@ -27,14 +27,14 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 /* ---------------------------- Projects section ---------------------------- */
-// send the skills data to the skill-card component
+// send the projects data to the project-card component
 document.addEventListener('DOMContentLoaded', () => {
-    // fetch the skills data
+    // fetch the projects data
     fetch('./_data/projects.json')
         // convert the response to JSON
         .then(response => response.json())
 
-        // send the data to the skill-card component
+        // send the data to the project-card component
         .then(data => {
             // get the projects section
             const projSection = document.querySelector('.projects-container');

@@ -19,14 +19,9 @@ class Comp extends HTMLElement {
                 box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
                 overflow: hidden;
             }
-            @media screen and (min-width: 768px) { /* tablet */
-                .card {
-                    width: 45vw;
-                }
-            }
             @media screen and (min-width: 1024px) { /* desktop */
                 .card {
-                    width: 21.5vw;
+                    width: 25vw;
                 }
             }
             

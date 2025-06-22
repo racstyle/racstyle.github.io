@@ -186,8 +186,8 @@ body {
         flex-wrap: wrap;
         justify-content: space-between;
         
+        /* TODO: make this a JS function to dynamically apply for N number of items esp for fewer # of items */
         & > *:nth-last-child(-n+1) {    /* last 1 item = last row */
-            /* & > *:nth-last-child(-n+1) { */
             margin-left: auto;
             margin-right: auto;
         }
@@ -211,11 +211,23 @@ body {
     gap: 2rem;
     margin: 10px 0;
 }
-@media screen and (min-width: 768px) {  /* tablet */
+@media screen and (min-width: 1024px) {  /* tablet */
     .projects-container {
         flex-direction: row;
         flex-wrap: wrap; /* Allow items to wrap within the container */
-        justify-content: center;
+        justify-content: space-between;
+        
+        /* TODO: same as ^skills todo */
+        & > *:nth-last-child(-n+1) {    /* last 1 item = last row */
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+}
+@media screen and (min-width: 1440px) {  /* desktop XL */
+    .projects-container > *:nth-last-child(-n+2) {    /* last 2 items = last row */
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 
