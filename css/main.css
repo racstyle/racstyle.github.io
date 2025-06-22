@@ -183,8 +183,20 @@ body {
 @media screen and (min-width: 1024px) {  /* desktop */
     .skills-container {
         flex-direction: row;
-        flex-wrap: wrap; /* Allow items to wrap within the container */
-        justify-content: center;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        
+        & > *:nth-last-child(-n+1) {    /* last 1 item = last row */
+            /* & > *:nth-last-child(-n+1) { */
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+}
+@media screen and (min-width: 1440px) {  /* desktop XL */
+    .skills-container > *:nth-last-child(-n+2) {    /* last 2 items = last row */
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 
