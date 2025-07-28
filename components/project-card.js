@@ -21,7 +21,7 @@ class Comp extends HTMLElement {
             }
             @media screen and (min-width: 1024px) { /* desktop */
                 .card {
-                    width: 25vw;
+                    width: 24vw;
                 }
             }
             

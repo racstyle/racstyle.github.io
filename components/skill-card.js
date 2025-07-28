@@ -28,7 +28,7 @@ class Comp extends HTMLElement {
             }
             @media screen and (min-width: 1024px) { /* desktop */
                 .category {
-                    width: 25vw;
+                    width: 24vw;
                 }
             }
             @media screen and (min-width: 1440px) { /* desktop XL */
@@ -129,7 +129,7 @@ class Comp extends HTMLElement {
         // get the list element
         const list = this.shadowRoot.querySelector('.category-skills');
 
-        // loop through skills list
+        // loop through skills list + add them to the .category-skills element
         skills.forEach(skill => {
             const div = document.createElement('div');
             div.innerHTML = `
