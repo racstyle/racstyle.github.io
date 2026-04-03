@@ -141,20 +141,36 @@ nav::before {
   position: absolute;
   top: 100%;
   left: 50%;  /* center relative to viewport */
-  transform: translateX(-50%) translateY(-10px);  /* center relative to viewport */
+  transform: translateX(-50%);  /* center relative to viewport */
   width: 100vw;   /* make it full width to cover the entire screen on mobile regardless of padding */
   background-color: var(--color-elements);
 
   /* responsiveness */
-  display: var(--navbar-toggle-menu);
+  display: flex;
+  /* display: var(--navbar-toggle-menu); */
   flex-direction: var(--navbar-direction);
   flex-wrap: wrap;
   align-items: stretch;
   text-align: center;
 
+  /* animation setup */
+  opacity: var(--navbar-toggle-menu-opacity);
+  visibility: var(--navbar-toggle-menu-visibility);
+  pointer-events: none;
+  transition: 
+    opacity 0.3s ease,
+    transform 0.3s ease,
+    visibility 0.3s ease;
+
   /* toggle menu on mobile */
   &.show-menu {
-    display: flex;
+    /* display: flex; */
+
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+
+    transform: translateX(-50%);
   }
 }
 .nav-links li {

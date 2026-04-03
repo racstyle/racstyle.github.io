@@ -18,7 +18,9 @@
     /* navbar responsiveness */
     --navbar-direction: column;
     --navbar-toggle-button: flex;
-    --navbar-toggle-menu: none;
+    --navbar-toggle-menu-opacity: 0;
+    --navbar-toggle-menu-visibility: hidden;
+    /* --navbar-toggle-menu: none; */
     --navbar-push-content: 0;   /* prevent content from being hidden behind navbar */
 }
 
@@ -31,7 +33,9 @@
         /* navbar responsiveness */
         --navbar-direction: row;
         --navbar-toggle-button: none;
-        --navbar-toggle-menu: flex;
+        --navbar-toggle-menu-opacity: 1;
+        --navbar-toggle-menu-visibility: visible;
+        /* --navbar-toggle-menu: flex; */
         --navbar-push-content: 60px;
     }
 }
