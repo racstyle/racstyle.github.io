@@ -19,6 +19,7 @@
     --navbar-direction: column;
     --navbar-toggle-button: flex;
     --navbar-toggle-menu: none;
+    --navbar-push-content: 0;   /* prevent content from being hidden behind navbar */
 }
 
 /* medium screen size */
@@ -31,6 +32,7 @@
         --navbar-direction: row;
         --navbar-toggle-button: none;
         --navbar-toggle-menu: flex;
+        --navbar-push-content: 60px;
     }
 }
 

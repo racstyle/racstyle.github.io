@@ -115,6 +115,9 @@ card-comp {
 
 /* --------------------------------- Navbar --------------------------------- */
 /* #region Navbar */
+nav {
+  position: relative;
+}
 /* nav bg color */
 nav::before {
   background-color: var(--color-elements);
@@ -134,12 +137,22 @@ nav::before {
 
 /* navbar content */
 .nav-links {
+  /* to make it not push the content down when expanding */
+  position: absolute;
+  top: 100%;
+  left: 50%;  /* center relative to viewport */
+  transform: translateX(-50%) translateY(-10px);  /* center relative to viewport */
+  width: 100vw;   /* make it full width to cover the entire screen on mobile regardless of padding */
+  background-color: var(--color-elements);
+
+  /* responsiveness */
   display: var(--navbar-toggle-menu);
-  flex-wrap: wrap;
   flex-direction: var(--navbar-direction);
+  flex-wrap: wrap;
   align-items: stretch;
   text-align: center;
 
+  /* toggle menu on mobile */
   &.show-menu {
     display: flex;
   }
@@ -158,12 +171,17 @@ nav::before {
   font-weight: bold;
   text-transform: uppercase;
   border-bottom: 0px solid transparent;  /* for the hover effect */
-  transition: font-weight 0.3s ease, border-bottom 0.3s ease;
+  transition: border-bottom 0.3s ease;
 
+  /* hover state for each nav item */
   &:hover {
-    font-weight: 900;
     border-bottom: 2px solid var(--color-text-white);
   }
+}
+
+/* prevent top content being hidden behind navbar */
+main {
+  padding-top: var(--navbar-push-content);
 }
 
 /* #endregion Navbar */
