@@ -1,17 +1,24 @@
 /* small screen size */
 :root {
-    /* colors */
-    --color-primary: #66a182;
-    --color-secondary: #c0d461;
-    --color-third: #caffb9;
-    --color-fourth: #56638a;
-    --color-fifth: #071013;
+    /* color theme */
+    --color-primary: #3B82F6;   /* interactions (e.g. buttons, links) */
+    --color-secondary: #6366F1; /* accents (e.g. highlights, icons) */
+    --color-accent: #22D3EE;
+    --color-bg: #0F172A;
+    --color-elements: #1E293B;
+    --color-elements-hover: #1E293B;
     
     /* typography  */
+    --color-text-white: #E2E8F0;
     --color-text-black: #2E2E2E;
 
     /* spacing */
     --container-padding: 1rem;
+
+    /* navbar responsiveness */
+    --navbar-direction: column;
+    --navbar-toggle-button: flex;
+    --navbar-toggle-menu: none;
 }
 
 /* medium screen size */
@@ -19,8 +26,12 @@
     :root {
         /* spacing */
         --container-padding: 9rem;
+        
+        /* navbar responsiveness */
+        --navbar-direction: row;
+        --navbar-toggle-button: none;
+        --navbar-toggle-menu: flex;
     }
-    
 }
 
 /* large screen size */

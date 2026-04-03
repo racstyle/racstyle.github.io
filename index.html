@@ -9,23 +9,17 @@
     <link rel="icon" type="image/x-icon" href="/assets/favicon_io/favicon.ico">
 
     <!-- main CSS -->
-    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/index.css">
 
     <!-- components -->
     <script src="./components/card.js" type="module" defer></script>
   </head>
   <body>
+    <!-- main content -->
     <div class="main-container">
-      <h1>Rachel Gijon</h1>
-  
-      <card-comp attr="test value" class="card">
-        <p>This is some extra content inside the component tag.</p>
-      </card-comp>
-
-
       <!-- ---------------------------- Hero Section ----------------------------- -->
       <!-- TODO: make it like a LinkedIn header? -->
-      <header id="hero">
+      <header id="hero" class="extend-bg">
         <!-- wrapper to keep content inside container while bg extends -->
         <div class="hero-content">
           <!-- image -->
@@ -46,27 +40,48 @@
       </header>
 
 
+      <!-- navbar -->
+      <nav id="top" class="extend-bg">
+        <!-- mobile menu button -->
+        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+
+        <!-- nav items -->
+        <ul class="nav-links">
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#code-challenges">Code Challenges</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+
       <!-- --------------------------- Skills Section ---------------------------- -->
       <section id="skills">
-
+        <h1>Skills</h1>
       </section>
 
 
       <!-- -------------------------- Projects Section --------------------------- -->
       <section id="projects">
+        <h1>Projects</h1>
+      </section>
 
+
+      <!-- ----------------------- Code Challenges Section ----------------------- -->
+      <section id="code-challenges">
+        <h1>Code Challenges</h1>
       </section>
 
 
       <!-- --------------------------- Contact Section --------------------------- -->
       <section id="contact">
-
+        <h1>Contact</h1>
       </section>
 
 
 
       <!-- ----------------------------- JS imports ------------------------------ -->
-      
+      <script src="./js/index.js"></script>
     </div>
   </body>
 </html>
