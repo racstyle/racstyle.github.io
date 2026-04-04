@@ -20,7 +20,7 @@
     --navbar-toggle-button: flex;
     --navbar-toggle-menu-opacity: 0;
     --navbar-toggle-menu-visibility: hidden;
-    /* --navbar-toggle-menu: none; */
+    --navbar-toggle-menu-transform: translateY(-30px);  /* initial position of the menu when hidden on mobile */
     --navbar-push-content: 0;   /* prevent content from being hidden behind navbar */
 }
 
@@ -35,7 +35,7 @@
         --navbar-toggle-button: none;
         --navbar-toggle-menu-opacity: 1;
         --navbar-toggle-menu-visibility: visible;
-        /* --navbar-toggle-menu: flex; */
+        --navbar-toggle-menu-transform: translateY(0);  /* no transform on desktop */
         --navbar-push-content: 60px;
     }
 }

@@ -110,6 +110,13 @@ card-comp {
   padding: 5vh 0;  /* no padding left/right bc already managed by .main-container */
 }
 
+/* profile picture */
+.profile-img {
+  border-radius: 50%;
+  object-fit: cover;
+  width: 100%;
+}
+
 /* #endregion Hero */
 
 
@@ -139,15 +146,13 @@ nav::before {
 .nav-links {
   /* to make it not push the content down when expanding */
   position: absolute;
-  top: 100%;
   left: 50%;  /* center relative to viewport */
-  transform: translateX(-50%);  /* center relative to viewport */
+  transform: translateX(-50%) var(--navbar-toggle-menu-transform);  /* center relative to viewport */
   width: 100vw;   /* make it full width to cover the entire screen on mobile regardless of padding */
   background-color: var(--color-elements);
 
   /* responsiveness */
   display: flex;
-  /* display: var(--navbar-toggle-menu); */
   flex-direction: var(--navbar-direction);
   flex-wrap: wrap;
   align-items: stretch;
@@ -164,13 +169,10 @@ nav::before {
 
   /* toggle menu on mobile */
   &.show-menu {
-    /* display: flex; */
-
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
-
-    transform: translateX(-50%);
+    transform: translateX(-50%) translateY(0px);
   }
 }
 .nav-links li {
