@@ -15,43 +15,44 @@
     <script src="./components/card.js" type="module" defer></script>
   </head>
   <body>
-    <div class="main-container">
-      <!-- hero -->
-      <!-- TODO: make it like a LinkedIn header? -->
-      <header id="hero" class="extend-bg">
-        <!-- wrapper to keep content inside container while bg extends -->
-        <div class="hero-content">
-          <!-- image -->
-          <div class="profile-col">
-            <img src="https://placehold.co/260" alt="profile pic" class="profile-img">
-          </div>
-          <!-- hero text + buttons -->
-          <div>
-            <h1 class="hero-title">Rachel Gijon</h1>
-            <h2 class="hero-subtitle">Software Engineer</h2>
-            <p class="hero-paragraph">I am a software engineer with a passion for creating and developing web applications.  I have experience in front-end and back-end development, and I am always looking for new challenges to improve my skills.</p>
-            <div class="hero-buttons">
-                <button class="button" type="button">Download Resume</button>
-                <a class="button" href="/">Contact Me</a>
-            </div>
+    <!-- hero -->
+    <!-- TODO: make it like a LinkedIn header? -->
+    <header id="hero" class="content-container">
+      <!-- wrapper to keep content inside container while bg extends -->
+      <div class="hero-content">
+        <!-- image -->
+        <div class="profile-col">
+          <img src="https://placehold.co/260" alt="profile pic" class="profile-img">
+        </div>
+        <!-- hero text + buttons -->
+        <div>
+          <h1 class="hero-title">Rachel Gijon</h1>
+          <h2 class="hero-subtitle">Software Engineer</h2>
+          <p class="hero-paragraph">I am a software engineer with a passion for creating and developing web applications.  I have experience in front-end and back-end development, and I am always looking for new challenges to improve my skills.</p>
+          <div class="hero-buttons">
+              <button class="button" type="button">Download Resume</button>
+              <a class="button" href="/">Contact Me</a>
           </div>
         </div>
-      </header>
+      </div>
+    </header>
 
-      <!-- navbar -->
-      <nav id="top" class="extend-bg">
-        <!-- mobile menu button -->
-        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    <!-- navbar -->
+    <nav id="top">
+      <!-- mobile menu button -->
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
 
-        <!-- nav items -->
-        <ul class="nav-links">
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#code-challenges">Challenges</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
+      <!-- nav items -->
+      <ul class="nav-links">
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#code-challenges">Challenges</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
 
+    <!-- main content -->
+    <div class="content-container">
       <!-- main content -->
       <main>
         <!-- ---------------------------- Skill Section ---------------------------- -->

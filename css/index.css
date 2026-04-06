@@ -30,8 +30,8 @@ a {
   z-index: -1;  /* needed to put the bg color behind the text */
 }
 
-/* main container */
-.main-container {
+/* content container */
+.content-container {
   padding: 0rem var(--container-padding);
 }
 
@@ -88,11 +88,8 @@ card-comp {
 /* #region Hero */
 /* hero container */
 #hero {
-  color: var(--color-text-white);
-}
-#hero::before { /* set the bg color here */
   background-color: var(--color-primary);
-  /* background: linear-gradient(135deg, #ff7e5f, #feb47b); */
+  color: var(--color-text-white);
 }
 
 /* hero content, stays inside container */
@@ -107,7 +104,7 @@ card-comp {
   flex-flow: column;
 
   /* up/down padding */
-  padding: 5vh 0;  /* no padding left/right bc already managed by .main-container */
+  padding: 5vh 0;  /* no padding left/right bc already managed by .content-container */
 }
 
 /* profile picture */
@@ -122,11 +119,10 @@ card-comp {
 
 /* --------------------------------- Navbar --------------------------------- */
 /* #region Navbar */
+/* make navbar sticky */
 nav {
-  position: relative;
-}
-/* nav bg color */
-nav::before {
+  position: sticky;
+  top: 0;
   background-color: var(--color-elements);
 }
 
@@ -145,10 +141,22 @@ nav::before {
 /* navbar content */
 .nav-links {
   /* to make it not push the content down when expanding */
-  position: absolute;
-  left: 50%;  /* center relative to viewport */
-  transform: translateX(-50%) var(--navbar-toggle-menu-transform);  /* center relative to viewport */
-  width: 100vw;   /* make it full width to cover the entire screen on mobile regardless of padding */
+  position: var(--navbar-items-position);
+  /* anchor directly below navbar */
+  /* top: 100%;  
+  left: 0; */
+  width: 100%;
+  transform: translateY(var(--navbar-toggle-menu-transform));
+
+  /* extend the bg color, but no sticky support */
+  /* center relative to viewport */
+    /* left: 50%; */
+  /* center relative to viewport */
+    /* transform: translateX(-50%) var(--navbar-toggle-menu-transform);   */
+  /* make it full width to cover the entire screen on mobile regardless of padding */
+    /* width: 100vw;    */
+  
+  /* bg color */
   background-color: var(--color-elements);
 
   /* responsiveness */
@@ -161,7 +169,7 @@ nav::before {
   /* animation setup */
   opacity: var(--navbar-toggle-menu-opacity);
   visibility: var(--navbar-toggle-menu-visibility);
-  pointer-events: none;
+  pointer-events: var(--navbar-pointer-events);
   transition: 
     opacity 0.3s ease,
     transform 0.3s ease,
@@ -172,7 +180,7 @@ nav::before {
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
-    transform: translateX(-50%) translateY(0px);
+    transform: translateY(0px);
   }
 }
 .nav-links li {
@@ -198,9 +206,9 @@ nav::before {
 }
 
 /* prevent top content being hidden behind navbar */
-main {
+/* main {
   padding-top: var(--navbar-push-content);
-}
+} */
 
 /* #endregion Navbar */
 
