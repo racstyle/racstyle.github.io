@@ -127,7 +127,7 @@ card-comp {
 /* make navbar sticky */
 nav {
   position: sticky;
-  top: 0;
+  top: -1.7px;  /* to prevent a small gap from appearing between the navbar and top of page when scrolling */
   background-color: var(--color-elements);
 }
 
@@ -147,19 +147,8 @@ nav {
 .nav-links {
   /* to make it not push the content down when expanding */
   position: var(--navbar-items-position);
-  /* anchor directly below navbar */
-  /* top: 100%;  
-  left: 0; */
   width: 100%;
   transform: translateY(var(--navbar-toggle-menu-transform));
-
-  /* extend the bg color, but no sticky support */
-  /* center relative to viewport */
-    /* left: 50%; */
-  /* center relative to viewport */
-    /* transform: translateX(-50%) var(--navbar-toggle-menu-transform);   */
-  /* make it full width to cover the entire screen on mobile regardless of padding */
-    /* width: 100vw;    */
   
   /* bg color */
   background-color: var(--color-elements);
@@ -219,11 +208,6 @@ nav {
 section {
   scroll-margin-top: var(--navbar-push-content);
 }
-
-/* prevent top content being hidden behind navbar */
-/* main {
-  padding-top: var(--navbar-push-content);
-} */
 
 /* #endregion Navbar */
 
