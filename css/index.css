@@ -9,6 +9,11 @@
   padding: 0;
 }
 
+/* to be able to scroll to clicked nav item section */
+html {
+  scroll-behavior: smooth;
+}
+
 /* remove link decorations */
 a {
   text-decoration: none;
@@ -199,10 +204,20 @@ nav {
   border-bottom: 0px solid transparent;  /* for the hover effect */
   transition: border-bottom 0.3s ease;
 
-  /* hover state for each nav item */
-  &:hover {
+  /* active state for each nav item */
+  &.active {
     border-bottom: 2px solid var(--color-text-white);
   }
+
+  /* TODO: hover state */
+  &:hover {
+    border-bottom: 2px solid yellow;
+  }
+}
+
+/* prevent top content of scrolled nav-item section from being hidden behind sticky navbar */
+section {
+  scroll-margin-top: var(--navbar-push-content);
 }
 
 /* prevent top content being hidden behind navbar */

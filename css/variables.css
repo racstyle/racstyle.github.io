@@ -21,9 +21,9 @@
     --navbar-toggle-menu-opacity: 0;
     --navbar-toggle-menu-visibility: hidden;
     --navbar-toggle-menu-transform: translateY(-30px);  /* initial position of the menu when hidden on mobile */
-    --navbar-push-content: 0;   /* prevent content from being hidden behind navbar */
     --navbar-items-position: absolute;  /* to be able to select the nav items on desktop */
     --navbar-pointer-events: none;  /* to prevent clicking on nav items when menu is hidden on mobile */
+    --navbar-push-content: 55px;   /* prevent scrolled content from being hidden behind navbar */
 }
 
 /* medium screen size */
@@ -38,7 +38,6 @@
         --navbar-toggle-menu-opacity: 1;
         --navbar-toggle-menu-visibility: visible;
         --navbar-toggle-menu-transform: translateY(0);  /* no transform on desktop */
-        --navbar-push-content: 60px;
         --navbar-items-position: static;
         --navbar-pointer-events: auto;  /* enable clicking on nav items on desktop */
     }
