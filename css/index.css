@@ -268,17 +268,17 @@ section {
 
 /* --------------------------------- Footer --------------------------------- */
 /* #region Footer */
+hr {
+  border: none;
+  border-top: 1px solid var(--color-elements);
+  margin: 0;
+}
+
 #footer {
   /* background-color: var(--color-elements); */
   text-align: center;
   padding-top: 2rem;
   padding-bottom: 5rem;
-}
-
-hr {
-  border: none;
-  border-top: 1px solid var(--color-elements);
-  margin: 0;
 }
 
 /* #endregion Footer */
