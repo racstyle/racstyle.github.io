@@ -244,17 +244,17 @@ nav {
   text-decoration: none;
   font-weight: bold;
   text-transform: uppercase;
-  border-bottom: 0px solid transparent;  /* for the hover effect */
-  transition: border-bottom 0.3s ease;
+  box-shadow: none;  /* for the hover effect */
+  transition: box-shadow 0.3s ease, background-color 0.3s ease;
 
-  /* active state for each nav item */
+  /* active state for each nav item when scrolling */
   &.active {
-    border-bottom: 2px solid var(--color-text-white);
+    box-shadow: inset 0 -4px 0 0 var(--color-text-white);
   }
 
-  /* TODO: hover state */
+  /* hover state */
   &:hover {
-    border-bottom: 2px solid yellow;
+    background-color: color-mix(in oklab, var(--color-elements), black 30%);
   }
 }
 
