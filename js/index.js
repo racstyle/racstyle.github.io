@@ -1,3 +1,30 @@
+/* ------------------------------- Back to Top ------------------------------ */
+// #region Back to Top
+const backToTop = document.getElementById('topBtn');  // select the back to top button
+
+// smooth scroll to top
+backToTop.onclick = () => {
+  // smoothly scroll to the top of the page when the button is clicked
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+
+  // update the URL to remove any hash/section ID (if present) without reloading the page
+  history.replaceState(null, '', window.location.pathname);
+};
+
+
+// show the button when navbar sticks
+const nav = document.getElementById('navbar');  // select the navbar to get when it sticks to the top of the page
+window.addEventListener('scroll', () => {
+  const rect = nav.getBoundingClientRect(); // get the position of the navbar relative to the viewport
+
+  // show the back to top button when the navbar reaches the top of the viewport (i.e., when it becomes sticky)
+  if (rect.top <= 0) { backToTop.classList.add('showTopButton'); }
+  else { backToTop.classList.remove('showTopButton'); }
+});
+
+// #endregion Back to Top
+
+
 /* --------------------------------- Navbar --------------------------------- */
 // #region Navbar
 // toggle menu for mobile

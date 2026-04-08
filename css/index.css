@@ -67,7 +67,7 @@ body {
 /* #endregion Theme */
 
 
-/* ------------------------------- Components ------------------------------- */
+/* -------------------------------- Components ------------------------------ */
 /* #region Components */
 /* card component */
 card-comp {
@@ -87,6 +87,60 @@ card-comp {
 }
 
 /* #endregion Components */
+
+
+/* ---------------------------- Back to Top button -------------------------- */
+/* #region Back to Top */
+.back-to-top {
+  /* positioning: fixed in bottom-right corner */
+  position: fixed;
+  bottom: 2rem; /* 2rem from the bottom */
+  right: 2rem;  /* 2rem from the right */
+
+  /* colors */
+  background-color: var(--color-primary);
+  color: var(--color-text-white);
+  border: none;
+  cursor: pointer;
+
+  /* size and shape */
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+
+  /* button content */
+  display: flex;
+  justify-content: center;  /* horizontal center */
+  align-items: center;  /* vertical center */
+
+  /* hide when at the top */
+  opacity: 0;
+  visibility: hidden;
+
+  /* transition */
+  transition:
+    /* hover effect */
+    background-color 0.3s ease,
+    transform 0.3s ease,
+
+    /* visible on specific scroll position */
+    opacity 0.3s ease,
+    visibility 0.3s ease;
+
+  /* hover effect */
+  &:hover {
+    background-color: var(--color-secondary);
+    transform: scale(1.1);
+  }
+
+}
+/* show at a specific scroll position */
+.showTopButton {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* #endregion Back to Top */
 
 
 /* ---------------------------------- Hero ---------------------------------- */
