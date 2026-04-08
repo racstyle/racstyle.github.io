@@ -14,12 +14,6 @@ html {
   scroll-behavior: smooth;
 }
 
-/* remove link decorations */
-a {
-  text-decoration: none;
-  color: inherit;   /* to make links the same color as surrounding text */
-}
-
 /* extend a section's bg color beyond the container */
 .extend-bg {
   position: relative;
@@ -62,6 +56,12 @@ body {
   line-height: 1.5;
   background-color: var(--color-bg);
   color: var(--color-text-white);
+}
+
+/* remove link decorations */
+a {
+  text-decoration: none;
+  color: inherit;   /* to make links the same color as surrounding text */
 }
 
 /* #endregion Theme */
@@ -182,7 +182,7 @@ card-comp {
 nav {
   position: sticky;
   top: -1.7px;  /* to prevent a small gap from appearing between the navbar and top of page when scrolling */
-  background-color: var(--color-elements);
+  background-color: var(--color-elements);  /* for the mobile navbar */
 }
 
 /* toggle nav button (hidden on desktop) */
@@ -238,7 +238,7 @@ nav {
 }
 .nav-links li a {
   display: block;
-  color: var(--color-text-white);
+  /* color: var(--color-text-white); */
   padding: 1.3rem 0rem;
   width: 100%;
   text-decoration: none;
@@ -249,7 +249,7 @@ nav {
 
   /* active state for each nav item when scrolling */
   &.active {
-    box-shadow: inset 0 -4px 0 0 var(--color-text-white);
+    box-shadow: inset 0 -3px 0 0 var(--color-text-white);
   }
 
   /* hover state */
@@ -264,5 +264,23 @@ section {
 }
 
 /* #endregion Navbar */
+
+
+/* --------------------------------- Footer --------------------------------- */
+/* #region Footer */
+#footer {
+  /* background-color: var(--color-elements); */
+  text-align: center;
+  padding-top: 2rem;
+  padding-bottom: 5rem;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid var(--color-elements);
+  margin: 0;
+}
+
+/* #endregion Footer */
 
 
