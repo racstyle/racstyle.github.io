@@ -73,13 +73,11 @@ a {
 card-comp {
   display: block;
   transition: transform 0.3s ease;
-  width: 80%;
+  width: var(--card-width);
   margin: 0 auto;
   padding: 1rem;
-  background-color: var(--color-primary);
-  color: white;
+  background-color: var(--color-elements);
   border-radius: 8px;
-  /* box-shadow: 0px 1px 15px 1px rgba(0, 0, 0, 0.2); */
 
   &:hover {
     transform: scale(1.03);
@@ -183,6 +181,7 @@ nav {
   position: sticky;
   top: -1.7px;  /* to prevent a small gap from appearing between the navbar and top of page when scrolling */
   background-color: var(--color-elements);  /* for the mobile navbar */
+  z-index: 10;  /* to make sure the navbar is above other content */
 }
 
 /* toggle nav button (hidden on desktop) */
@@ -264,6 +263,42 @@ section {
 }
 
 /* #endregion Navbar */
+
+
+/* ----------------------------- Skills section ----------------------------- */
+/* #region Skills section */
+/* skill cards */
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  flex-direction: var(--card-direction);
+}
+
+/* skill card content */
+.skills-list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+}
+
+
+/* each skill item */
+.skill-item {
+  margin: 1.5rem;
+}
+
+/* skill icons */
+.skill-icon {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+
+/* #endregion Skills section */
 
 
 /* --------------------------------- Footer --------------------------------- */

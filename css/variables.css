@@ -15,12 +15,16 @@
     /* spacing */
     --container-padding: 1rem;
 
+    /* card component */
+    --card-direction: column;
+    --card-width: 80%;
+
     /* navbar responsiveness */
     --navbar-direction: column;
     --navbar-toggle-button: flex;
     --navbar-toggle-menu-opacity: 0;
     --navbar-toggle-menu-visibility: hidden;
-    --navbar-toggle-menu-transform: translateY(-30px);  /* initial position of the menu when hidden on mobile */
+    --navbar-toggle-menu-transform: translateY(-30px);  /* initial position of the menu items when hidden on mobile */
     --navbar-items-position: absolute;  /* to be able to select the nav items on desktop */
     --navbar-pointer-events: none;  /* to prevent clicking on nav items when menu is hidden on mobile */
     --navbar-push-content: 55px;   /* prevent scrolled content from being hidden behind navbar */
@@ -31,6 +35,10 @@
     :root {
         /* spacing */
         --container-padding: 9rem;
+
+        /* card component */
+        --card-direction: row;
+        --card-width: 35%;
         
         /* navbar responsiveness */
         --navbar-direction: row;

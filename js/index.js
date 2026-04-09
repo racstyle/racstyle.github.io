@@ -75,3 +75,66 @@ window.addEventListener('scroll', () => {
 // #endregion Navbar
 
 
+/* ----------------------------- Skills section ----------------------------- */
+// #region Skills section
+document.addEventListener('DOMContentLoaded', () => {
+  // get the skills data
+  fetch('./_data/skills.json')
+    // convert the response to JSON
+    .then(response => response.json())
+    
+    // use the data to create the skill items dynamically
+    .then(data => {
+      // get the container where the skill items will be added
+      const skillsContainer = document.querySelector('.skills-container');
+
+      // loop through the skills data
+      data.forEach(skillItem => {
+        const skillCard = document.createElement('card-comp');  // create a new card component for each skill category
+
+        const skillCat = skillItem['category'];  // get the skill category (e.g., "Programming Languages")
+        const skillCatID = skillItem['cat_id'];  // get the skill category ID (e.g., "programming-languages")
+
+        skillCard.setAttribute('id', skillCatID);  // set the ID of the skill card to the category ID for linking from nav
+        
+        // skill category title
+        skillCard.innerHTML = /*html*/ `
+          <h2>${skillCat}</h2>
+        `;
+
+        // put skills inside a div for reordering
+        skillCard.innerHTML += /*html*/ `
+          <div class="skills-list">
+        `;
+
+        // loop through each skill in the category and add it to the skill card
+        skillItem['skills'].forEach(skill => {
+          // console.log(skill);  // log each skill to the console (for debugging)
+          skillCard.innerHTML += /*html*/ `
+            <div class="skill-item">
+              <!-- skill icon -->
+              <img src="${skill.icon}" alt="${skill.skill_name} icon" class="skill-icon"> 
+              <br>
+              <!-- skill name -->
+              <span>${skill.skill_name}</span>
+            </div>
+          `;  // add each skill as a new item in the skill card
+        });
+        
+        // close the skills list div
+        skillCard.innerHTML += /*html*/ `
+          </div>
+        `;
+        
+        skillsContainer.appendChild(skillCard);  // add the skill card to the container
+
+        // add class to inner component div for styling
+        skillCard.querySelector('.comp-content').classList.add('skills-card-content');
+      });
+    })
+
+    // handle any errors that occur during the fetch operation
+    .catch(error => console.error('Error fetching skills data:', error));
+});
+
+// #endregion Skills section

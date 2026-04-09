@@ -10,14 +10,12 @@ class Comp extends HTMLElement {
         
         // Step 2: render base component content
         this.innerHTML = /*html*/ `
-            <!-- get attribute -->
-            <div id="div3">Attribute: ${this.getAttribute('attr')}</div>
-            <!-- extra content -->
-            <div class="extra"></div>
+            <!-- content -->
+            <div class="comp-content"></div>
         `;
         
         // Step 3: insert original content into the slot area
-        this.querySelector('.extra').appendChild(fragment);
+        this.querySelector('.comp-content').appendChild(fragment);
     }
 }
 
