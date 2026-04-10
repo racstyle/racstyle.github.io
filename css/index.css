@@ -75,7 +75,7 @@ card-comp {
   transition: transform 0.3s ease;
   width: var(--card-width);
   margin: 0 auto;
-  padding: 1rem;
+  padding: 1.5rem 1.5rem;
   background-color: var(--color-elements);
   border-radius: 8px;
 
@@ -274,20 +274,27 @@ section {
   justify-content: center;
   gap: 2rem;
   flex-direction: var(--card-direction);
+  margin-top: 2rem;
 }
 
-/* skill card content */
+/* skills (excluding the skill category title) */
 .skills-list {
   display: flex;
-  flex-direction: row;
+  flex-wrap: wrap;
   align-items: center;
+  justify-content: center;
   gap: 1rem;
+  margin-top: 1rem;
 }
-
 
 /* each skill item */
 .skill-item {
-  margin: 1.5rem;
+  margin: 1rem;
+  transition: transform 0.3s ease;
+  
+  &:hover {
+    transform: scale(1.1);
+  }
 }
 
 /* skill icons */

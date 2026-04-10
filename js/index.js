@@ -103,33 +103,31 @@ document.addEventListener('DOMContentLoaded', () => {
         `;
 
         // put skills inside a div for reordering
-        skillCard.innerHTML += /*html*/ `
-          <div class="skills-list">
-        `;
+        const skillsList = document.createElement('div');
+        skillsList.classList.add('skills-list');
 
         // loop through each skill in the category and add it to the skill card
         skillItem['skills'].forEach(skill => {
-          // console.log(skill);  // log each skill to the console (for debugging)
-          skillCard.innerHTML += /*html*/ `
+          // add each skill as a new item in the skill card
+          skillsList.innerHTML += /*html*/ `
+            <!-- skill link -->
             <div class="skill-item">
-              <!-- skill icon -->
-              <img src="${skill.icon}" alt="${skill.skill_name} icon" class="skill-icon"> 
-              <br>
-              <!-- skill name -->
-              <span>${skill.skill_name}</span>
+              <a href="${skill.skill_page}" target="_blank" rel="noopener noreferrer">
+                <!-- skill icon -->
+                <img src="${skill.icon}" alt="${skill.skill_name} icon, taken from ${skill.icon_source}" class="skill-icon">
+                <br>
+                <!-- skill name -->
+                <span>${skill.skill_name}</span>
+              </a>
             </div>
-          `;  // add each skill as a new item in the skill card
+          `;
+
+          // add the skills list to the skill card
+          skillCard.appendChild(skillsList);
         });
         
-        // close the skills list div
-        skillCard.innerHTML += /*html*/ `
-          </div>
-        `;
-        
-        skillsContainer.appendChild(skillCard);  // add the skill card to the container
-
-        // add class to inner component div for styling
-        skillCard.querySelector('.comp-content').classList.add('skills-card-content');
+        // add the skill card to the container
+        skillsContainer.appendChild(skillCard);
       });
     })
 

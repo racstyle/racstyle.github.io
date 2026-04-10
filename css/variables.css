@@ -38,7 +38,7 @@
 
         /* card component */
         --card-direction: row;
-        --card-width: 35%;
+        --card-width: 50%;
         
         /* navbar responsiveness */
         --navbar-direction: row;
@@ -56,5 +56,8 @@
     :root {
         /* spacing */
         --container-padding: 15rem;
+
+        /* card component */
+        --card-width: 38%;
     }
 }
