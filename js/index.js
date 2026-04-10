@@ -1,3 +1,29 @@
+/* ---------------------------- Global functions ---------------------------- */
+// #region Global functions
+// render data from JSON file into the page for a section (i.e., skills, projects)
+function renderFromData({ url, containerSelector, renderFunction }) {
+  // get the skills/projects data
+  fetch(url)
+    // convert the response to JSON
+    .then(res => res.json())
+
+    // use the data to create the items dynamically and add them to the page
+    .then(data => {
+      // get the container where the items will be added
+      const container = document.querySelector(containerSelector);
+
+      // loop through the skills/projects data
+      data.forEach(item => {
+        const element = renderFunction(item);
+        container.appendChild(element);
+      });
+    })
+    .catch(err => console.error(`Error fetching ${url}:`, err));
+}
+
+// #endregion Global functions
+
+
 /* ------------------------------- Back to Top ------------------------------ */
 // #region Back to Top
 const backToTop = document.getElementById('topBtn');  // select the back to top button
@@ -77,62 +103,112 @@ window.addEventListener('scroll', () => {
 
 /* ----------------------------- Skills section ----------------------------- */
 // #region Skills section
-document.addEventListener('DOMContentLoaded', () => {
-  // get the skills data
-  fetch('./_data/skills.json')
-    // convert the response to JSON
-    .then(response => response.json())
+// document.addEventListener('DOMContentLoaded', () => {
+//   // get the skills data
+//   fetch('./_data/skills.json')
+//     // convert the response to JSON
+//     .then(response => response.json())
     
-    // use the data to create the skill items dynamically
-    .then(data => {
-      // get the container where the skill items will be added
-      const skillsContainer = document.querySelector('.skills-container');
+//     // use the data to create the skill items dynamically
+//     .then(data => {
+//       // get the container where the skill items will be added
+//       const skillsContainer = document.querySelector('.skills-container');
 
-      // loop through the skills data
-      data.forEach(skillItem => {
-        const skillCard = document.createElement('card-comp');  // create a new card component for each skill category
+//       // loop through the skills data
+//       data.forEach(skillItem => {
+//         const skillCard = document.createElement('card-comp');  // create a new card component for each skill category
 
-        const skillCat = skillItem['category'];  // get the skill category (e.g., "Programming Languages")
-        const skillCatID = skillItem['cat_id'];  // get the skill category ID (e.g., "programming-languages")
+//         const skillCat = skillItem['category'];  // get the skill category (e.g., "Programming Languages")
+//         const skillCatID = skillItem['cat_id'];  // get the skill category ID (e.g., "programming-languages")
 
-        skillCard.setAttribute('id', skillCatID);  // set the ID of the skill card to the category ID for linking from nav
+//         skillCard.setAttribute('id', skillCatID);  // set the ID of the skill card to the category ID for linking from nav
         
-        // skill category title
-        skillCard.innerHTML = /*html*/ `
-          <h2>${skillCat}</h2>
-        `;
+//         // skill category title
+//         skillCard.innerHTML = /*html*/ `
+//           <h2>${skillCat}</h2>
+//         `;
 
-        // put skills inside a div for reordering
-        const skillsList = document.createElement('div');
-        skillsList.classList.add('skills-list');
+//         // put skills inside a div for reordering
+//         const skillsList = document.createElement('div');
+//         skillsList.classList.add('skills-list');
 
-        // loop through each skill in the category and add it to the skill card
-        skillItem['skills'].forEach(skill => {
-          // add each skill as a new item in the skill card
-          skillsList.innerHTML += /*html*/ `
-            <!-- skill link -->
-            <div class="skill-item">
-              <a href="${skill.skill_page}" target="_blank" rel="noopener noreferrer">
-                <!-- skill icon -->
-                <img src="${skill.icon}" alt="${skill.skill_name} icon, taken from ${skill.icon_source}" class="skill-icon">
-                <br>
-                <!-- skill name -->
-                <span>${skill.skill_name}</span>
-              </a>
-            </div>
-          `;
+//         // loop through each skill in the category and add it to the skill card
+//         skillItem['skills'].forEach(skill => {
+//           // add each skill as a new item in the skill card
+//           skillsList.innerHTML += /*html*/ `
+//             <!-- skill link -->
+//             <div class="skill-item">
+//               <a href="${skill.skill_page}" target="_blank" rel="noopener noreferrer">
+//                 <!-- skill icon -->
+//                 <img src="${skill.icon}" alt="${skill.skill_name} icon, taken from ${skill.icon_source}" class="skill-icon">
+//                 <br>
+//                 <!-- skill name -->
+//                 <span>${skill.skill_name}</span>
+//               </a>
+//             </div>
+//           `;
 
-          // add the skills list to the skill card
-          skillCard.appendChild(skillsList);
-        });
+//           // add the skills list to the skill card
+//           skillCard.appendChild(skillsList);
+//         });
         
-        // add the skill card to the container
-        skillsContainer.appendChild(skillCard);
-      });
-    })
+//         // add the skill card to the container
+//         skillsContainer.appendChild(skillCard);
+//       });
+//     })
 
-    // handle any errors that occur during the fetch operation
-    .catch(error => console.error('Error fetching skills data:', error));
+//     // handle any errors that occur during the fetch operation
+//     .catch(error => console.error('Error fetching skills data:', error));
+// });
+
+// function to render the skills section
+function createSkillCard(skillItem) {
+  const skillCard = document.createElement('card-comp');  // create a new card component for each skill category
+
+  const skillCat = skillItem['category'];  // get the skill category (e.g., "Programming Languages")
+  const skillCatID = skillItem['cat_id'];  // get the skill category ID (e.g., "programming-languages")
+
+  skillCard.setAttribute('id', skillCatID);  // set the ID of the skill card to the category ID for linking from nav
+  
+  // skill category title
+  skillCard.innerHTML = /*html*/ `
+    <h2>${skillCat}</h2>
+  `;
+
+  // put skills inside a div for reordering
+  const skillsList = document.createElement('div');
+  skillsList.classList.add('skills-list');
+
+  // loop through each skill in the category and add it to the skill card
+  skillItem['skills'].forEach(skill => {
+    // add each skill as a new item in the skill card
+    skillsList.innerHTML += /*html*/ `
+      <!-- skill link -->
+      <div class="skill-item">
+        <a href="${skill.skill_page}" target="_blank" rel="noopener noreferrer">
+          <!-- skill icon -->
+          <img src="${skill.icon}" alt="${skill.skill_name} icon, taken from ${skill.icon_source}" class="skill-icon">
+          <br>
+          <!-- skill name -->
+          <span>${skill.skill_name}</span>
+        </a>
+      </div>
+    `;
+
+    // add the skills list to the skill card
+    skillCard.appendChild(skillsList);
+  });
+  
+  return skillCard;
+}
+
+// put the ^skills data into the page itself
+document.addEventListener('DOMContentLoaded', () => {
+  renderFromData({
+    url: './_data/skills.json',
+    containerSelector: '.skills-container',
+    renderFunction: createSkillCard
+  });
 });
 
 // #endregion Skills section
