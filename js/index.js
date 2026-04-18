@@ -97,70 +97,11 @@ window.addEventListener('scroll', () => {
   });
 });
 
-
 // #endregion Navbar
 
 
 /* ----------------------------- Skills section ----------------------------- */
 // #region Skills section
-// document.addEventListener('DOMContentLoaded', () => {
-//   // get the skills data
-//   fetch('./_data/skills.json')
-//     // convert the response to JSON
-//     .then(response => response.json())
-    
-//     // use the data to create the skill items dynamically
-//     .then(data => {
-//       // get the container where the skill items will be added
-//       const skillsContainer = document.querySelector('.skills-container');
-
-//       // loop through the skills data
-//       data.forEach(skillItem => {
-//         const skillCard = document.createElement('card-comp');  // create a new card component for each skill category
-
-//         const skillCat = skillItem['category'];  // get the skill category (e.g., "Programming Languages")
-//         const skillCatID = skillItem['cat_id'];  // get the skill category ID (e.g., "programming-languages")
-
-//         skillCard.setAttribute('id', skillCatID);  // set the ID of the skill card to the category ID for linking from nav
-        
-//         // skill category title
-//         skillCard.innerHTML = /*html*/ `
-//           <h2>${skillCat}</h2>
-//         `;
-
-//         // put skills inside a div for reordering
-//         const skillsList = document.createElement('div');
-//         skillsList.classList.add('skills-list');
-
-//         // loop through each skill in the category and add it to the skill card
-//         skillItem['skills'].forEach(skill => {
-//           // add each skill as a new item in the skill card
-//           skillsList.innerHTML += /*html*/ `
-//             <!-- skill link -->
-//             <div class="skill-item">
-//               <a href="${skill.skill_page}" target="_blank" rel="noopener noreferrer">
-//                 <!-- skill icon -->
-//                 <img src="${skill.icon}" alt="${skill.skill_name} icon, taken from ${skill.icon_source}" class="skill-icon">
-//                 <br>
-//                 <!-- skill name -->
-//                 <span>${skill.skill_name}</span>
-//               </a>
-//             </div>
-//           `;
-
-//           // add the skills list to the skill card
-//           skillCard.appendChild(skillsList);
-//         });
-        
-//         // add the skill card to the container
-//         skillsContainer.appendChild(skillCard);
-//       });
-//     })
-
-//     // handle any errors that occur during the fetch operation
-//     .catch(error => console.error('Error fetching skills data:', error));
-// });
-
 // function to render the skills section
 function createSkillCard(skillItem) {
   const skillCard = document.createElement('card-comp');  // create a new card component for each skill category
@@ -172,7 +113,7 @@ function createSkillCard(skillItem) {
   
   // skill category title
   skillCard.innerHTML = /*html*/ `
-    <h2>${skillCat}</h2>
+    <h2 class="card-title">${skillCat}</h2>
   `;
 
   // put skills inside a div for reordering
@@ -212,3 +153,69 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // #endregion Skills section
+
+
+/* ---------------------------- Projects section ---------------------------- */
+// #region Projects section
+// function to render the projects section
+function createProjectCard(projectItem) {
+  const projectCard = document.createElement('card-comp');  // create a new card component for each project
+  projectCard.classList.add('project-card');  // add a class for styling
+
+  // project title + image
+  projectCard.innerHTML = /*html*/ `
+    <h2 class="card-title">${projectItem['proj_name']}</h2>
+    <img src="${projectItem['screenshot']}" alt="${projectItem['screenshot_desc']}" class="project-image">
+  `;
+
+  // project description (create new paragraph for each item in the description array)
+  const projectDescContainer = document.createElement('div');
+  projectDescContainer.classList.add('project-description');
+  projectItem['description'].forEach(desc => {
+    const projectDescElem = document.createElement('p');  // create new p tag for each paragraph
+    projectDescElem.innerHTML += /*html*/ `${desc}`;  // add each paragraph to the project description
+    projectDescContainer.appendChild(projectDescElem); // add that paragraph to the project description container
+  });
+  projectCard.appendChild(projectDescContainer); // add the project description container to the project card
+
+  // project buttons (e.g., GitHub, live demo)
+  const buttonsContainer = document.createElement('div');
+  buttonsContainer.classList.add('project-buttons');
+  
+  // GitHub button
+  if (projectItem['github']) {
+    const githubButton = document.createElement('a');
+    githubButton.href = projectItem['github'];
+    githubButton.target = '_blank';
+    githubButton.rel = 'noopener noreferrer';
+    githubButton.classList.add('button', 'github-button');
+    githubButton.textContent = 'GitHub';
+    buttonsContainer.appendChild(githubButton);
+  }
+
+  // Demo button
+  if (projectItem['demo']) {
+    const demoButton = document.createElement('a');
+    demoButton.href = projectItem['demo'];
+    demoButton.target = '_blank';
+    demoButton.rel = 'noopener noreferrer';
+    demoButton.classList.add('button', 'demo-button');
+    demoButton.textContent = 'Demo';
+    buttonsContainer.appendChild(demoButton);
+  }
+
+  projectCard.appendChild(buttonsContainer); // add the buttons container to the project card
+
+  return projectCard;
+}
+
+// put the ^projects data into the page itself
+document.addEventListener('DOMContentLoaded', () => {
+  renderFromData({
+    url: './_data/projects.json',
+    containerSelector: '.projects-container',
+    renderFunction: createProjectCard
+  });
+});
+
+// #endregion Projects section

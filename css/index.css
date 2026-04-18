@@ -72,15 +72,48 @@ a {
 /* card component */
 card-comp {
   display: block;
-  transition: transform 0.3s ease;
   width: var(--card-width);
   margin: 0 auto;
   padding: 1.5rem 1.5rem;
   background-color: var(--color-elements);
   border-radius: 8px;
+  transition: transform 0.3s ease;
 
   &:hover {
     transform: scale(1.03);
+  }
+}
+
+/* title of card */
+.card-title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+/* container of cards */
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  flex-direction: var(--card-direction);
+  margin-top: 2rem;
+}
+
+/* buttons */
+.button {
+  color: var(--color-text-white);
+  font-size: .9rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 1rem 3rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: scale(1.05);
   }
 }
 
@@ -169,6 +202,25 @@ card-comp {
   border-radius: 50%;
   object-fit: cover;
   width: 100%;
+}
+
+/* row of hero buttons */
+.hero-buttons {
+  display: flex;
+  flex-direction: var(--card-direction);
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+/* download resume button */
+.hero-button-resume {
+  background-color: var(--color-elements);
+}
+
+/* contact me button */
+.hero-button-contact {
+  background-color: var(--color-elements);
 }
 
 /* #endregion Hero */
@@ -267,17 +319,7 @@ section {
 
 /* ----------------------------- Skills section ----------------------------- */
 /* #region Skills section */
-/* skill cards */
-.skills-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 2rem;
-  flex-direction: var(--card-direction);
-  margin-top: 2rem;
-}
-
-/* skills (excluding the skill category title) */
+/* skills inside each card (excluding the skill category title) */
 .skills-list {
   display: flex;
   flex-wrap: wrap;
@@ -287,7 +329,7 @@ section {
   margin-top: 1rem;
 }
 
-/* each skill item */
+/* each skill item (icon + label) */
 .skill-item {
   margin: 1rem;
   transition: transform 0.3s ease;
@@ -297,15 +339,60 @@ section {
   }
 }
 
-/* skill icons */
+/* skill icon size */
 .skill-icon {
   width: 50px;
   height: 50px;
   object-fit: contain;
 }
 
-
 /* #endregion Skills section */
+
+
+/* ---------------------------- Projects section ---------------------------- */
+/* #region Projects section */
+/* project card */
+.project-card {
+  display: flex;
+  flex-direction: column;
+  /* height: 100%; */
+}
+
+/* project image (make it fit inside the card) */
+.project-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+/* project description container */
+.project-description {
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
+/* project buttons */
+.project-buttons {
+  display: flex;
+  flex-direction: var(--card-direction);
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: auto;  /* to push the buttons to the bottom of the card */
+}
+
+/* GitHub button */
+.github-button {
+  background-color: var(--color-secondary);
+}
+
+/* Live Demo button */
+.demo-button {
+  background-color: var(--color-primary);
+}
+
+/* #endregion Projects section */
 
 
 /* --------------------------------- Footer --------------------------------- */
