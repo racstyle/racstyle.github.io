@@ -106,7 +106,7 @@ card-comp {
   font-size: .9rem;
   font-weight: bold;
   text-transform: uppercase;
-  padding: 1rem 3rem;
+  padding: 1rem 2.5rem;
   border: none;
   border-radius: 8px;
   cursor: pointer;
@@ -210,7 +210,7 @@ card-comp {
   flex-direction: var(--card-direction);
   gap: 1rem;
   justify-content: center;
-  margin-top: 1rem;
+  margin: 2.5rem 0rem;
 }
 
 /* download resume button */
@@ -355,7 +355,6 @@ section {
 .project-card {
   display: flex;
   flex-direction: column;
-  /* height: 100%; */
 }
 
 /* project image (make it fit inside the card) */
@@ -363,13 +362,13 @@ section {
   width: 100%;
   height: auto;
   object-fit: cover;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 /* project description container */
 .project-description {
   text-align: left;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 /* project buttons */

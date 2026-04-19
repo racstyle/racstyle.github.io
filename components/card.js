@@ -8,14 +8,14 @@ class Comp extends HTMLElement {
             fragment.appendChild(this.firstChild);
         }
         
-        // Step 2: render base component content
-        this.innerHTML = /*html*/ `
-            <!-- content -->
-            <div class="comp-content"></div>
-        `;
+        // Step 2: render base component content (may not be needed)
+        // this.innerHTML = /*html*/ `
+        //     <!-- content -->
+        //     <div class="comp-content"></div>
+        // `;
         
         // Step 3: insert original content into the slot area
-        this.querySelector('.comp-content').appendChild(fragment);
+        this.appendChild(fragment);
     }
 }
 
