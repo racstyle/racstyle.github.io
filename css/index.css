@@ -374,7 +374,7 @@ section {
 /* project buttons */
 .project-buttons {
   display: flex;
-  flex-direction: var(--card-direction);
+  flex-direction: var(--button-container-direction);
   flex-wrap: wrap;
   justify-content: center;
   gap: 1rem;

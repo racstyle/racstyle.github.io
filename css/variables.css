@@ -1,8 +1,8 @@
 /* small screen size */
 :root {
     /* color theme */
-    --color-primary: #3B82F6;   /* interactions (e.g. buttons, links) */
-    --color-secondary: #6366F1; /* accents (e.g. highlights, icons) */
+    --color-primary: #244218;   /* interactions (e.g. buttons, links) */
+    --color-secondary: #22335E; /* accents (e.g. highlights, icons) */
     --color-accent: #22D3EE;
     --color-bg: #0F172A;
     --color-elements: #1E293B;
@@ -18,6 +18,9 @@
     /* card component */
     --card-direction: column;
     --card-width: 80%;
+
+    /* button component */
+    --button-container-direction: column;
 
     /* navbar responsiveness */
     --navbar-direction: column;
@@ -59,5 +62,8 @@
 
         /* card component */
         --card-width: 38%;
+
+        /* button component */
+        --button-container-direction: row;
     }
 }
