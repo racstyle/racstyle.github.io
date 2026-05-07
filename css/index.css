@@ -215,12 +215,12 @@ card-comp {
 
 /* download resume button */
 .hero-button-resume {
-  background-color: var(--color-elements);
+  background-color: var(--color-bg);
 }
 
 /* contact me button */
 .hero-button-contact {
-  background-color: var(--color-elements);
+  background-color: var(--color-bg);
 }
 
 /* #endregion Hero */
@@ -365,6 +365,15 @@ section {
   margin-bottom: 1.5rem;
 }
 
+/* project skills used container */
+.project-skills-used-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
 /* project description container */
 .project-description {
   text-align: left;
@@ -389,6 +398,16 @@ section {
 /* Live Demo button */
 .demo-button {
   background-color: var(--color-primary);
+}
+
+/* show the filtered projects */
+.show-filtered-projects {
+  display: block;
+}
+
+/* hide the projects that don't match the filter */
+.hide-filtered-projects {
+  display: none;
 }
 
 /* #endregion Projects section */

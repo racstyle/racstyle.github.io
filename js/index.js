@@ -4,7 +4,7 @@
 function renderFromData({ url, containerSelector, renderFunction }) {
   // get the skills/projects data
   fetch(url)
-    // convert the response to JSON
+    // if found, convert the response to JSON
     .then(res => res.json())
 
     // use the data to create the items dynamically and add them to the page
@@ -18,7 +18,23 @@ function renderFromData({ url, containerSelector, renderFunction }) {
         container.appendChild(element);
       });
     })
+
+    // otherwise, log any errors
     .catch(err => console.error(`Error fetching ${url}:`, err));
+
+  return;
+}
+
+// fetch data
+async function fetchData(url) {
+  try {
+    const res = await fetch(url);
+    if (!res.ok) { throw new Error(`Response status: ${res.status}`); }
+    return await res.json();
+  }
+  catch(err) {
+    return console.error(`Error fetching ${url}:`, err);
+  }
 }
 
 // #endregion Global functions
@@ -168,6 +184,26 @@ function createProjectCard(projectItem) {
     <img src="${projectItem['screenshot']}" alt="${projectItem['screenshot_desc']}" class="project-image">
   `;
 
+  // skills used in the project (as icons)
+  const skillsContainer = document.createElement('div');
+  skillsContainer.classList.add('project-skills-used-container');
+  const getSkills = async () => {
+    const skills = await fetchData('./_data/skills.json');
+    const skillsFlat = skills.reduce((acc, category) => acc.concat(category.skills), []);  // flatten the skills data to get an array of all skills
+    projectItem['skills_used'].forEach(skill => {
+      const skillUsedObj = Object.entries(skillsFlat).find(([key, value]) => value.skill_name === skill);
+      if (skillUsedObj) {  // check if the skill used in the project is in the skills data (to get the icon)
+        const skillIcon = document.createElement('img');
+        skillIcon.src = skillUsedObj[1].icon;
+        skillIcon.alt = `${skill} icon, taken from ${skill}`;
+        skillIcon.classList.add('project-skill-icon');
+        skillsContainer.appendChild(skillIcon);
+      }
+    });
+  };
+  getSkills();
+  projectCard.appendChild(skillsContainer); // add the skills container to the project card
+
   // project description (create new paragraph for each item in the description array)
   const projectDescContainer = document.createElement('div');
   projectDescContainer.classList.add('project-description');
@@ -217,5 +253,54 @@ document.addEventListener('DOMContentLoaded', () => {
     renderFunction: createProjectCard
   });
 });
+
+// show the filtered projects
+function showProject(project, filter) {
+  let projectClasses = project.className.split(' ');  // get the classes of the project card as an array
+  let filters = filter.split(' ');  // split the filter into an array (in case there are multiple categories in the filter)
+
+  // loop through filter categories and check if the project card has a class that matches any of the filter categories
+  for (let i=0; i<filters.length; i++) {
+    if (projectClasses.indexOf(filters[i]) == -1) {  // if the project card has a class that matches the filter category
+      project.className += ' ' + filters[i];  // add that category as a class to the project card (to show it)
+    }
+  }
+
+  return;
+}
+
+// hide the projects that don't match the filter
+function hideProject(project, filter) {
+  let projectClasses = project.className.split(' ');  // get the classes of the project card as an array
+  let filters = filter.split(' ');  // split the filter into an array (in case there are multiple categories in the filter)
+
+  // loop through filter categories and check if the project card has a class that matches any of the filter categories
+  for (let i=0; i<filters.length; i++) {
+    // while the project card has a class that matches the filter category (in case there are multiple instances of the same category in the class list)
+    while (projectClasses.indexOf(filters[i]) > -1) {
+        projectClasses.splice(projectClasses.indexOf(filters[i]), 1);  // remove that instance of the category from the class list
+      }
+  }
+  project.className = projectClasses.join(' ');  // update the project card's classes with the modified class list
+
+  return;
+}
+
+// filter projects by category when the category buttons are clicked
+function filterProjects(category) {
+  let projectCards = document.querySelectorAll('.project-card');  // select all project cards
+
+  if (category === 'all') {
+    category = '';  // show all projects if "All" is selected (i.e., no category filter)
+    for (let i=0; i<projectCards.length; i++) {
+      hideProject(projectCards[i], 'show-filtered-projects');  // remove the 'all' class to show all projects
+      if (projectCards[i].className.indexOf(category) > -1) {
+        showProject(projectCards[i], 'show-filtered-projects');  // add the 'show' class to show the project card
+      }
+    }
+  }
+
+  return;
+}
 
 // #endregion Projects section
