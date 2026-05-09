@@ -196,7 +196,7 @@ function createProjectCard(projectItem) {
         const skillIcon = document.createElement('img');
         skillIcon.src = skillUsedObj[1].icon;
         skillIcon.alt = `${skill} icon, taken from ${skill}`;
-        skillIcon.classList.add('project-skill-icon');
+        skillIcon.classList.add('skill-item', 'skill-icon');
         skillsContainer.appendChild(skillIcon);
       }
     });

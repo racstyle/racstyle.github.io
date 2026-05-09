@@ -362,7 +362,6 @@ section {
   width: 100%;
   height: auto;
   object-fit: cover;
-  margin-bottom: 1.5rem;
 }
 
 /* project skills used container */
@@ -371,7 +370,6 @@ section {
   flex-wrap: wrap;
   justify-content: center;
   gap: 1rem;
-  margin-bottom: 1.5rem;
 }
 
 /* project description container */
